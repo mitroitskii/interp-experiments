@@ -172,3 +172,12 @@ nohup.out
 *.eps
 *.jpg
 *.jpeg
+
+# Checkpoints
+checkpoints/
+
+# Analysis
+analysis/
+
+# Evaluations
+evaluations/
