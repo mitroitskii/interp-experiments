@@ -1,3 +1,5 @@
+# based on https://github.com/jkminder/science-of-finetuning/blob/master/scripts/collect_max_activating_examples.py
+
 """
 Script to collect max activating examples for a base and reasoning only latents of a CrossCoder.
 """
