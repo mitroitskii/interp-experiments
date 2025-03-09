@@ -397,7 +397,7 @@ def main():
         max_seq_len=args.seq_len,
         save_path=save_path,
         checkpoint_every=1,
-        name="mini-reasoning-traces",
+        name="mini-reasoning-answers",
     )
 
     # Generate and save max activating examples
@@ -417,7 +417,7 @@ def main():
         workers=args.workers,
         max_seq_len=args.seq_len,
         save_path=save_path,
-        name="reasoning-traces",
+        name="reasoning-answers",
     )
 
     wandb.finish()
