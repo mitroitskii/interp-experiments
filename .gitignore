@@ -165,14 +165,6 @@ run_experiment.sh
 nohup.out
 *.zip
 
-# Plots
-*.png
-*.pdf
-*.svg
-*.eps
-*.jpg
-*.jpeg
-
 # Checkpoints
 checkpoints/
 
@@ -181,3 +173,6 @@ analysis/
 
 # Evaluations
 evaluations/
+
+# Misc
+.DS_Store
