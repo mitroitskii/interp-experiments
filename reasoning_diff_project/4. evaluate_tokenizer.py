@@ -50,8 +50,7 @@ def evaluate_tokenizer_performance(model, eval_tokenizer, dataset, num_samples=1
         text = dataset[idx]['message_qwen1.5b']
         
         # Tokenize with the tokenizer we're evaluating
-        inputs = eval_tokenizer(text, return_tensors="pt", 
-                              truncation=True, max_length=512).to(device)
+        inputs = eval_tokenizer(text, return_tensors="pt").to(device)
         
         # Skip if empty
         if inputs.input_ids.shape[1] == 0:

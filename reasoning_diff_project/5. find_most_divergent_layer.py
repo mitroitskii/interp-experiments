@@ -3,7 +3,7 @@ import argparse
 import torch as th
 import torch.nn.functional as F
 from transformers import AutoTokenizer, AutoModelForCausalLM
-from datasets import load_from_disk
+from datasets import load_from_disk, load_dataset
 import matplotlib.pyplot as plt
 import numpy as np
 import einops
@@ -81,35 +81,33 @@ def load_models(base_model_name, ft_model_name):
 # %% Load dataset
 
 
-def load_dataset(dataset_path):
-    return load_from_disk(dataset_path)['test']
+# def load_dataset(dataset_path):
+#     return load_from_disk(dataset_path)['test']
 
 # %% Calculate layer-wise differences
 
 
-def calculate_layer_differences(base_model, ft_model, base_tokenizer, dataset, num_samples=100):
+def calculate_layer_differences(base_model, ft_model, eval_tokenizer, dataset, num_samples=100):
     device = "cuda" if th.cuda.is_available() else "cpu"
     base_model = base_model.to(device)
     ft_model = ft_model.to(device)
 
-    num_layers = base_model.config.num_hidden_layers
+    num_layers = ft_model.config.num_hidden_layers
 
     # Initialize statistics trackers
     l2_stats = [RunningMeanStd() for _ in range(num_layers)]
     cosine_stats = [RunningMeanStd() for _ in range(num_layers)]
 
     for idx in tqdm(range(min(num_samples, len(dataset)))):
-        input_text = dataset[idx]['message_qwen1.5b']
-        inputs = base_tokenizer(input_text, return_tensors="pt").to(device)
+        input_text = eval_tokenizer.decode(151646) + dataset[idx]['message_in_chat_template']
+        inputs = eval_tokenizer(input_text, return_tensors="pt").to(device)
 
         # Get hidden states from both models
         with th.no_grad():
             base_outputs = base_model(**inputs, output_hidden_states=True)
             ft_outputs = ft_model(**inputs, output_hidden_states=True)
-
             base_hidden_states = base_outputs.hidden_states
             ft_hidden_states = ft_outputs.hidden_states
-
             # Calculate differences for each layer
             for layer in range(num_layers):
                 # Skip embedding layer
@@ -124,14 +122,14 @@ def calculate_layer_differences(base_model, ft_model, base_tokenizer, dataset, n
 
                 # L2 norm difference
                 l2_diff_per_token = th.norm(
-                    base_layer_flat - ft_layer_flat, dim=-1)
+                    base_layer_flat - ft_layer_flat, dim=1)
                 l2_stats[layer].update(l2_diff_per_token)
 
                 # Cosine similarity
                 cosine_sim_per_token = F.cosine_similarity(
-                    base_layer_flat, ft_layer_flat, dim=-1)
+                    base_layer_flat, ft_layer_flat, dim=1)
                 cosine_stats[layer].update(cosine_sim_per_token)
-
+    
     return l2_stats, cosine_stats
 
 # %% Plotting functions
@@ -221,7 +219,7 @@ def main():
                         default="agentica-org/DeepScaleR-1.5B-Preview",
                         help='Fine-tuned model')
     parser.add_argument('--dataset', type=str,
-                        default='~/.cache/huggingface/datasets/OpenR1-Math-220k-formatted',
+                        default='koyena/OpenR1-Math-220k-formatted',
                         help='Path to the dataset')
     parser.add_argument('--num-samples', type=int,
                         default=1000,
@@ -229,15 +227,18 @@ def main():
     args, _ = parser.parse_known_args()
 
     print("Loading models...")
-    base_model, ft_model, base_tokenizer, _ = load_models(
+    base_model, ft_model, _, ft_tokenizer = load_models(
         args.base_model, args.ft_model)
 
+    base_model.eval()
+    ft_model.eval()
+
     print("Loading dataset...")
-    dataset = load_dataset(args.dataset)
+    dataset = load_dataset(args.dataset)['test']
 
     print("Calculating layer differences...")
     l2_stats, cosine_stats = calculate_layer_differences(
-        base_model, ft_model, base_tokenizer, dataset, num_samples=args.num_samples
+        base_model, ft_model, ft_tokenizer, dataset, num_samples=args.num_samples
     )
 
     print("Plotting results...")

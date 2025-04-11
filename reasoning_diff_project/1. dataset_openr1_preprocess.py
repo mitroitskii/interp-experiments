@@ -8,7 +8,7 @@ from collections import defaultdict
 from argparse import ArgumentParser
 
 source_dataset = "open-r1/OpenR1-Math-220k"
-target_dataset = "mitroitskii/OpenR1-Math-220k-formatted"
+target_dataset = "koyena/OpenR1-Math-220k-formatted"
 
 # %%
 

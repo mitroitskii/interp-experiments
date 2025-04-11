@@ -8,8 +8,17 @@ from tqdm.auto import tqdm
 from collections import defaultdict
 from argparse import ArgumentParser
 
-source_dataset = "mitroitskii/OpenR1-Math-220k-formatted"
-target_dataset = "mitroitskii/OpenR1-Math-220k-formatted"
+source_dataset = "koyena/OpenR1-Math-220k-formatted"
+target_dataset = "koyena/OpenR1-Math-220k-formatted"
+
+# For QWEN
+BOS = 151646
+USER = 151644
+ASSISTANT = 151645
+NEWLINE = 198
+THINK_START = 151648
+THINK_END = 151649
+EOS = 151643
 
 # %%
 
@@ -42,17 +51,23 @@ if __name__ == "__main__":
         for i in tqdm(range(0, len(dsl), 100), desc=f"Processing {split}"):
             
             messages = dsl[i : min(i + 100, len(dsl))]
-            
-            if tokenizer.bos_token is None:
-                formated_messages[split].extend(
-                    tokenizer.apply_chat_template(messages, tokenize=False)
-                    )
-            else:
-                tokens = tokenizer.apply_chat_template(messages, tokenize=True)
-                assert all(t[0] == tokenizer.bos_token_id for t in tokens)
-                tokens = [t[1:] for t in tokens]
-                formated_messages[split].extend(tokenizer.batch_decode(tokens))
+            manual_formatted_messages = []
+            # we are not including BOS token
+            for m in messages:
+                new_m = tokenizer.decode(USER) + m[0]["content"] + tokenizer.decode(ASSISTANT) + m[-1]["content"] + tokenizer.decode(EOS)
+                manual_formatted_messages.append(new_m)
 
+            formated_messages[split].extend(manual_formatted_messages)            
+            # if tokenizer.bos_token is None:
+            #     formated_messages[split].extend(
+            #         tokenizer.apply_chat_template(messages, tokenize=False)
+            #         )
+            # else:
+            #     tokens = tokenizer.apply_chat_template(messages, tokenize=True, add_special_tokens=True)
+            #     assert all(t[0] == tokenizer.bos_token_id for t in tokens)
+            #     tokens = [t[1:] for t in tokens]
+            #     formated_messages[split].extend(tokenizer.batch_decode(tokens))
+            
 # %%
     # add the formatted messages to the dataset as a new column
     ds_formatted = ds

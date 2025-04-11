@@ -1,6 +1,6 @@
 # %% Imports
 from transformers import AutoTokenizer
-from datasets import load_from_disk
+from datasets import load_from_disk, load_dataset
 import numpy as np
 from tqdm import tqdm
 
@@ -8,18 +8,19 @@ from tqdm import tqdm
 
 
 def load_tokenizer():
-    return AutoTokenizer.from_pretrained("Qwen/Qwen2.5-Math-1.5B")
+    #return AutoTokenizer.from_pretrained("Qwen/Qwen2.5-Math-1.5B")
+    return AutoTokenizer.from_pretrained("agentica-org/DeepScaleR-1.5B-Preview")
 
 # %% Load dataset
 
 
-def load_dataset():
-    return load_from_disk('~/.cache/huggingface/datasets/OpenR1-Math-220k-formatted')['train']
+# def load_dataset():
+#     return load_from_disk('~/.cache/huggingface/datasets/OpenR1-Math-220k-formatted')['train']
 
 # %% Analyze token statistics
 
 
-def analyze_token_stats(tokenizer, dataset, field='message_qwen1.5b'):
+def analyze_token_stats(tokenizer, dataset, field='message_in_chat_template'):
     """Compute token statistics for the dataset
 
     Args:
@@ -61,12 +62,12 @@ def main():
     tokenizer = load_tokenizer()
 
     print("Loading dataset...")
-    dataset = load_dataset()
+    dataset = load_dataset("koyena/OpenR1-Math-220k-formatted")['train']
 
     print("Computing token statistics...")
     stats, token_counts = analyze_token_stats(tokenizer, dataset)
 
-    print("\nToken count statistics for 'message_qwen1.5b' field:")
+    print("\nToken count statistics for 'message_in_chat_template' field:")
     print(f"Minimum tokens: {stats['min']}")
     print(f"Maximum tokens: {stats['max']}")
     print(f"Average tokens: {stats['mean']:.2f}")
