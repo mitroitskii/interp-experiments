@@ -7,9 +7,10 @@ from tqdm.auto import tqdm
 from collections import defaultdict
 from argparse import ArgumentParser
 
-source_dataset = "open-r1/OpenR1-Math-220k"
-target_dataset = "koyena/OpenR1-Math-220k-formatted"
-
+# source_dataset = "open-r1/OpenR1-Math-220k"
+# target_dataset = "koyena/OpenR1-Math-220k-formatted"
+source_dataset = "nvidia/OpenCodeReasoning"
+target_dataset = "koyena/OpenCodeReasoning-formatted"
 # %%
 
 # Flatten the dataset by exploding list columns
@@ -46,45 +47,47 @@ def flatten_dataset(dataset, columns_to_explode):
 if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument("--source-dataset", type=str, default=source_dataset)
-    parser.add_argument("--dataset-config", type=str, default="all") # if the dataset has multiple configs
+    parser.add_argument("--dataset-config", type=str, default="split_0") # if the dataset has multiple configs
     parser.add_argument("--target-dataset", type=str, default=target_dataset)
     parser.add_argument("--target-path", type=str, default="~/.cache/huggingface/datasets")
     args, _ = parser.parse_known_args()
 # %%
 
-    ds = load_dataset(args.source_dataset, args.dataset_config)
+    ds = load_dataset(args.source_dataset, args.dataset_config)["split_0"]
     # there is no actual train and test split in the openr1 math dataset
-    ds = ds["train"]
+    # ds = ds["train"]
+    # ds = ds["split_0"]
 
 # %%
     # drop correctness_count and messages
-    ds = ds.remove_columns(["correctness_count", "messages", 'uuid'])
+    #ds = ds.remove_columns(["correctness_count", "messages", 'uuid'])
+    ds = ds.remove_columns(['id'])
 
 # %%
-    ds = flatten_dataset(ds, ['generations', 'is_reasoning_complete',
-                         'correctness_math_verify', 'correctness_llama', 'finish_reasons'])
+    # ds = flatten_dataset(ds, ['generations', 'is_reasoning_complete',
+    #                      'correctness_math_verify', 'correctness_llama', 'finish_reasons'])
 
 # %%
 
-    ds = ds.filter(lambda x: x["is_reasoning_complete"]) # I assume DeepSeek distilled only from complete reasoning traces
+    # ds = ds.filter(lambda x: x["is_reasoning_complete"]) # I assume DeepSeek distilled only from complete reasoning traces
 # %%
-    ds = ds.rename_column("generations", "generation")
+    #ds = ds.rename_column("generations", "generation")
     
     # Reorder columns
-    column_order = [
-        "problem", "generation", "is_reasoning_complete", "finish_reasons",
-        "solution", "answer", "correctness_math_verify", "correctness_llama",
-        "problem_type", "question_type", "source"
-    ]
+    # column_order = [
+    #     "problem", "generation", "is_reasoning_complete", "finish_reasons",
+    #     "solution", "answer", "correctness_math_verify", "correctness_llama",
+    #     "problem_type", "question_type", "source"
+    # ]
 
-    ds = ds.select_columns(column_order)
+    # ds = ds.select_columns(column_order)
 # %%
 
-    def add_prefix(item):
-        item["problem"] = "Please reason step by step, and put your final answer within \\boxed{}." + \
-            item["problem"]  # this is prepended to deepseek prompts for math reasoning
-        return item
-    ds = ds.map(add_prefix)
+    # def add_prefix(item):
+    #     item["problem"] = "Please reason step by step, and put your final answer within \\boxed{}." + \
+    #         item["problem"]  # this is prepended to deepseek prompts for math reasoning
+    #     return item
+    # ds = ds.map(add_prefix)
 
 # %%
     # Format problem and generation into message column with user/assistant roles
@@ -93,7 +96,7 @@ if __name__ == "__main__":
             {"role": "user", "content": problem},
             {"role": "assistant", "content": generation}
         ]
-        for problem, generation in zip(ds["problem"], ds["generation"])
+        for problem, generation in zip(ds["input"], ds["output"])
     ]
     ds = ds.add_column("message", messages)
 # %%

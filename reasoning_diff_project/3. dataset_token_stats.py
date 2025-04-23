@@ -20,7 +20,7 @@ def load_tokenizer():
 # %% Analyze token statistics
 
 
-def analyze_token_stats(tokenizer, dataset, field='message_in_chat_template'):
+def analyze_token_stats(tokenizer, dataset, field='message_qwen2.5_chat_template'):
     """Compute token statistics for the dataset
 
     Args:
@@ -62,12 +62,12 @@ def main():
     tokenizer = load_tokenizer()
 
     print("Loading dataset...")
-    dataset = load_dataset("koyena/OpenR1-Math-220k-formatted")['train']
+    dataset = load_dataset("koyena/OpenCodeReasoning-formatted")['train']
 
     print("Computing token statistics...")
     stats, token_counts = analyze_token_stats(tokenizer, dataset)
 
-    print("\nToken count statistics for 'message_in_chat_template' field:")
+    print("\nToken count statistics for 'message_qwen2.5_chat_template' field:")
     print(f"Minimum tokens: {stats['min']}")
     print(f"Maximum tokens: {stats['max']}")
     print(f"Average tokens: {stats['mean']:.2f}")

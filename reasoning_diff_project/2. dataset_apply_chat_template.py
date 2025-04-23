@@ -8,8 +8,8 @@ from tqdm.auto import tqdm
 from collections import defaultdict
 from argparse import ArgumentParser
 
-source_dataset = "koyena/OpenR1-Math-220k-formatted"
-target_dataset = "koyena/OpenR1-Math-220k-formatted"
+source_dataset = "koyena/OpenCodeReasoning-formatted"
+target_dataset = "koyena/OpenCodeReasoning-formatted"
 
 # For QWEN
 BOS = 151646
@@ -29,7 +29,7 @@ if __name__ == "__main__":
     parser.add_argument("--target-dataset", type=str, default=target_dataset)
     parser.add_argument("--target-path", type=str, default="~/.cache/huggingface/datasets")
     # load the dataset from disk
-    parser.add_argument("--tokenizer", type=str, default="agentica-org/DeepScaleR-1.5B-Preview")
+    parser.add_argument("--tokenizer", type=str, default="agentica-org/DeepCoder-1.5B-Preview")
     parser.add_argument("--name", "-n", required=True)
     args, _ = parser.parse_known_args()
     args = parser.parse_args()
