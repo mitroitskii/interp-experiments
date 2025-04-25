@@ -1,5 +1,5 @@
 # %%
-from dictionary_learning.dictionary_learning.dictionary import BatchTopKCrossCoder
+from dictionary_learning.dictionary import BatchTopKCrossCoder
 from torch.nn.functional import cosine_similarity
 import torch as th
 import numpy as np
@@ -24,29 +24,29 @@ import sys
 sys.path.append("..")
 
 # %%
-crosscoder_path = "/share/u/models/crosscoder_checkpoints/DeepScaleR_vs_Qwen2.5-Math_L15/ae.pt"
-crosscoder = "L15"
-extra_args = []
-exp_name = "eval_crosscoder"
-exp_id = ""
-base_layer = 0
-reasoning_layer = 1
+# crosscoder_path = "/share/u/models/crosscoder_checkpoints/DeepScaleR_vs_Qwen2.5-Math_L15/ae.pt"
+# crosscoder = "L15"
+# extra_args = []
+# exp_name = "eval_crosscoder"
+# exp_id = ""
+# base_layer = 0
+# reasoning_layer = 1
 
-model_device = "cuda"
-coder_device = "cuda"
-calc_device = "cpu"
-coder = BatchTopKCrossCoder.from_pretrained(crosscoder_path)
-coder = coder.to(coder_device)
-num_layers, activation_dim, dict_size = coder.encoder.weight.shape
+# model_device = "cuda"
+# coder_device = "cuda"
+# calc_device = "cpu"
+# coder = BatchTopKCrossCoder.from_pretrained(crosscoder_path)
+# coder = coder.to(coder_device)
+# num_layers, activation_dim, dict_size = coder.encoder.weight.shape
 
-base_model = nnsight.LanguageModel("Qwen/Qwen2.5-Math-1.5B", device_map=model_device)
-ft_model = nnsight.LanguageModel("agentica-org/DeepScaleR-1.5B-Preview",device_map=model_device)
-csv_path = Path("csv_files/kl_divergence_results_with_percents.csv")
+# base_model = nnsight.LanguageModel("Qwen/Qwen2.5-Math-1.5B", device_map=model_device)
+# ft_model = nnsight.LanguageModel("agentica-org/DeepScaleR-1.5B-Preview",device_map=model_device)
+# csv_path = Path("csv_files/kl_divergence_results_with_percents.csv")
 
 
-layer = 15
-dataset = load_dataset("koyena/OpenR1-Math-220k-formatted")['train']
-dataset = dataset.take(1000)
+# layer = 15
+# dataset = load_dataset("koyena/OpenR1-Math-220k-formatted")['train']
+# dataset = dataset.take(1000)
 
 # For QWEN
 BOS = 151646
@@ -128,7 +128,15 @@ def calculate_fve_full(csv_path="csv_files/fve_results.csv"):
     
 if __name__ == "__main__":
     #main()
-    calculate_fve_full()
-    # df = pd.read_csv("csv_files/kl_divergence_results_with_percents.csv")
-    # plot_kl_act_diff_percent_distribution(df)
-    # plot_kl_comparison_histograms(df)
+    #calculate_fve_full()
+    df = pd.read_csv("../csv_files/fve_results.csv")
+    print(df.head())
+    # plot the fve of the base model and the ft model for the think start and think end positions
+    plt.figure(figsize=(10, 5))
+    plt.plot(df["fve_base_think_start"], label="Base Model Think Start")
+    plt.plot(df["fve_ft_think_start"], label="FT Model Think Start")
+    plt.plot(df["fve_base_think_end"], label="Base Model Think End")
+    plt.plot(df["fve_ft_think_end"], label="FT Model Think End")
+    plt.legend()
+    plt.savefig("../plots/fve_plot.png")
+    plt.show()
