@@ -133,10 +133,14 @@ if __name__ == "__main__":
     print(df.head())
     # plot the fve of the base model and the ft model for the think start and think end positions
     plt.figure(figsize=(10, 5))
-    plt.plot(df["fve_base_think_start"], label="Base Model Think Start")
-    plt.plot(df["fve_ft_think_start"], label="FT Model Think Start")
-    plt.plot(df["fve_base_think_end"], label="Base Model Think End")
-    plt.plot(df["fve_ft_think_end"], label="FT Model Think End")
+    x_values = df.index # Use the DataFrame index for the x-axis
+    plt.scatter(x_values, df["fve_base_think_start"], label="Base Model Think Start", s=10) # s controls the marker size
+    plt.scatter(x_values, df["fve_ft_think_start"], label="FT Model Think Start", s=10)
+    plt.scatter(x_values, df["fve_base_think_end"], label="Base Model Think End", s=10)
+    plt.scatter(x_values, df["fve_ft_think_end"], label="FT Model Think End", s=10)
+    plt.xlabel("Example Number") # Add an x-axis label
+    plt.ylabel("FVE") # Add a y-axis label
+    plt.title("FVE Comparison at Think Start/End Tokens") # Add a title
     plt.legend()
-    plt.savefig("../plots/fve_plot.png")
+    plt.savefig("../plots/fve_scatter_plot.png") # Changed filename to avoid overwriting
     plt.show()
