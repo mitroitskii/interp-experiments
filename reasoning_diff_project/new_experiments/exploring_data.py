@@ -36,6 +36,7 @@ def filter_data(data_json, k=5):
         wait_index = full_response.index("Wait")
         # get the substring of "thinking_response" up to and right before the "Wait"
         full_response_up_to_wait = full_response[:wait_index]
+        # print(full_response)
         # add the "original_message" and "thinking_response_up_to_wait" to the item
         data_to_return.append(full_response_up_to_wait)
     # Sort the data_to_return by the length of the strings from shortest to longest and return this sorted list.
@@ -56,6 +57,8 @@ if __name__ == '__main__':
         # You can add more code here to explore the data
         # print(data[0]) # Example: print the first record 
     
-    filter_data=filter_data(data, k=1)
-    print(filter_data[0])
+    filter_data=filter_data(data, k=2)
+    for item in filter_data:
+        print(item)
+        print("--------------------------------")
 # %%
