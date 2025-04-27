@@ -1,5 +1,5 @@
 # %%
-from dictionary_learning.dictionary_learning.dictionary import BatchTopKCrossCoder
+from dictionary_learning.dictionary import BatchTopKCrossCoder
 from torch.nn.functional import cosine_similarity
 import torch as th
 import numpy as np
@@ -22,39 +22,47 @@ import seaborn as sns
 import csv
 import sys
 sys.path.append("..")
+from scipy.stats import wasserstein_distance, ks_2samp
+from sklearn.metrics import mean_squared_error
+from transformers import AutoModelForCausalLM, AutoTokenizer
+import json
+import os
+import glob
+from scipy.stats import entropy  # Import entropy for KL divergence calculation
+from scipy.stats import ttest_ind
 
 # %%
-crosscoder_path = "/share/u/models/crosscoder_checkpoints/DeepScaleR_vs_Qwen2.5-Math_L15/ae.pt"
-crosscoder = "L15"
-extra_args = []
-exp_name = "eval_crosscoder"
-exp_id = ""
-base_layer = 0
-reasoning_layer = 1
+# crosscoder_path = "/share/u/models/crosscoder_checkpoints/DeepScaleR_vs_Qwen2.5-Math_L15/ae.pt"
+# crosscoder = "L15"
+# extra_args = []
+# exp_name = "eval_crosscoder"
+# exp_id = ""
+# base_layer = 0
+# reasoning_layer = 1
 
 model_device = "auto"
-coder_device = "cuda:6"
-calc_device = "cpu"
-coder = BatchTopKCrossCoder.from_pretrained(crosscoder_path)
-coder = coder.to(coder_device)
-num_layers, activation_dim, dict_size = coder.encoder.weight.shape
+# coder_device = "cuda:6"
+# calc_device = "cpu"
+# coder = BatchTopKCrossCoder.from_pretrained(crosscoder_path)
+# coder = coder.to(coder_device)
+# num_layers, activation_dim, dict_size = coder.encoder.weight.shape
 
-base_model = nnsight.LanguageModel("Qwen/Qwen2.5-Math-1.5B", device_map=model_device)
+# base_model = nnsight.LanguageModel("Qwen/Qwen2.5-Math-1.5B", device_map=model_device)
 ft_model = nnsight.LanguageModel("agentica-org/DeepScaleR-1.5B-Preview",device_map=model_device)
 
 
-layer = 15
-dataset = load_dataset("koyena/OpenR1-Math-220k-formatted")['train']
-dataset = dataset.take(1000)
+# layer = 15
+# dataset = load_dataset("koyena/OpenR1-Math-220k-formatted")['train']
+# dataset = dataset.take(1000)
 
-# For QWEN
-BOS = 151646
-USER = 151644
-ASSISTANT = 151645
-NEWLINE = 198
-THINK_START = 151648
-THINK_END = 151649
-EOS = 151643
+# # For QWEN
+# BOS = 151646
+# USER = 151644
+# ASSISTANT = 151645
+# NEWLINE = 198
+# THINK_START = 151648
+# THINK_END = 151649
+# EOS = 151643
 
 # %%
 def calculate_kl_divergence(logits_p, logits_q, temperature=1.0, constant=0, token_wise=True):
@@ -255,7 +263,7 @@ def plot_kl_act_diff_percent_distribution(df):
     plt.show()
     plt.close() # Close the figure
 
-def plot_kl_scatter_comparison(df):
+def plot_kl_scatter_comparison(df, column_name_1='kl_base_ft', column_name_2='kl_base_ft_intervened'):
     """
     Generates a scatter plot comparing KL(Base || FT) vs KL(FT || FT Intervened).
     Uses transparency and small markers to handle potentially large datasets.
@@ -267,19 +275,27 @@ def plot_kl_scatter_comparison(df):
     plt.figure(figsize=(10, 10)) # Square figure is often good for scatter plots
 
     # Define the columns to plot
-    x_col = 'kl_base_ft'
-    y_col = 'kl_ft_ft_intervened'
+    x_col = column_name_1
+    y_col = column_name_2
 
     # Create the scatter plot
     # Use small markers (s) and transparency (alpha) for dense data
-    plt.scatter(df[x_col], df[y_col], alpha=0.3, s=5, label='Per-Example KL Divergence')
+    plt.scatter(df[x_col], df[y_col], alpha=0.1, s=5, label='Per-Example KL Divergence')
 
     # Add an identity line (y=x) for reference
+    # Dynamic limits based on actual plot data
     lims = [
-        np.min([plt.xlim(), plt.ylim()]),  # min of both axes
-        np.max([plt.xlim(), plt.ylim()]),  # max of both axes
+        np.min([df[x_col].min(), df[y_col].min()]),
+        np.max([df[x_col].max(), df[y_col].max()])
     ]
-    plt.plot(lims, lims, 'k--', alpha=0.75, zorder=0, label='y=x line')
+    # Add some padding to limits
+    padding = (lims[1] - lims[0]) * 0.05
+    plot_lims = [lims[0] - padding, lims[1] + padding]
+    plt.xlim(plot_lims)
+    plt.ylim(plot_lims)
+
+    plt.plot(plot_lims, plot_lims, 'k--', alpha=0.75, zorder=0, label='y=x line')
+
 
     # Add labels and title
     plt.xlabel(f"{x_col} (KL Divergence)")
@@ -291,12 +307,89 @@ def plot_kl_scatter_comparison(df):
     plt.tight_layout()
 
     # Save the figure
-    plt.savefig('plots/kl_scatter_comparison.png')
-    plt.show()
+    plt.savefig(f'../plots/kl_scatter_comparison_{column_name_1}_{column_name_2}.png')
+    # plt.show()
+    # plt.close() # Close the figure after showing/saving
+
+def plot_kl_hexbin_comparison(df, x_col='kl_base_ft', y_col='kl_base_ft_intervened'):
+    """
+    Generates a hexagonal binning plot comparing KL(Base || FT) vs KL(Base || FT Intervened).
+
+    Args:
+        df (pd.DataFrame): DataFrame containing KL divergence results with columns
+                           'kl_base_ft' and 'kl_base_ft_intervened'.
+    """
+    plt.figure(figsize=(10, 8)) # Adjusted size slightly for colorbar
+
+    # Create the hexagonal binning plot
+    # Adjust gridsize as needed, added cmap and colorbar
+    # mincnt=1 hides hexagons with 0 count
+    hb = plt.hexbin(df[x_col], df[y_col], gridsize=50, cmap='viridis', mincnt=1)
+    plt.colorbar(hb, label='Point Density') # Add colorbar to show density
+
+    # Determine plot limits based on hexbin boundaries to ensure line covers data
+    x_min, x_max = plt.xlim()
+    y_min, y_max = plt.ylim()
+    plot_lims = [min(x_min, y_min), max(x_max, y_max)]
+
+    # Add an identity line (y=x) for reference
+    plt.plot(plot_lims, plot_lims, 'r--', alpha=0.75, zorder=1, label='y=x line') # Changed color to red for visibility
+
+    # Set limits back after plotting the line to maintain focus on data
+    plt.xlim(x_min, x_max)
+    plt.ylim(y_min, y_max)
+
+    # Add labels and title
+    plt.xlabel(f"{x_col} (KL Divergence)")
+    plt.ylabel(f"{y_col} (KL Divergence)")
+    plt.title(f"Hexagonal Binning Comparison: {y_col} vs {x_col}")
+    plt.legend()
+    plt.grid(True, linestyle='--', alpha=0.6)
+    plt.gca().set_aspect('equal', adjustable='box') # Keep aspect ratio equal
+    plt.tight_layout()
+    plt.savefig(f'../plots/kl_hexbin_comparison_{x_col}_{y_col}.png')
+    plt.close()
+    
+def plot_kl_joint_kde_comparison(df, x_col='kl_base_ft', y_col='kl_base_ft_intervened'):
+    """
+    Generates a joint KDE plot comparing two KL divergence columns,
+    with marginal histograms/KDEs.
+
+    Args:
+        df (pd.DataFrame): DataFrame containing KL divergence results.
+        x_col (str): Name of the column for the x-axis.
+        y_col (str): Name of the column for the y-axis.
+    """
+    # Create the joint plot with KDE in the center and histograms on margins
+    # Use fill=True to shade the KDE areas
+    g = sns.jointplot(data=df, x=x_col, y=y_col, kind="kde", fill=True, cmap="viridis", height=8)
+
+    # Add the identity line (y=x) to the central KDE plot
+    x0, x1 = g.ax_joint.get_xlim()
+    y0, y1 = g.ax_joint.get_ylim()
+    lims = [min(x0, y0), max(x1, y1)]
+    g.ax_joint.plot(lims, lims, 'r--', alpha=0.75, zorder=1, label='y=x line')
+
+    # Ensure the axes remain roughly square for visual comparison
+    g.ax_joint.set_xlim(lims)
+    g.ax_joint.set_ylim(lims)
+    # If strict equal aspect is needed (might distort marginals):
+    # g.ax_joint.set_aspect('equal', adjustable='box')
+
+    # Add a clear overall title
+    g.fig.suptitle(f"Joint KDE Plot Comparison: {y_col} vs {x_col}", y=1.02) # Adjust y for title position
+
+    # Add legend to the joint plot axis
+    g.ax_joint.legend()
+
+    # Save the figure
+    plt.tight_layout(rect=[0, 0, 1, 0.98]) # Adjust layout to make space for suptitle
+    plt.savefig(f'../plots/kl_joint_kde_comparison_{x_col}_{y_col}.png')
+    plt.close(g.fig) # Close the figure associated with the JointGrid object
 
 def get_top_k_examples(df, k, tokenizer):
     # Sort the DataFrame by kl_act_diff_percent in descending order
-    sorted_df = df.sort_values(by='kl_act_diff_percent', ascending=False)
+    sorted_df = df.sort_values(by='kl_base_ft_intervened', ascending=False)
     
     # Get the top k examples
     top_k_examples = sorted_df.head(k)
@@ -310,19 +403,93 @@ def get_top_k_examples(df, k, tokenizer):
         print(f"Error decoding tokens: {e}")
         top_k_examples['decoded_token'] = top_k_examples['encoded_token'].astype(str) # Fallback
 
+    
+    # print(top_k_examples, flush=True)
+    # Iterate and print each row
+    print("Top K Examples:", flush=True)
+    top_k_examples.to_csv(f'../csv_files/top_{k}_examples_kl_base_ft_intervened.csv', index=False)
+    for index, row in top_k_examples.iterrows():
+        print(row.to_string(), flush=True) # Convert row to string for better printing
+
     # Plot the top k examples
     plt.figure(figsize=(10, 10))
     plt.scatter(top_k_examples['kl_base_ft'], top_k_examples['kl_ft_ft_intervened'], alpha=0.3, s=5, label='Per-Example KL Divergence')
     plt.xlabel("KL(Base || FT)")
-    plt.ylabel("KL(FT || FT Intervened)")
-    plt.title(f"Top {k} Examples by KL Activation Difference Percentage")
+    plt.ylabel("KL(Base Reconstructed || FT Reconstructed)")
+    plt.title(f"Top {k} Examples by KL Base Reconstructed || FT Reconstructed")
     plt.legend()
     # save the plot
-    plt.savefig(f'plots/top_{k}_kl_comparison.png')
-    plt.show()
-    plt.close()
+    plt.savefig(f'../plots/top_{k}_kl_comparison.png')
+    # plt.show()
+    # plt.close()
 
     return top_k_examples
+
+
+
+
+def get_frequencies(df, tokenizer, column_name_1='kl_base_ft_intervened', column_name_2='kl_base_ft', top_n=100):
+    # Sort the DataFrame by kl_act_diff_percent in descending order
+    # add new column to df with the difference between the two columns
+    
+    new_column_name = f'kl_diff_{column_name_1}_{column_name_2}'
+    df[new_column_name] = df[column_name_1] - df[column_name_2]
+    # filter new_column_name values with values greater than 0.0
+    df = df[df[new_column_name] > 0.0]
+    # get the frequencies of the appearance of decoded_token in this new df
+        # Decode the tokens
+    # Ensure the tokenizer is accessible (it's defined globally as base_model.tokenizer)
+    try:
+        df['decoded_token'] = df['encoded_token'].apply(
+            lambda token_id: tokenizer.decode([token_id], skip_special_tokens=False)
+        )
+    except Exception as e:
+        print(f"Error decoding tokens: {e}")
+        df['decoded_token'] = df['encoded_token'].astype(str) # Fallback
+    df['decoded_token_escaped'] = df['decoded_token'].str.replace('$', r'\$', regex=False)
+    frequencies = df['decoded_token_escaped'].value_counts()
+    # get the mean of the new_column_name based on decoded_token
+    mean_values = df.groupby('decoded_token_escaped')[new_column_name].mean().reset_index()
+    # make sure the decoded_token is a string
+    mean_values['decoded_token_escaped'] = mean_values['decoded_token_escaped'].astype(str)
+    
+    # Sort frequencies in descending order
+    frequencies = frequencies.sort_values(ascending=False)
+    # put frequencies and related decoded_token_escaped values in a csv file
+    frequencies.to_csv(f'../csv_files/frequencies_{new_column_name}.csv', index='decoded_token_escaped')
+
+    frequencies = frequencies.sort_values(ascending=False).head(top_n)
+    # Align mean_values order with frequencies order (and filter to top N)
+    mean_values = mean_values.set_index('decoded_token_escaped').reindex(frequencies.index).reset_index()
+
+    # plot frequencies and mean values in separate subplots
+    fig, axes = plt.subplots(2, 1, figsize=(15, 12), sharex=True) # Increased figure size, share x-axis
+
+    # Plot Frequencies
+    axes[0].bar(frequencies.index, frequencies.values, label='Frequency')
+    axes[0].set_ylabel('Frequency (Count)')
+    axes[0].set_title(f'Top {top_n} Token Frequencies for {new_column_name} > 0') # Updated title
+    axes[0].legend()
+    axes[0].grid(True, axis='y', linestyle='--', alpha=0.7)
+
+    # Plot Mean Values
+    axes[1].bar(mean_values['decoded_token_escaped'], mean_values[new_column_name], label='Mean Value', color='red', alpha=0.7)
+    axes[1].set_xlabel(f'Top {top_n} Decoded Tokens (Sorted by Frequency)') # Updated label
+    axes[1].set_ylabel(f'Mean {new_column_name}')
+    axes[1].set_title(f'Mean {new_column_name} per Token for Top {top_n} Tokens') # Updated title
+    axes[1].legend()
+    axes[1].grid(True, axis='y', linestyle='--', alpha=0.7)
+    
+    # Rotate x-axis labels for readability
+    plt.xticks(rotation=90)
+    
+    # Adjust layout and save
+    plt.tight_layout() # Adjust layout to prevent overlap
+    plt.savefig(f'../plots/frequencies_and_mean_values_subplots_top_{top_n}_{new_column_name}.png') # Updated filename
+    # plt.show()
+    plt.close(fig) # Close the figure to free memory
+
+
 
 # Example usage (assuming df is loaded elsewhere):
 # plot_kl_scatter_comparison(your_dataframe)
@@ -354,19 +521,56 @@ def get_top_k_examples(df, k, tokenizer):
 #
 #     plt.show()
 
+def update_example_ids_and_save(input_csv_path, output_csv_path):
+    """
+    Reads a CSV, halves the 'example_id', and saves to a new CSV.
 
+    Args:
+        input_csv_path (str): Path to the input CSV file.
+        output_csv_path (str): Path to save the modified CSV file.
+    """
+    try:
+        print(f"Reading input CSV from: {input_csv_path}")
+        df = pd.read_csv(input_csv_path)
+        
+        print("Modifying 'example_id' column...")
+        # Ensure 'example_id' exists and perform integer division by 2
+        if 'example_id' in df.columns:
+            df['example_id'] = df['example_id'] // 2
+        else:
+            print("Warning: 'example_id' column not found in the CSV.")
+            return
+
+        print(f"Saving updated DataFrame to: {output_csv_path}")
+        df.to_csv(output_csv_path, index=False)
+        print("Successfully saved the updated CSV.")
+
+    except FileNotFoundError:
+        print(f"Error: Input CSV file not found at {input_csv_path}")
+    except Exception as e:
+        print(f"An error occurred: {e}")
 
 
 if __name__ == "__main__":
+    input_csv = "../csv_files/full_kl_divergence_results_token_wise.csv"
+    # output_csv = "../csv_files/full_kl_divergence_results_token_wise_updated_ids.csv"
+    # update_example_ids_and_save(input_csv, output_csv)
     #kl_divergence_test(token_wise=True)
     #main()
-    df = pd.read_csv("csv_files/kl_divergence_results_token_wise.csv")
+    df = pd.read_csv(input_csv)
     # Filter the DataFrame
     df = df[df['example_id'] <= 1000]
-    plot_kl_scatter_comparison(df)
-    plot_kl_act_diff_percent_distribution(df)
-    # plot_kl_act_diff_percent_distribution(df)
-    # plot_kl_comparison_histograms(df)
-    # k = top 25% of the dataset    
-    k = int(len(df) * 0.25)
-    get_top_k_examples(df, k=k, tokenizer=ft_model.tokenizer) # Example call with k=20
+    # plot_kl_scatter_comparison(df)
+    # #plot_kl_act_diff_percent_distribution(df)
+    # plot_kl_hexbin_comparison(df) # Add call to the new function
+    # # plot_kl_act_diff_percent_distribution(df)
+    # # plot_kl_comparison_histograms(df)
+    # # k = top 25% of the dataset    
+    # k = int(len(df) * 0.10)
+    # get_top_k_examples(df, k=k, tokenizer=ft_model.tokenizer) # Example call with k=20
+    #get_frequencies(df,tokenizer=ft_model.tokenizer,column_name_1='kl_base_ft_intervened', column_name_2='kl_base_ft', top_n=100)
+    #get_frequencies(df, tokenizer=ft_model.tokenizer,column_name_1='kl_ft_ft_intervened', column_name_2='kl_base_ft', top_n=100)
+    #plot_kl_hexbin_comparison(df, x_col='kl_base_ft', y_col='kl_base_ft_intervened')
+    #plot_kl_hexbin_comparison(df, x_col='kl_base_ft', y_col='kl_ft_ft_intervened')
+    plot_kl_joint_kde_comparison(df, x_col='kl_base_ft', y_col='kl_base_ft_intervened')
+    plot_kl_joint_kde_comparison(df, x_col='kl_base_ft', y_col='kl_ft_ft_intervened')
