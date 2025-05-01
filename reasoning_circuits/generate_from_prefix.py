@@ -78,6 +78,4 @@ else:
     else:
         print("\nResult: The continuation generated from the truncated input DOES NOT MATCH the original continuation.")
 
-# %%
-
-%%
+# %

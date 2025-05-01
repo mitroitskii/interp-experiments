@@ -131,19 +131,20 @@ def generate_and_save(seed, message, model, tokenizer, generation_configs, outpu
 #       "role": "user",
 #       "content": "In a group of 5 people, what's the probability at least 2 were born in the same month?"}
 
-# prompt_3 = {
-#     "role": "user",
-#     "content": "What's the probability of getting exactly one 6 when rolling five dice?"}
+prompt_3 = {
+    "role": "user",
+    "content": "What's the probability of getting exactly one 6 when rolling five dice?"}
 
-prompt_4 = {
-      "role": "user",
-      "content": "What's the sum of all proper divisors of 36?"
-    }
+# prompt_4 = {
+#       "role": "user",
+#       "content": "What's the sum of all proper divisors of 36?"
+#     }
 
 
 # Loop over seeds and run generation
 for seed_val in range(1, 42):  # Seeds 0 to 41
-    generate_and_save(seed_val, prompt_4, model,
+    generate_and_save(seed_val, prompt_3, model,
                       tokenizer, generation_configs, output_dir)
 
 print("\n--- All seeds processed ---")
+# %%
