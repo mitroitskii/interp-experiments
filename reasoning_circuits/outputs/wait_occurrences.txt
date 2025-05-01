@@ -1,0 +1,352 @@
+Occurrences of 'wait' found:
+------------------------------
+prompt_1
+- seed_2
+-- Sampling (DeepSeek recommended)
+-- Sampling (default, top_k=0)
+-- Sampling (temp=0.6)
+-- Sampling (temp=1.0)
+- seed_7
+-- Sampling (temp=1.0)
+- seed_9
+-- Sampling (DeepSeek recommended)
+-- Sampling (default, top_k=0)
+-- Sampling (temp=0.6)
+-- Sampling (temp=1.0)
+- seed_11
+-- Sampling (DeepSeek recommended)
+-- Sampling (default, top_k=0)
+-- Sampling (temp=0.6)
+-- Sampling (temp=1.0)
+- seed_12
+-- Sampling (temp=1.0)
+- seed_13
+-- Sampling (DeepSeek recommended)
+-- Sampling (default, top_k=0)
+-- Sampling (temp=0.6)
+-- Sampling (temp=1.0)
+- seed_17
+-- Sampling (DeepSeek recommended)
+-- Sampling (default, top_k=0)
+-- Sampling (temp=0.6)
+-- Sampling (temp=1.0)
+- seed_22
+-- Sampling (DeepSeek recommended)
+-- Sampling (default, top_k=0)
+-- Sampling (temp=0.6)
+- seed_24
+-- Sampling (temp=1.0)
+- seed_27
+-- Sampling (DeepSeek recommended)
+-- Sampling (default, top_k=0)
+-- Sampling (temp=0.6)
+-- Sampling (temp=1.0)
+- seed_29
+-- Sampling (DeepSeek recommended)
+-- Sampling (default, top_k=0)
+-- Sampling (temp=0.6)
+-- Sampling (temp=1.0)
+- seed_35
+-- Sampling (DeepSeek recommended)
+-- Sampling (default, top_k=0)
+-- Sampling (temp=0.6)
+-- Sampling (temp=1.0)
+- seed_38
+-- Sampling (DeepSeek recommended)
+-- Sampling (default, top_k=0)
+-- Sampling (temp=0.6)
+-- Sampling (temp=1.0)
+- seed_39
+-- Sampling (temp=1.0)
+- seed_41
+-- Sampling (DeepSeek recommended)
+-- Sampling (default, top_k=0)
+-- Sampling (temp=0.6)
+------------------------------
+prompt_2
+- seed_1
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_2
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_3
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_4
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_5
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_6
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_7
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_8
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_9
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_10
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_11
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_12
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_13
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_14
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_15
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_16
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_17
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_18
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_19
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_20
+-- Sampling (DeepSeek recommended)
+- seed_21
+-- Sampling (DeepSeek recommended)
+- seed_22
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_23
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_24
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_25
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_26
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_27
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_28
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_29
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_30
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_31
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_32
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_33
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_34
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_35
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_36
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_37
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_38
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_39
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_40
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_41
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+------------------------------
+prompt_3
+- seed_1
+-- Sampling (DeepSeek recommended)
+- seed_2
+-- Sampling (DeepSeek recommended)
+- seed_3
+-- Sampling (DeepSeek recommended)
+- seed_4
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_5
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_6
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_7
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_8
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_9
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_10
+-- Sampling (temp=1.0)
+- seed_11
+-- Sampling (temp=1.0)
+- seed_12
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_13
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_14
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_15
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_16
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_17
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_18
+-- Sampling (DeepSeek recommended)
+- seed_19
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_20
+-- Sampling (DeepSeek recommended)
+- seed_21
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_22
+-- Sampling (temp=1.0)
+- seed_23
+-- Sampling (DeepSeek recommended)
+- seed_24
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_25
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_26
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_27
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_28
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_29
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_30
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_31
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_32
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_33
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_34
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_35
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_36
+-- Sampling (DeepSeek recommended)
+- seed_37
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_38
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_39
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_40
+-- Sampling (DeepSeek recommended)
+- seed_41
+-- Sampling (temp=1.0)
+------------------------------
+prompt_4
+- seed_2
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_7
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_8
+-- Sampling (temp=1.0)
+- seed_9
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_10
+-- Sampling (temp=1.0)
+- seed_11
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_12
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_13
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_17
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_24
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_27
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_29
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_32
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_34
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_35
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_38
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+- seed_41
+-- Sampling (DeepSeek recommended)
+-- Sampling (temp=1.0)
+------------------------------

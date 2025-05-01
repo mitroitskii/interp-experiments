@@ -1,0 +1,466 @@
+{
+  "prompt_1": {
+    "seed_2": [
+      "Sampling (default, top_k=0)",
+      "Sampling (temp=0.6)",
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_7": [
+      "Sampling (temp=1.0)"
+    ],
+    "seed_9": [
+      "Sampling (default, top_k=0)",
+      "Sampling (temp=0.6)",
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_11": [
+      "Sampling (default, top_k=0)",
+      "Sampling (temp=0.6)",
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_12": [
+      "Sampling (temp=1.0)"
+    ],
+    "seed_13": [
+      "Sampling (default, top_k=0)",
+      "Sampling (temp=0.6)",
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_17": [
+      "Sampling (default, top_k=0)",
+      "Sampling (temp=0.6)",
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_22": [
+      "Sampling (default, top_k=0)",
+      "Sampling (temp=0.6)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_24": [
+      "Sampling (temp=1.0)"
+    ],
+    "seed_27": [
+      "Sampling (default, top_k=0)",
+      "Sampling (temp=0.6)",
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_29": [
+      "Sampling (default, top_k=0)",
+      "Sampling (temp=0.6)",
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_35": [
+      "Sampling (default, top_k=0)",
+      "Sampling (temp=0.6)",
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_38": [
+      "Sampling (default, top_k=0)",
+      "Sampling (temp=0.6)",
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_39": [
+      "Sampling (temp=1.0)"
+    ],
+    "seed_41": [
+      "Sampling (default, top_k=0)",
+      "Sampling (temp=0.6)",
+      "Sampling (DeepSeek recommended)"
+    ]
+  },
+  "prompt_4": {
+    "seed_2": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_7": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_8": [
+      "Sampling (temp=1.0)"
+    ],
+    "seed_9": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_10": [
+      "Sampling (temp=1.0)"
+    ],
+    "seed_11": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_12": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_13": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_17": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_24": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_27": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_29": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_32": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_34": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_35": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_38": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_41": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ]
+  },
+  "prompt_2": {
+    "seed_1": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_2": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_3": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_4": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_5": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_6": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_7": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_8": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_9": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_10": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_11": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_12": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_13": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_14": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_15": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_16": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_17": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_18": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_19": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_20": [
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_21": [
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_22": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_23": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_24": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_25": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_26": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_27": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_28": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_29": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_30": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_31": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_32": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_33": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_34": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_35": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_36": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_37": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_38": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_39": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_40": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_41": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ]
+  },
+  "prompt_3": {
+    "seed_1": [
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_2": [
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_3": [
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_4": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_5": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_6": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_7": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_8": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_9": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_10": [
+      "Sampling (temp=1.0)"
+    ],
+    "seed_11": [
+      "Sampling (temp=1.0)"
+    ],
+    "seed_12": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_13": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_14": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_15": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_16": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_17": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_18": [
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_19": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_20": [
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_21": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_22": [
+      "Sampling (temp=1.0)"
+    ],
+    "seed_23": [
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_24": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_25": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_26": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_27": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_28": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_29": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_30": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_31": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_32": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_33": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_34": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_35": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_36": [
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_37": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_38": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_39": [
+      "Sampling (temp=1.0)",
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_40": [
+      "Sampling (DeepSeek recommended)"
+    ],
+    "seed_41": [
+      "Sampling (temp=1.0)"
+    ]
+  }
+}
