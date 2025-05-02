@@ -18,17 +18,18 @@ TT = TypeVar("TT")
 
 # %%
 # --- Constants ---
-BATCH_SIZE = 16
+BATCH_SIZE = 24
 
 GENERATION_SEED = 3
 INIT_SEED = 42
 
-DATA_PATH = "/disk/u/troitskiid/projects/interp-experiments/reasoning_circuits/outputs/wait_subsequences.json"
+# DATA_PATH = "/disk/u/troitskiid/projects/interp-experiments/reasoning_circuits/outputs/wait_subsequences_from_outputs.json"
+DATA_PATH = "/disk/u/troitskiid/projects/interp-experiments/reasoning_circuits/data/wait_subsequences_from_data.json"
 SAVE_PATH = "/disk/u/troitskiid/projects/interp-experiments/reasoning_circuits/results"
 
 MODEL_NAME = "deepseek-ai/DeepSeek-R1-Distill-Llama-8B"
 
-SAE_LAYER = 23
+SAE_LAYER = 7
 SAE_DEVICE = "cuda:3"
 RELEASE = "llama_scope_r1_distill"
 SAE_ID = f"l{SAE_LAYER}r_400m_slimpajama_400m_openr1_math"
@@ -132,8 +133,6 @@ print(
 
 # %%
 # --- Define Metric Function ---
-
-
 def mean_multi_target_log_prob_metric(logits: torch.Tensor, target_token_ids: torch.Tensor) -> torch.Tensor:
     """
     Calculates the mean log probability of a set of target tokens
@@ -199,9 +198,8 @@ def compute_sae_attribution(model: LanguageModel, sae: SAE, tokens: torch.Tensor
                 hidden_state_grad,  # (batch, seq, d_model)
                 "d_sae d_model, batch seq d_model -> batch seq d_sae",
             )
-            * (sae_latents - 
-            )  # (batch, seq, d_sae)
-        ).save()  # Final shape: (batch, seq, d_sae)
+            * (sae_latents - baseline)  # (batch, seq, d_sae)
+            ).save()  # (batch, seq, d_sae)  # Final shape: (batch, seq, d_sae)
 
         # Backpropagate to compute the gradients of the metric w.r.t. the latents
         metric_value.backward()
@@ -330,7 +328,8 @@ else:
 # %%
 # --- Save Results ---
 # Save the last token attribution
-save_path = f"{SAVE_PATH}/sae_attributions_zero_baseline_l{SAE_LAYER}.pt"
+# save_path = f"{SAVE_PATH}/sae_attributions_zero_baseline_l{SAE_LAYER}_outputs.pt"
+save_path = f"{SAVE_PATH}/sae_attributions_zero_baseline_l{SAE_LAYER}_data.pt"
 save_dir = os.path.dirname(save_path)
 os.makedirs(save_dir, exist_ok=True)
 

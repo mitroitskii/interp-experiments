@@ -18,12 +18,13 @@ TT = TypeVar("TT")
 
 # %%
 # --- Constants ---
-BATCH_SIZE = 16
+BATCH_SIZE = 24
 
 GENERATION_SEED = 3
 INIT_SEED = 42
 
-DATA_PATH = "/disk/u/troitskiid/projects/interp-experiments/reasoning_circuits/outputs/wait_subsequences.json"
+# DATA_PATH = "/disk/u/troitskiid/projects/interp-experiments/reasoning_circuits/outputs/wait_subsequences_from_outputs.json"
+DATA_PATH = "/disk/u/troitskiid/projects/interp-experiments/reasoning_circuits/data/wait_subsequences_from_data.json"
 SAVE_PATH = "/disk/u/troitskiid/projects/interp-experiments/reasoning_circuits/results"
 
 FT_MODEL_NAME = "deepseek-ai/DeepSeek-R1-Distill-Llama-8B"
@@ -343,7 +344,8 @@ else:
 # %%
 # --- Save Results ---
 # Save the last token attribution
-save_path = f"{SAVE_PATH}/sae_attributions_base-model_baseline_l{SAE_LAYER}.pt"
+# save_path = f"{SAVE_PATH}/sae_attributions_base-model_baseline_l{SAE_LAYER}_outputs.pt"
+save_path = f"{SAVE_PATH}/sae_attributions_base-model_baseline_l{SAE_LAYER}_data.pt"
 save_dir = os.path.dirname(save_path)
 os.makedirs(save_dir, exist_ok=True)
 
