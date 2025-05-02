@@ -176,3 +176,19 @@ evaluations/
 
 # Misc
 .DS_Store
+
+# Pickle files
+*.pkl
+*.pickle
+*.pickle.gz
+*.pickle.bz2
+*.pickle.zip
+*.pickle.tar
+
+# PyTorch
+*.pt
+*.pth
+*.pt.gz
+*.pth.gz
+*.pt.bz2
+*.pth.bz2
