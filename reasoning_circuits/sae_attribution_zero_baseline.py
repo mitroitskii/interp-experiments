@@ -174,6 +174,7 @@ def compute_sae_attribution(model: LanguageModel, sae: SAE, tokens: torch.Tensor
     with model.trace(tokens, kwargs={'attention_mask': attention_mask}):
         layer = model.model.layers[sae_layer_idx]
         hidden_state = layer.output[0]  # Shape: (batch, seq, d_model)
+        hidden_state = hidden_state[~attention_mask]
         hidden_state_grad = hidden_state.grad  # Shape: (batch, seq, d_model)
 
         # Ensure hidden state is on the correct device for SAE
