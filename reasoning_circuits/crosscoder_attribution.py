@@ -12,13 +12,13 @@ import torch.nn.functional as F
 import nnsight as ns
 from nnsight import LanguageModel
 from transformers import AutoTokenizer, set_seed
-from dictionary_learning import CrossCoder
+from dictionary_learning import BatchTopKCrossCoder, CrossCoder
 
 TT = TypeVar("TT")
 
 # %%
 # --- Constants ---
-BATCH_SIZE = 24
+BATCH_SIZE = 8
 
 GENERATION_SEED = 3
 INIT_SEED = 42
@@ -30,9 +30,11 @@ SAVE_PATH = "/disk/u/troitskiid/projects/interp-experiments/reasoning_circuits/r
 FT_MODEL_NAME = "deepseek-ai/DeepSeek-R1-Distill-Llama-8B"
 BASE_MODEL_NAME = "meta-llama/Meta-Llama-3.1-8B"
 
+# CROSSCODER_TYPE = "L1"
+CROSSCODER_TYPE = "BatchTopK"
 CROSSCODER_LAYER = 23
-CROSSCODER_DEVICE = "cuda:7"
-CROSSCODER_PATH = f"/disk/u/troitskiid/projects/science-of-finetuning/checkpoints/L1-Crosscoder/L{CROSSCODER_LAYER}R/cc_weights.pt"
+CROSSCODER_DEVICE = "cuda:0"
+CROSSCODER_PATH = f"/disk/u/troitskiid/data/checkpoints/{CROSSCODER_TYPE}-Crosscoder/L{CROSSCODER_LAYER}R/cc_weights.pt"
 
 BASELINE = 0
 
@@ -63,7 +65,12 @@ set_seed(INIT_SEED)
 print(
     f"Loading {'/'.join(CROSSCODER_PATH.split('/')[-3:-2])} for layer {CROSSCODER_LAYER}...")
 
-crosscoder = CrossCoder.from_pretrained(
+if CROSSCODER_TYPE == "BatchTopK":
+    cc = BatchTopKCrossCoder
+else:
+    cc = CrossCoder
+
+crosscoder = cc.from_pretrained(
     path=CROSSCODER_PATH,
     dtype=torch.bfloat16,
     device=CROSSCODER_DEVICE,
@@ -312,6 +319,7 @@ else:
 del all_crosscoder_attributions
 gc.collect()
 
+
 # %%
 # --- Results & Analysis ---
 # Use the last token attribution for analysis
@@ -325,7 +333,7 @@ analysis_tensor = crosscoder_attribution_last_token.cpu(
 
 if analysis_tensor.numel() > 0:
     # Sum attribution over the batch dimension
-    total_attribution_per_latent = analysis_tensor.sum(
+    total_attribution_per_latent = analysis_tensor.mean(
         dim=0)  # Shape: (d_crosscoder)
     k = 50  # Number of top/bottom latents to find
     num_latents = total_attribution_per_latent.shape[0]
@@ -338,15 +346,17 @@ if analysis_tensor.numel() > 0:
 
         print(
             f"\nTop {num_to_show} attribution latents (summed over batch for last token, descending):")
+        top_latents_data = []
         for i in range(num_to_show):
             idx = top_attr_indices[i].item()
             val = top_attr_values[i].item()
             print(f"  Latent {idx}: Attribution = {val:.4f}")
+            top_latents_data.append({"index": idx, "value": val})
 
         # Print top indices in the requested format
         top_indices_list = top_attr_indices.cpu().tolist()
         print(
-            f"\nl{CROSSCODER_LAYER}_top_{num_to_show}_descending = {top_indices_list}")
+            f"\nl{CROSSCODER_LAYER}_top_{num_to_show}_descending_indices = {top_indices_list}")
 
         # --- Bottom K (Ascending) ---
         bottom_attr_values, bottom_attr_indices = torch.topk(
@@ -354,16 +364,32 @@ if analysis_tensor.numel() > 0:
 
         print(
             f"\nBottom {num_to_show} attribution latents (summed over batch for last token, ascending):")
+        bottom_latents_data = []
         # torch.topk with largest=False returns the k smallest elements, sorted ascendingly
         for i in range(num_to_show):
             idx = bottom_attr_indices[i].item()
             val = bottom_attr_values[i].item()
             print(f"  Latent {idx}: Attribution = {val:.4f}")
+            bottom_latents_data.append({"index": idx, "value": val})
 
         # Print bottom indices in the requested format
         bottom_indices_list = bottom_attr_indices.cpu().tolist()
         print(
-            f"\nl{CROSSCODER_LAYER}_bottom_{num_to_show}_ascending = {bottom_indices_list}")
+            f"\nl{CROSSCODER_LAYER}_bottom_{num_to_show}_ascending_indices = {bottom_indices_list}")
+
+        # --- Save to JSON ---
+        json_save_path = f"{SAVE_PATH}/{CROSSCODER_TYPE}-Crosscoder/crosscoder_attributions_l{CROSSCODER_LAYER}_mean_last_token_data.json"
+        json_save_dir = os.path.dirname(json_save_path)
+        os.makedirs(json_save_dir, exist_ok=True)
+
+        data_to_save = {
+            "top": top_latents_data,
+            "bottom": bottom_latents_data
+        }
+
+        with open(json_save_path, "w") as f:
+            json.dump(data_to_save, f, indent=4)
+        print(f"\nSaved top/bottom latents with values to {json_save_path}")
 
     else:
         print("\nNot enough latents to show top/bottom k.")
@@ -374,8 +400,9 @@ else:
 # %%
 # --- Save Results ---
 # Save the last token attribution
+
 # save_path = f"{SAVE_PATH}/crosscoder_attributions_l{CROSSCODER_LAYER}_outputs.pt"
-save_path = f"{SAVE_PATH}/crosscoder_attributions_l{CROSSCODER_LAYER}_data.pt"
+save_path = f"{SAVE_PATH}/{CROSSCODER_TYPE}-Crosscoder/crosscoder_attributions_l{CROSSCODER_LAYER}_data.pt"
 save_dir = os.path.dirname(save_path)
 os.makedirs(save_dir, exist_ok=True)
 
