@@ -4,7 +4,6 @@ import re
 import json
 
 # %%
-
 # --- Constants ---
 # Get the current working directory (where the script is executed)
 CURRENT_WORKING_DIR = os.getcwd()
@@ -20,7 +19,7 @@ OUTPUT_JSON_PATH = os.path.join(CURRENT_WORKING_DIR, RESULTS_FILENAME)
 
 WAIT_WORD_PATTERN = r'\bwait\b'
 
-
+# %%
 def find_wait_in_json(input_json_path):
     """
     Scans a JSON file containing a list of objects. For objects where
@@ -129,9 +128,10 @@ def main():
         save_results_to_json(wait_occurrences_list, OUTPUT_JSON_PATH)
 
 # %%
-
-
 if __name__ == "__main__":
     main()
+
+# %%
+
 
 # %%
