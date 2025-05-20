@@ -7,7 +7,7 @@ from transformers import AutoTokenizer
 # --- Constants ---
 MODEL_NAME = "deepseek-ai/DeepSeek-R1-Distill-Llama-8B"
 # Updated input path to match the output of the previous script
-INPUT_JSON_PATH = "wait_occurrences_from_data.json"
+INPUT_JSON_PATH = "wait_occurrences_from_data_manually_cleaned.json"
 # Updated output path name for clarity
 OUTPUT_JSON_PATH = "wait_subsequences_from_data.json"
 TOKENS_TO_CHECK = ["wait", "Wait", " wait", " Wait"]
@@ -116,7 +116,7 @@ def main():
     for entry_index, entry in enumerate(data):
         # Use 'response' instead of 'output'
         original_response = entry.get('response')
-        w = entry.get('question')  # Get question
+        original_question = entry.get('question')  # Get question
 
         # Basic validation for the entry structure
         if not isinstance(original_response, str) or not isinstance(original_question, str):
@@ -142,6 +142,7 @@ def main():
                 # Subsequence ends *before* the wait token
                 subsequence = token_ids[0:i]
                 all_subsequences.append({
+                    'index': processed_count,
                     'original_entry_index': entry_index,
                     # Add 'question' field
                     'question': original_question,
@@ -150,11 +151,11 @@ def main():
                     'wait_token_index_in_response': i,  # Clarified field name
                     'subsequence_tokens': subsequence
                 })
+                processed_count += 1
             elif i == 0:
                 print(
                     f"Info: Wait token found at index 0 for entry {entry_index}. No preceding subsequence generated.")
 
-        processed_count += 1
         if processed_count % 100 == 0:  # Progress indicator
             print(f"Processed {processed_count} entries...")
 
