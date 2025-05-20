@@ -10,14 +10,17 @@ TT = TypeVar("TT")
 
 # %%
 # --- Constants ---
-SAMPLE_INDEX = 16
+SAMPLE_INDEX = 0  # see `index` in `wait_subsequences` to find the index of the subsequence sample
 K = 50  # Number of top/bottom latents for the specific sample
 
-CROSSCODER_LAYER = 7
+DATA_SOURCE = "outputs"
+# DATA_SOURCE = "data"
+
+CROSSCODER_LAYER = 23
 CROSSCODER_TYPE = "BatchTopK"
 # CROSSCODER_TYPE = "L1"
 SAVE_PATH = "."
-ATTRIBUTIONS_TENSOR_PATH = f"{CROSSCODER_TYPE}-Crosscoder/crosscoder_attributions_l{CROSSCODER_LAYER}_data.pt"
+ATTRIBUTIONS_TENSOR_PATH = f"{CROSSCODER_TYPE}-Crosscoder/L{CROSSCODER_LAYER}R/attributions_{DATA_SOURCE}.pt"
 
 # %%
 # --- Load Attributions ---
@@ -84,7 +87,7 @@ if analysis_tensor.numel() > 0 and analysis_tensor.shape[0] > SAMPLE_INDEX:
             f"\nl{CROSSCODER_LAYER}_sample{SAMPLE_INDEX}_bottom_{num_to_show_sample}_ascending = {bottom_indices_list_sample}")
 
         # --- Save to JSON for sample ---
-        json_save_path = f"{SAVE_PATH}/{CROSSCODER_TYPE}-Crosscoder/crosscoder_attributions_l{CROSSCODER_LAYER}_sample{SAMPLE_INDEX}_last_token_data.json"
+        json_save_path = f"{SAVE_PATH}/{CROSSCODER_TYPE}-Crosscoder/L{CROSSCODER_LAYER}R/attributions_sample{SAMPLE_INDEX}_last_token_{DATA_SOURCE}.json"
         json_save_dir = os.path.dirname(json_save_path)
         os.makedirs(json_save_dir, exist_ok=True)
 
