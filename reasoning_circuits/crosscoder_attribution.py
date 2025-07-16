@@ -18,17 +18,43 @@ TT = TypeVar("TT")
 
 # %%
 # --- Constants ---
-BATCH_SIZE = 8
+BATCH_SIZE = 4
 
 GENERATION_SEED = 3
 INIT_SEED = 42
 
-# DATA_PATH = "/disk/u/troitskiid/projects/interp-experiments/reasoning_circuits/outputs/wait_subsequences_from_outputs.json"
-DATA_PATH = "/disk/u/troitskiid/projects/interp-experiments/reasoning_circuits/data/wait_subsequences_from_data.json"
+DATA_SOURCE = "outputs"
+# DATA_SOURCE = "data"
+
+DATA_PATH = "/disk/u/troitskiid/projects/interp-experiments/reasoning_circuits/outputs/wait_subsequences_from_outputs.json"
+# DATA_PATH = "/disk/u/troitskiid/projects/interp-experiments/reasoning_circuits/data/wait_subsequences_from_data.json"
 SAVE_PATH = "/disk/u/troitskiid/projects/interp-experiments/reasoning_circuits/results"
 
-FT_MODEL_NAME = "deepseek-ai/DeepSeek-R1-Distill-Llama-8B"
-BASE_MODEL_NAME = "meta-llama/Meta-Llama-3.1-8B"
+# --- Model Identifiers ---
+REASONING_MODEL_ID = "deepseek-ai/DeepSeek-R1-Distill-Llama-8B"
+ORIGINAL_BASE_MODEL_ID = "meta-llama/Meta-Llama-3.1-8B"
+
+# --- Configuration for current run ---
+# Model to perform attribution on
+# ATTRIBUTION_MODEL_CONFIG_ID = REASONING_MODEL_ID
+ATTRIBUTION_MODEL_CONFIG_ID = ORIGINAL_BASE_MODEL_ID  # For next run with base model
+
+# Model to use as the first input ('reference') for the CrossCoder
+# This is typically the model the CrossCoder's first input head was trained on.
+CROSSCODER_REFERENCE_MODEL_CONFIG_ID = ORIGINAL_BASE_MODEL_ID
+
+# Short name for the attribution model, used in save paths
+if ATTRIBUTION_MODEL_CONFIG_ID == REASONING_MODEL_ID:
+    ATTRIBUTION_MODEL_SHORT_NAME = "Reasoning"
+elif ATTRIBUTION_MODEL_CONFIG_ID == ORIGINAL_BASE_MODEL_ID:
+    ATTRIBUTION_MODEL_SHORT_NAME = "Base"
+else:
+    # Fallback if a different model ID is used directly
+    ATTRIBUTION_MODEL_SHORT_NAME = ATTRIBUTION_MODEL_CONFIG_ID.split(
+        '/')[-1].replace('-', '_')
+
+# Model to load tokenizer from (usually compatible one, e.g., reasoning model's)
+TOKENIZER_MODEL_ID = REASONING_MODEL_ID
 
 # CROSSCODER_TYPE = "L1"
 CROSSCODER_TYPE = "BatchTopK"
@@ -44,20 +70,28 @@ random.seed(INIT_SEED)
 torch.manual_seed(INIT_SEED)
 set_seed(INIT_SEED)
 
-print(f"Loading model {FT_MODEL_NAME}...")
-model = LanguageModel(
-    FT_MODEL_NAME, device_map="auto", torch_dtype=torch.bfloat16)
-base_model = LanguageModel(
-    BASE_MODEL_NAME, device_map="auto", torch_dtype=torch.bfloat16)
+print(f"Loading model for attribution: {ATTRIBUTION_MODEL_CONFIG_ID}...")
+attribution_model_loaded = LanguageModel(
+    ATTRIBUTION_MODEL_CONFIG_ID, device_map="auto", torch_dtype=torch.bfloat16)
+
+if ATTRIBUTION_MODEL_CONFIG_ID == CROSSCODER_REFERENCE_MODEL_CONFIG_ID:
+    crosscoder_reference_model_loaded = attribution_model_loaded
+    print(f"Using attribution model as crosscoder reference model.")
+else:
+    print(
+        f"Loading crosscoder reference model: {CROSSCODER_REFERENCE_MODEL_CONFIG_ID}...")
+    crosscoder_reference_model_loaded = LanguageModel(
+        CROSSCODER_REFERENCE_MODEL_CONFIG_ID, device_map="auto", torch_dtype=torch.bfloat16)
+
 tokenizer = AutoTokenizer.from_pretrained(
-    FT_MODEL_NAME,
+    TOKENIZER_MODEL_ID,  # Using the specified model's tokenizer
     use_fast=True,
     add_bos_token=True,
 )
 print("Models and Tokenizer loaded.")
 
 # %%
-# --- Load CROSSCODER (from test_crosscoder.py) ---
+# --- Load CROSSCODER ---
 random.seed(INIT_SEED)
 torch.manual_seed(INIT_SEED)
 set_seed(INIT_SEED)
@@ -157,19 +191,21 @@ def mean_multi_target_log_prob_metric(logits: torch.Tensor, target_token_ids: to
     multi_target_log_probs = log_probs[:, target_token_ids]
     log_sum_exp_probs_per_item = torch.logsumexp(
         multi_target_log_probs, dim=-1)
+    # mean here leads to the same results as sum in terms of relative ordering of attribution scores ->
+    # using mean simply scales all gradients by 1/batch_size compared to sum, preserving relative feature importance
     return log_sum_exp_probs_per_item.mean()
 
 # --- Define CROSSCODER Attribution Computation Function  ---
 
 
-def compute_crosscoder_attribution(ft_model: LanguageModel, base_model: LanguageModel, baseline: float, crosscoder: CrossCoder, tokens: torch.Tensor, attention_mask: torch.Tensor, metric_fn: Callable, crosscoder_layer_idx: int) -> torch.Tensor:
+def compute_crosscoder_attribution(attribution_model: LanguageModel, reference_model: LanguageModel, baseline: float, crosscoder: CrossCoder, tokens: torch.Tensor, attention_mask: torch.Tensor, metric_fn: Callable, crosscoder_layer_idx: int) -> torch.Tensor:
     """
     Computes crosscoder latent attribution using nnsight by taking gradients w.r.t. crosscoder latents.
     The metric is applied to the last token, but attribution is calculated across all sequence positions.
 
     Args:
-        ft_model: The distilled model.
-        base_model: The base model.
+        attribution_model: The model on which attribution is performed and whose output is used for the metric.
+        reference_model: The model providing the 'base' activations for the first input of the crosscoder.
         crosscoder: The loaded crosscoder model.
         tokens: Input tokens tensor (input_ids).
         attention_mask: Attention mask tensor (shape: batch, seq).
@@ -182,7 +218,7 @@ def compute_crosscoder_attribution(ft_model: LanguageModel, base_model: Language
                       token position, shape (batch_size, seq_len, d_crosscoder).
     """
     print(
-        f"Starting nnsight trace for layer {crosscoder_layer_idx} ...")
+        f"Starting nnsight trace for layer {crosscoder_layer_idx} on model {attribution_model.model_key} (reference: {reference_model.model_key})...")
     # Pass both tokens (as input_ids) and attention_mask to trace
     # nnsight passes these kwargs to the model's forward method
 
@@ -191,24 +227,28 @@ def compute_crosscoder_attribution(ft_model: LanguageModel, base_model: Language
     batch_size = tokens.shape[0]
     seq_len = tokens.shape[1]
 
-    with base_model.trace(tokens, kwargs={'attention_mask': attention_mask}):
-        layer = base_model.model.layers[crosscoder_layer_idx]
-        hidden_state = layer.output[0]  # Shape: (batch, seq, d_model)
-        base_hidden_state = hidden_state.save()
+    with reference_model.trace(tokens, kwargs={'attention_mask': attention_mask}):
+        layer_ref = reference_model.model.layers[crosscoder_layer_idx]
+        hidden_state_ref = layer_ref.output[0]  # Shape: (batch, seq, d_model)
+        reference_model_hidden_state_for_crosscoder = hidden_state_ref.save()
 
-    base_hidden_state = base_hidden_state.to(CROSSCODER_DEVICE)
+    reference_model_hidden_state_for_crosscoder = reference_model_hidden_state_for_crosscoder.to(
+        CROSSCODER_DEVICE)
 
-    with ft_model.trace(tokens, kwargs={'attention_mask': attention_mask}):
+    with attribution_model.trace(tokens, kwargs={'attention_mask': attention_mask}):
 
-        layer = ft_model.model.layers[crosscoder_layer_idx]
-        hidden_state = layer.output[0]  # Shape: (batch, seq, d_model)
-        hidden_state_grad = hidden_state.grad  # Shape: (batch, seq, d_model)
+        layer_attr = attribution_model.model.layers[crosscoder_layer_idx]
+        # Shape: (batch, seq, d_model)
+        hidden_state_attr = layer_attr.output[0]
+        # Shape: (batch, seq, d_model)
+        hidden_state_attr_grad = hidden_state_attr.grad
 
-        ft_hidden_state = hidden_state.to(CROSSCODER_DEVICE)
+        attribution_model_hidden_state_for_crosscoder = hidden_state_attr.to(
+            CROSSCODER_DEVICE)
         # Stack along a new dimension (n_models=2)
         # Shape: (batch_size, 2, seq_len, d_model)
         hidden_states_stack = torch.stack(
-            [base_hidden_state, ft_hidden_state], dim=1)
+            [reference_model_hidden_state_for_crosscoder, attribution_model_hidden_state_for_crosscoder], dim=1)
 
         # Reshape for crosscoder.encode: Combine batch and sequence dimensions
         # Shape: (batch_size * seq_len, 2, d_model)
@@ -224,11 +264,12 @@ def compute_crosscoder_attribution(ft_model: LanguageModel, base_model: Language
             crosscoder_latents_flat, '(batch seq) d_crosscoder -> batch seq d_crosscoder', batch=batch_size, seq=seq_len)
 
         # Operates on (batch, seq, d_model)
-        hidden_state_grad[~attention_mask] = 0
+        hidden_state_attr_grad[~attention_mask] = 0
         # Operates on (batch, seq, d_crosscoder)
         crosscoder_latents[~attention_mask] = 0
 
-        output_logits = model.output.logits
+        # Use logits from the attribution_model
+        output_logits = attribution_model.output.logits
         # Metric calculated on last token logits
         metric_value = ns.apply(metric_fn, output_logits)
 
@@ -237,13 +278,13 @@ def compute_crosscoder_attribution(ft_model: LanguageModel, base_model: Language
         # but the attribution is computed across all positions using the gradient at each position.
 
         # Select the decoder weights for the second model (index 1, assuming 0 is base, 1 is ft)
-        decoder_weight_ft = crosscoder.decoder.weight[1]
+        decoder_weight_for_second_input = crosscoder.decoder.weight[1]
         # Shape: (d_crosscoder, d_model)
 
         attribution = (
             einops.einsum(
-                decoder_weight_ft,
-                hidden_state_grad,
+                decoder_weight_for_second_input,
+                hidden_state_attr_grad,  # Gradient from the attribution_model's hidden state
                 "d_crosscoder d_model, batch seq d_model -> batch seq d_crosscoder",
             )
             * (crosscoder_latents - baseline)  # (batch, seq, d_crosscoder)
@@ -286,8 +327,14 @@ for i in range(0, num_sequences, BATCH_SIZE):
     set_seed(GENERATION_SEED)
 
     batch_crosscoder_attribution = compute_crosscoder_attribution(
-        base_model=base_model, ft_model=model, baseline=BASELINE, crosscoder=crosscoder, tokens=batch_tokens, attention_mask=batch_attention_mask,
-        metric_fn=metric_fn_prepared, crosscoder_layer_idx=CROSSCODER_LAYER
+        attribution_model=attribution_model_loaded,
+        reference_model=crosscoder_reference_model_loaded,
+        baseline=BASELINE,
+        crosscoder=crosscoder,
+        tokens=batch_tokens,
+        attention_mask=batch_attention_mask,
+        metric_fn=metric_fn_prepared,
+        crosscoder_layer_idx=CROSSCODER_LAYER
     )
 
     print(f"Batch {i // BATCH_SIZE + 1} completed.\n")
@@ -326,6 +373,14 @@ gc.collect()
 print(f"\n--- Results (Last Token Attributions) ---")
 print(
     f"Last Token CROSSCODER Attribution shape: {crosscoder_attribution_last_token.shape}")
+
+# Define base directory for saving results, including model and layer
+model_specific_results_dir = f"{SAVE_PATH}/{CROSSCODER_TYPE}-Crosscoder/L{CROSSCODER_LAYER}R/{ATTRIBUTION_MODEL_SHORT_NAME}"
+os.makedirs(model_specific_results_dir, exist_ok=True)
+print(f"Results will be saved in: {model_specific_results_dir}")
+
+# Define the prefix for attribution result files (JSON and PT)
+results_file_prefix = f"{model_specific_results_dir}/attributions"
 
 # Analyze top attributing latents (summed/averaged over batch dimension only)
 analysis_tensor = crosscoder_attribution_last_token.cpu(
@@ -378,9 +433,9 @@ if analysis_tensor.numel() > 0:
             f"\nl{CROSSCODER_LAYER}_bottom_{num_to_show}_ascending_indices = {bottom_indices_list}")
 
         # --- Save to JSON ---
-        json_save_path = f"{SAVE_PATH}/{CROSSCODER_TYPE}-Crosscoder/crosscoder_attributions_l{CROSSCODER_LAYER}_mean_last_token_data.json"
-        json_save_dir = os.path.dirname(json_save_path)
-        os.makedirs(json_save_dir, exist_ok=True)
+        json_save_path = f"{results_file_prefix}_mean_last_token_{DATA_SOURCE}.json"
+        # json_save_dir = os.path.dirname(json_save_path) # Already created by model_specific_results_dir
+        # os.makedirs(json_save_dir, exist_ok=True)
 
         data_to_save = {
             "top": top_latents_data,
@@ -402,11 +457,11 @@ else:
 # Save the last token attribution
 
 # save_path = f"{SAVE_PATH}/crosscoder_attributions_l{CROSSCODER_LAYER}_outputs.pt"
-save_path = f"{SAVE_PATH}/{CROSSCODER_TYPE}-Crosscoder/crosscoder_attributions_l{CROSSCODER_LAYER}_data.pt"
-save_dir = os.path.dirname(save_path)
-os.makedirs(save_dir, exist_ok=True)
+pt_save_path = f"{results_file_prefix}_{DATA_SOURCE}.pt"
+# pt_save_dir = os.path.dirname(pt_save_path) # Already created by model_specific_results_dir
+# os.makedirs(pt_save_dir, exist_ok=True)
 
-print(f"\nSaving combined attributions to {save_path}...")
-torch.save(crosscoder_attribution, save_path)
+print(f"\nSaving combined attributions to {pt_save_path}...")
+torch.save(crosscoder_attribution, pt_save_path)
 print("Attributions saved.")
 # %%
