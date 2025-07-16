@@ -135,7 +135,7 @@ print(f"Median chars before 'wait': {valid_counts.median():.2f}")
 # --- Constants for filtering ---
 FEATURE_GROUP = "bottom"
 STRENGTH_VALUE = 0.5
-K = 1
+K = 50
 
 # --- Filter for features with specified group and strength ---
 
