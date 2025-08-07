@@ -2,20 +2,41 @@
 import os
 import torch
 import random
+import json
 from transformers import AutoModelForCausalLM, AutoTokenizer, set_seed
 
 # %%
 
-# Initial seed setting (can be removed if not needed outside the loop)
+# --- Constants ---
 INIT_SEED = 42
+MODEL_NAME = "deepseek-ai/DeepSeek-R1-Distill-Llama-8B"
+PROMPTS_FILE_PATH = "/disk/u/troitskiid/projects/interp-experiments/reasoning_features/data/responses_deepseek-r1-distill-llama-8b.json"
+OUTPUT_FILE = "new_generated_outputs.json"
+GENERATION_CONFIG = {
+    "name": "Sampling (DeepSeek recommended)",
+    "params": {
+        "do_sample": True,
+        "temperature": 0.6,
+        "top_p": 0.95,
+    }
+}
+MAX_NEW_TOKENS = 1000
+
+# %%
+
+# Initial seed setting
 random.seed(INIT_SEED)
 torch.manual_seed(INIT_SEED)
 
 # Load model and tokenizer
-MODEL_NAME = "deepseek-ai/DeepSeek-R1-Distill-Llama-8B"
 print(f"Loading model {MODEL_NAME}...")
 
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+# Fix pad token issue
+if tokenizer.pad_token is None:
+    tokenizer.pad_token = tokenizer.eos_token
+    tokenizer.pad_token_id = tokenizer.eos_token_id
+
 model = AutoModelForCausalLM.from_pretrained(
     MODEL_NAME,
     torch_dtype=torch.bfloat16,
@@ -24,105 +45,76 @@ model = AutoModelForCausalLM.from_pretrained(
 
 # %%
 
-# Define generation configurations (outside the function as it's constant)
-generation_configs = [
-    {
-        "name": "Sampling (temp=1.0)",
-        "params": {
-            "do_sample": True,
-            "temperature": 1.0,
-        }
-    },
-    {
-        "name": "Sampling (DeepSeek recommended)",
-        "params": {
-            "do_sample": True,
-            "temperature": 0.6,
-            "top_p": 0.95,
-        }
-    },
-]
 
-# Define output directory
-output_dir = "prompt_1"
-os.makedirs(output_dir, exist_ok=True)
-
-
-def generate_and_save(seed, message, model, tokenizer, generation_configs, output_dir):
+def generate_response(counter, message, model, tokenizer, config):
     """
-    Generates text based on different configurations for a given seed and message,
-    and saves the results to a file. Does not print generated text to console.
+    Generates text for a given seed and message, returns the response.
     """
-    print(f"--- Running generation for seed {seed} ---")
-    # Prepare the input message
-    input_ids = tokenizer.apply_chat_template(
-        [message], add_generation_prompt=True, return_tensors="pt").to(model.device)
+    print(f"--- Running generation {counter} ---")
 
-    # Store results for this seed
-    results = {}
+    set_seed(INIT_SEED)
+    random.seed(INIT_SEED)
+    torch.manual_seed(INIT_SEED)
 
-    # Run generations
-    for config in generation_configs:
-        # Reset seed for each generation config for reproducibility within this seed run
-        set_seed(seed)
-        random.seed(seed)
-        torch.manual_seed(seed)
+    # Prepare the input message with attention mask
+    inputs = tokenizer.apply_chat_template(
+        [message], add_generation_prompt=True, return_tensors="pt")
+    input_ids = inputs.to(model.device)
+    attention_mask = torch.ones_like(input_ids).to(model.device)
 
-        outputs = model.generate(
-            input_ids,
-            max_new_tokens=1000,
-            pad_token_id=tokenizer.eos_token_id,
-            **config["params"]  # Unpack parameters
-        )
-        response = tokenizer.decode(outputs[0], skip_special_tokens=True)
-        # Store the decoded text (tokens can be large, only storing text)
-        results[config['name']] = response  # Only storing text results now
-
-    # Save results to a file
-    output_file = os.path.join(output_dir, f"seed_{seed}_results.txt")
-    try:
-        with open(output_file, "w") as f:
-            f.write(f"Results for seed {seed}\n")
-            f.write(f"Model: {MODEL_NAME}\n\n")
-            f.write(f"Input message: {message['content']}\n\n")
-
-            for config_name, result_text in results.items():
-                f.write(f"--- {config_name} ---\n")
-                f.write(result_text)
-                f.write("\n\n")
-
-            f.write("=" * 80 + "\n")
-        print(f"Results for seed {seed} saved to {output_file}")
-    except Exception as e:
-        print(f"Error saving results for seed {seed} to {output_file}: {e}")
-    
+    # Run generation
+    outputs = model.generate(
+        input_ids,
+        attention_mask=attention_mask,
+        max_new_tokens=MAX_NEW_TOKENS,
+        pad_token_id=tokenizer.eos_token_id,
+        **config["params"]
+    )
+    response = tokenizer.decode(outputs[0], skip_special_tokens=True)
     torch.cuda.empty_cache()
+    return response
 
+
+def load_prompts(file_path):
+    """Loads prompts from a JSON file."""
+    try:
+        with open(file_path, 'r') as f:
+            data = json.load(f)
+        return [item['original_message']['content'] for item in data]
+    except (IOError, json.JSONDecodeError, KeyError) as e:
+        print(f"Error loading or parsing prompts file {file_path}: {e}")
+        return []
 
 # %%
 
-# Define the constant input messages
-prompt_1 = {"role": "user",
-                 "content": "Find three prime numbers that add up to 100."}
 
-prompt_2 =   {
-      "role": "user",
-      "content": "In a group of 5 people, what's the probability at least 2 were born in the same month?"}
+# Load prompts and generate responses
+prompts = load_prompts(PROMPTS_FILE_PATH)
+all_results = []
 
-prompt_3 = {
-    "role": "user",
-    "content": "What's the probability of getting exactly one 6 when rolling five dice?"}
+if prompts:
+    for counter, prompt_content in enumerate(prompts):
+        message = {"role": "user", "content": prompt_content}
+        response = generate_response(counter, message, model, tokenizer, GENERATION_CONFIG)
 
-prompt_4 = {
-      "role": "user",
-      "content": "What's the sum of all proper divisors of 36?"
-    }
+        result = {
+            "model": MODEL_NAME,
+            "generation_config": GENERATION_CONFIG["name"],
+            "seed": INIT_SEED,
+            "prompt": prompt_content,
+            "response": response
+        }
+        all_results.append(result)
 
+    # Save all results to JSON file
+    try:
+        with open(OUTPUT_FILE, 'w') as f:
+            json.dump(all_results, f, indent=2)
+        print(f"\nAll results saved to {OUTPUT_FILE}")
+        print(f"Total prompts processed: {len(all_results)}")
+    except Exception as e:
+        print(f"Error saving results to {OUTPUT_FILE}: {e}")
+else:
+    print("No prompts found to process.")
 
-# Loop over seeds and run generation
-for seed_val in range(1, 42):  # Seeds 0 to 41
-    generate_and_save(seed_val, prompt_1, model,
-                      tokenizer, generation_configs, output_dir)
-
-print("\n--- All seeds processed ---")
 # %%
