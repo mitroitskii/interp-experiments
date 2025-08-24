@@ -83,11 +83,29 @@ def load_prompts(file_path):
 
 # Load prompts and generate responses
 prompts = load_prompts(PROMPTS_FILE_PATH)
-all_results = []
+# Find next available filename if output file exists
+output_file = OUTPUT_FILE
+counter = 1
+while os.path.exists(output_file):
+    # Split filename and extension
+    name, ext = os.path.splitext(OUTPUT_FILE)
+    output_file = f"{name}_{counter}{ext}"
+    counter += 1
 
 if prompts:
     total_batches = (len(prompts) + BATCH_SIZE - 1) // BATCH_SIZE
     print(f"Processing {len(prompts)} prompts in {total_batches} batches...")
+    
+    # Create new file at start of processing
+    try:
+        with open(output_file, 'w') as f:
+            json.dump([], f)  # Initialize with empty list
+        print(f"Created new output file: {output_file}")
+    except Exception as e:
+        print(f"Error creating output file {output_file}: {e}")
+        exit(1)
+    
+    all_results = []
     
     for start in range(0, len(prompts), BATCH_SIZE):
         batch_prompts = prompts[start:start + BATCH_SIZE]
@@ -111,14 +129,16 @@ if prompts:
             }
             all_results.append(result)
 
-    # Save all results to JSON file
-    try:
-        with open(OUTPUT_FILE, 'w') as f:
-            json.dump(all_results, f, indent=2)
-        print(f"\nAll results saved to {OUTPUT_FILE}")
-        print(f"Total prompts processed: {len(all_results)}")
-    except Exception as e:
-        print(f"Error saving results to {OUTPUT_FILE}: {e}")
+        # Save intermediate results after each batch
+        try:
+            with open(output_file, 'w') as f:
+                json.dump(all_results, f, indent=2)
+            print(f"Saved intermediate results after batch {start // BATCH_SIZE + 1}/{total_batches}")
+        except Exception as e:
+            print(f"Error saving intermediate results to {output_file}: {e}")
+
+    print(f"\nAll results saved to {output_file}")
+    print(f"Total prompts processed: {len(all_results)}")
 else:
     print("No prompts found to process.")
 
