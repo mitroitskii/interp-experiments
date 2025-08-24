@@ -3,7 +3,8 @@ import os
 import torch
 import random
 import json
-from transformers import AutoModelForCausalLM, AutoTokenizer, set_seed
+from transformers import AutoTokenizer
+from vllm import LLM, SamplingParams
 
 # %%
 
@@ -12,23 +13,20 @@ INIT_SEED = 42
 MODEL_NAME = "deepseek-ai/DeepSeek-R1-Distill-Llama-8B"
 PROMPTS_FILE_PATH = "/disk/u/troitskiid/projects/interp-experiments/reasoning_features/data/responses_deepseek-r1-distill-llama-8b.json"
 OUTPUT_FILE = "new_generated_outputs.json"
-GENERATION_CONFIG = {
-    "name": "Sampling (DeepSeek recommended)",
+SAMPLING_PARAMS = {
+    "name": "DeepSeek recommended",
     "params": {
         "do_sample": True,
         "temperature": 0.6,
         "top_p": 0.95,
     }
 }
-MAX_NEW_TOKENS = 1000
+MAX_NEW_TOKENS = 32768 # longer context to get a full reasoning trace where possible
+BATCH_SIZE = 16
 
 # %%
 
-# Initial seed setting
-random.seed(INIT_SEED)
-torch.manual_seed(INIT_SEED)
-
-# Load model and tokenizer
+# Load tokenizer for prompt formatting only
 print(f"Loading model {MODEL_NAME}...")
 
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
@@ -37,42 +35,38 @@ if tokenizer.pad_token is None:
     tokenizer.pad_token = tokenizer.eos_token
     tokenizer.pad_token_id = tokenizer.eos_token_id
 
-model = AutoModelForCausalLM.from_pretrained(
-    MODEL_NAME,
-    torch_dtype=torch.bfloat16,
-    device_map="auto"
+model = LLM(
+    model=MODEL_NAME,
+    tensor_parallel_size=8,  # set >1 if using multiple GPUs
+    dtype="bfloat16",
+    gpu_memory_utilization=0.95
 )
 
 # %%
 
-
-def generate_response(counter, message, model, tokenizer, config):
+def generate_responses(batch_idx, messages, model, config, tokenizer):
     """
-    Generates text for a given seed and message, returns the response.
+    Generates texts for a batch of messages, returns a list of responses.
     """
-    print(f"--- Running generation {counter} ---")
+    print(f"--- Running batch {batch_idx} (size={len(messages)}) ---")
 
-    set_seed(INIT_SEED)
-    random.seed(INIT_SEED)
-    torch.manual_seed(INIT_SEED)
+    # Format prompts using chat template (return strings for vLLM)
+    formatted_prompts = [
+        tokenizer.apply_chat_template([msg], add_generation_prompt=True, tokenize=False)
+        for msg in messages
+    ]
 
-    # Prepare the input message with attention mask
-    inputs = tokenizer.apply_chat_template(
-        [message], add_generation_prompt=True, return_tensors="pt")
-    input_ids = inputs.to(model.device)
-    attention_mask = torch.ones_like(input_ids).to(model.device)
-
-    # Run generation
-    outputs = model.generate(
-        input_ids,
-        attention_mask=attention_mask,
-        max_new_tokens=MAX_NEW_TOKENS,
-        pad_token_id=tokenizer.eos_token_id,
-        **config["params"]
+    # Prepare sampling params for vLLM
+    sampling_params = SamplingParams(
+        seed=INIT_SEED,
+        temperature=config["params"].get("temperature", 0.6),
+        top_p=config["params"].get("top_p", 0.95),
+        max_tokens=MAX_NEW_TOKENS,
     )
-    response = tokenizer.decode(outputs[0], skip_special_tokens=True)
-    torch.cuda.empty_cache()
-    return response
+
+    # Run generation in a single batched call
+    outputs = model.generate(prompts=formatted_prompts, sampling_params=sampling_params)
+    return [o.outputs[0].text for o in outputs]
 
 
 def load_prompts(file_path):
@@ -87,24 +81,35 @@ def load_prompts(file_path):
 
 # %%
 
-
 # Load prompts and generate responses
 prompts = load_prompts(PROMPTS_FILE_PATH)
 all_results = []
 
 if prompts:
-    for counter, prompt_content in enumerate(prompts):
-        message = {"role": "user", "content": prompt_content}
-        response = generate_response(counter, message, model, tokenizer, GENERATION_CONFIG)
+    total_batches = (len(prompts) + BATCH_SIZE - 1) // BATCH_SIZE
+    print(f"Processing {len(prompts)} prompts in {total_batches} batches...")
+    
+    for start in range(0, len(prompts), BATCH_SIZE):
+        batch_prompts = prompts[start:start + BATCH_SIZE]
+        messages = [{"role": "user", "content": p} for p in batch_prompts]
 
-        result = {
-            "model": MODEL_NAME,
-            "generation_config": GENERATION_CONFIG["name"],
-            "seed": INIT_SEED,
-            "prompt": prompt_content,
-            "response": response
-        }
-        all_results.append(result)
+        responses = generate_responses(
+            batch_idx=start // BATCH_SIZE,
+            messages=messages,
+            model=model,
+            config=SAMPLING_PARAMS,
+            tokenizer=tokenizer,
+        )
+
+        for prompt_content, response in zip(batch_prompts, responses):
+            result = {
+                "model": MODEL_NAME,
+                "sampling_params": SAMPLING_PARAMS["name"],
+                "seed": INIT_SEED,
+                "prompt": prompt_content,
+                "response": response
+            }
+            all_results.append(result)
 
     # Save all results to JSON file
     try:
