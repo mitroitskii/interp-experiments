@@ -1,0 +1,2203 @@
+,label,indices
+7,Mathematical calculation and numerical reasoning,[]
+10,Mathematical constraint reasoning,[]
+14,Code assignment operations in mathematical contexts,[]
+27,Numbers written on physical objects in problem statements,[]
+41,Beginning of LaTeX mathematical expressions,"[969, 796, 1365, 1623, 1422, 879, 1166, 1322, 1438, 1341]"
+65,Mathematical variable tokens in problem-solving contexts,[]
+67,Mathematical calculation and problem-solving,[]
+70,Mathematical expressions and notation,[]
+80,Mathematical expressions and notation,[]
+118,mathematical notation and calculus operations,[]
+125,Computational geometry and mathematical problem-solving,[]
+142,Mathematical equation processing,[]
+146,Mathematical operations and syntax in programming,[]
+155,Mathematical problem solving,[]
+163,Mathematical operations that equal zero,[]
+171,Mathematical calculation and algebraic reasoning,[]
+176,Small integers and numerical values in computational contexts,[]
+195,Mathematical expressions and arithmetic operations in code,[]
+201,Mathematical expressions and operations,[]
+202,Mathematical and algorithmic reasoning about numbers,[]
+216,Mathematical problem-solving tasks,[]
+223,small number words in mathematical reasoning,[]
+261,mathematical problem-solving reasoning,[]
+280,Step-by-step explanations of mathematical and logical concepts,[]
+288,Explanatory reasoning in mathematical and computational problem-solving,[]
+310,Mathematical operations in programming,[]
+322,Solving mathematical optimization problems,[]
+324,Mathematical expressions and algebraic operations,[]
+327,Mathematical spatial reasoning,[]
+328,"Mathematical operations, particularly subtraction",[]
+353,Variable names in mathematical contexts,[]
+390,Definition or explanation of a concept,[]
+421,Mathematical reasoning with alternating signs,[]
+425,Mathematical addition operations,[]
+435,Mathematical equations in programming problems,[]
+439,is in mathematical explanations,[]
+452,Mathematical ratios and division operations,[]
+458,Mathematical and algorithmic reasoning with variables,[]
+464,Mathematical problem solving,[]
+473,Mathematical reasoning and pattern recognition,[]
+481,Mathematical formula derivation and pattern recognition,[]
+482,Mathematical notation and formalism,[]
+483,Mathematical and graphical transformations,[]
+488,Mathematical problem reference term,[]
+545,Mathematical problem-solving content,[]
+547,mathematical solutions and valid answers to equations,[]
+556,Mathematical problem-solving and algorithm development,[]
+568,Numbers in programming problem solutions,[]
+572,Mathematical computation and arithmetic operations,[]
+573,Problem statement identification,[]
+591,Ratio concepts and proportional relationships,[]
+594,Problem constraints and requirements in mathematical contexts,[]
+606,Array or sequence introduction in mathematical context,[]
+615,The number 3 and three-element mathematical structures,[]
+625,Mathematical calculation error detection,[]
+626,Small integers in programming and mathematical contexts,[]
+635,Mathematical ratios and proportional relationships,[]
+646,Mathematical reasoning with fractions and ratios,[]
+650,Positive numerical quantities in mathematics,[]
+651,Problem-solving reasoning in algorithmic and mathematical contexts,[]
+658,Division operations in mathematical contexts,[]
+661,Numerical values in programming contexts,[]
+665,Mathematical optimization problems,[]
+707,Fundamental concepts in discrete mathematics and algorithms,[]
+718,Mathematical variables in equations and formulas,[]
+730,Solution explanation in programming and mathematical problems,[]
+746,Two variables or integers in mathematical problems,[]
+753,Mathematical notation in programming problems,[]
+762,Mathematical technique limitations or inapplicability,[]
+770,Beginning of mathematical/programming problem statements,[]
+779,Mathematical operations in algorithms,[]
+787,Algorithm and problem-solving explanations,[]
+803,Mathematical and algorithmic reasoning steps,[]
+807,relationships between elements in mathematical or logical structures,[]
+825,Mathematical problem-solving and algorithmic reasoning,[]
+829,Odd number detection in mathematical problems,[]
+836,Mathematical variables in algorithmic reasoning,[]
+842,Algorithmic solution explanation in code,[]
+843,Mathematical reasoning about sums and differences,[]
+845,"Mathematical expressions and calculations, especially subtraction operations",[]
+852,Algorithm explanation and problem-solving,[]
+860,Relational conjunctions in mathematical and spatial contexts,[]
+914,Algorithm explanation and computational reasoning,[]
+919,Algorithm explanation and optimization techniques,[]
+926,Efficient computation of mathematical values,[]
+942,Mathematical relationships and comparisons,[]
+950,Identifying mathematical formulas,[]
+967,Programming concept explanations,[]
+981,Mathematical calculation steps,[]
+982,Algorithm explanation and implementation,[]
+986,Mathematical and algorithmic problem-solving,[]
+1008,Mathematical and programming variables,[]
+1027,Mathematical calculation and formula application,[]
+1037,Solution validity in mathematical problem-solving,[]
+1043,Mathematical problem statements requiring numerical answers,[]
+1059,The number 2 in mathematical expressions,[]
+1071,geometric objects and structures,[]
+1073,Mathematical operations in programming code,[]
+1078,Second variable or value in mathematical contexts,[]
+1108,Game-winning strategies in mathematical games,[]
+1119,Multiplication by two or doubling in mathematical contexts,[]
+1120,Mathematical notation and expressions,[]
+1131,mathematical sets and collections,[]
+1147,Mathematical calculation and reasoning,[]
+1152,Mathematical problem-solving explanations,[]
+1161,Mathematical and algorithmic problem solving,[]
+1165,Additional quantities or elements in mathematical contexts,[]
+1173,Mathematical operations and constraints,[]
+1198,Mathematical optimization problems,[]
+1208,Squared mathematical quantities,[]
+1218,"Mathematical operations, particularly subtraction",[]
+1221,Mathematical problem-solving,[]
+1242,Mathematical conditions and relationships,[]
+1257,mathematical reasoning and relationship analysis,[]
+1270,Mathematical addition and algebraic relationships,[]
+1292,Mathematical notation in programming problems,[]
+1296,Mathematical calculations and expressions,[]
+1302,Numbers in mathematical calculations,[]
+1318,Formal mathematical problem descriptions involving sequences and arrays,[]
+1348,The number 3 in mathematical contexts,[]
+1356,Line splitting and mathematical reasoning,[]
+1360,Explaining algorithmic solutions involving counting or calculation,[]
+1361,Geometric and spatial relationships,[]
+1368,Mathematical expressions and formulas,[]
+1397,Mathematical and algorithmic explanations,[]
+1426,Constraint and requirement relationships in mathematical contexts,[]
+1428,Mathematical reasoning,[]
+1434,Mathematical notation and symbols in problem-solving contexts,[]
+1446,Mathematical subtraction operations,[]
+1447,Computation or determination methods in technical contexts,[]
+1452,Detailed algorithmic problem-solving explanations,[]
+1463,Mathematical operations and equations,[]
+1472,Mathematical and numerical reasoning,[]
+1487,Mathematical reasoning and numerical processing,[]
+1491,Connections between points in geometric contexts,[]
+1498,Mathematical reasoning and step-by-step problem solving,[]
+1499,Analytical reasoning and problem-solving,[]
+1522,Mathematical operations and arithmetic symbols,[]
+1525,Mathematical variables and placeholders,[]
+1543,Algorithm explanation in programming solutions,[]
+1558,Mathematical problem-solving tasks requiring numerical answers,[]
+1585,Mathematical operators and variables in equations,"[608, 609, 1316, 2977, 1728, 1459, 5419, 4144, 7184, 1305]"
+1590,The number 1 in code and mathematical contexts,"[428, 5178, 5897, 478, 10414, 3189, 5668, 3138, 15808, 7495]"
+1591,Algorithmic problem-solving approach explanation,"[723, 1667, 1055, 2416, 722, 1122, 1692, 1349, 497, 1932]"
+1600,Variable names in mathematical and algorithmic reasoning,"[1353, 4674, 2674, 2624, 2516, 2745, 5847, 5532, 8332, 10153]"
+1601,Mathematical variables in algorithmic contexts,"[10274, 1874, 4335, 1130, 5171, 10771, 8876, 10795, 2412, 11695]"
+1604,Algorithms and mathematical problem-solving,"[91, 79, 284, 3206, 75, 58, 81, 317, 217, 161]"
+1619,Detailed algorithm explanation for complex problems,"[9256, 242, 1883, 4034, 8775, 8475, 2276, 802, 4423, 11557]"
+1659,Mathematical optimization and minimum value determination,"[780, 6194, 202, 2595, 5079, 4725, 2383, 1024, 1725, 86]"
+1660,End of formal programming problem explanation,"[6587, 2699, 7678, 2991, 4323, 3065, 4998, 7780, 2584, 2297]"
+1676,Mathematical reasoning about factorials and numerical calculations,"[1663, 8068, 6622, 10483, 5863, 2273, 7780, 1487, 4008, 1571]"
+1680,Mathematical variable usage in algorithms,"[1596, 1480, 1647, 1714, 1708, 11112, 4332, 1448, 2808, 5797]"
+1692,Algorithmic problem-solving explanations,"[65, 64, 64, 65, 1235, 500, 8, 106, 17, 324]"
+1693,Mathematical concepts and specialized terminology,"[1563, 1572, 5132, 2022, 8624, 3520, 1752, 4880, 6070, 4788]"
+1737,Mathematical addition operations,"[3826, 4458, 3016, 2004, 3339, 2732, 6835, 1996, 10878, 2001]"
+1738,Numbers and coordinates in mathematical contexts,"[22222, 21282, 14565, 15155, 13203, 6412, 4311, 9773, 2051, 513]"
+1740,Algorithmic problem-solving explanations,"[10834, 8501, 1775, 8192, 9137, 4872, 13495, 3267, 3121, 6159]"
+1742,Variable assignment and mathematical operations in code explanations,"[11386, 13781, 20451, 16375, 12654, 13444, 13615, 15509, 6815, 14291]"
+1747,Explaining algorithmic solutions to computational problems,"[12627, 7608, 1758, 934, 12611, 8166, 8114, 6723, 5106, 3829]"
+1753,Addition operations in programming and mathematics,"[1554, 1391, 5016, 1147, 1556, 5791, 9344, 5642, 1149, 2889]"
+1757,Mathematical problem variables and relationships,"[2647, 1165, 868, 826, 659, 421, 1298, 656, 1350, 917]"
+1789,Mathematical notation and algebraic expressions,"[2119, 514, 2146, 1469, 7006, 2908, 716, 1877, 1063, 6721]"
+1790,Mathematical problem-solving reasoning,"[2274, 6551, 10729, 8239, 2798, 3921, 9629, 9324, 6418, 5140]"
+1796,Mathematical assignment operations in programming contexts,"[6341, 8531, 6005, 3290, 1994, 2394, 2560, 3494, 7469, 5352]"
+1820,Mathematical calculation results,"[9660, 1620, 2977, 2202, 2937, 1584, 1998, 2627, 821, 2737]"
+1821,Algorithmic reasoning and problem-solving in computational mathematics,"[7606, 4363, 6907, 65, 7495, 10035, 3786, 82, 85, 13649]"
+1833,Mathematical reasoning and equation manipulation,"[8020, 4665, 4524, 4446, 6943, 6944, 4666, 378, 4833, 1820]"
+1837,Mathematical problem-solving with geometric reasoning,"[45, 44, 221, 45, 1916, 2288, 90, 2014, 571, 55]"
+1851,Coding problem solving with mathematical explanations,"[15371, 20181, 14917, 17276, 12671, 16520, 11607, 19925, 13401, 9442]"
+1856,Mathematical reasoning about hypothetical cases and possibilities,"[3270, 15896, 7874, 10098, 1824, 1896, 2816, 795, 1600, 2417]"
+1864,Mathematical expressions and algebraic reasoning,"[5095, 8309, 7770, 343, 703, 1523, 6537, 7031, 2845, 4347]"
+1878,Mathematical calculations and numerical sequences,"[9231, 2217, 2477, 7911, 1905, 1921, 1828, 2361, 938, 1568]"
+1888,Mathematical equality and algorithmic result explanation,"[3289, 696, 695, 4164, 3288, 2621, 6536, 2266, 860, 1073]"
+1898,Mathematical reasoning and algorithmic logic,"[5658, 15511, 6491, 8422, 2820, 3689, 9949, 1511, 2712, 9867]"
+1911,Numbers in mathematical contexts,"[13739, 1752, 1667, 4046, 8658, 925, 4490, 4408, 1751, 3951]"
+1920,Algorithm explanation and implementation,"[10878, 8687, 10877, 7422, 916, 9435, 8688, 6538, 2239, 3794]"
+1946,Mathematical reasoning and calculation steps,"[2936, 2245, 2504, 1952, 5242, 1653, 2451, 2051, 3852, 1507]"
+1955,Sequences of numbers in mathematical contexts,"[906, 8655, 579, 7492, 4312, 395, 3339, 308, 3927, 1099]"
+1957,Variable names in mathematical or algorithmic explanations,"[1429, 5992, 10777, 6134, 8518, 7905, 5453, 5898, 2050, 4496]"
+1962,Numbers in programming problem inputs,"[7886, 12851, 5388, 10770, 1648, 2110, 18814, 1048, 2283, 4748]"
+1964,Mathematical definition and notation introduction,"[524, 2105, 3289, 6684, 2517, 1681, 895, 510, 1241, 658]"
+2020,Mathematical relationships between variables,"[857, 6843, 1284, 1283, 2916, 11342, 972, 886, 997, 2980]"
+2041,Mathematical calculations and expressions,"[9331, 15743, 4989, 7998, 6743, 1662, 9199, 9238, 11200, 11555]"
+2056,Mathematical expressions and algebraic manipulations,"[6538, 17638, 4131, 17708, 12336, 2168, 17500, 10036, 6866, 4066]"
+2060,Mathematical reasoning with numbers and variables,"[1863, 2315, 3641, 1284, 14074, 6571, 2648, 3428, 1655, 9727]"
+2091,Mathematical problem-solving reasoning,"[510, 12753, 2130, 11345, 2863, 1096, 8355, 4858, 272, 2395]"
+2101,Algorithm indexing and mathematical operations,"[791, 11801, 881, 7148, 2388, 4894, 3923, 2508, 6806, 1431]"
+2141,Explaining programming problems and algorithms,"[4236, 8207, 8321, 4258, 4248, 10727, 3814, 4258, 11567, 8713]"
+2149,Mathematical notation and expressions,"[183, 183, 2445, 4257, 49, 49, 184, 15033, 173, 184]"
+2152,Technical problem-solving explanations,"[3186, 5386, 988, 966, 2349, 2154, 1479, 1627, 3985, 5351]"
+2171,The model wants to solve a computational problem,"[12041, 2426, 13637, 3515, 2643, 6536, 8832, 4764, 467, 8257]"
+2175,Mathematical reasoning transitions and conclusions,"[1874, 3620, 1990, 6683, 5600, 2725, 1946, 1717, 1076, 1372]"
+2207,Sets and collections of mathematical elements,"[179, 9114, 191, 228, 175, 237, 762, 251, 1110, 1345]"
+2225,Mathematical problem-solving reasoning,"[7334, 9764, 273, 5820, 705, 8964, 4729, 1032, 4275, 8755]"
+2229,Mathematical calculation results in programming problems,"[17009, 7953, 1834, 14083, 3410, 1981, 12756, 1553, 16817, 12345]"
+2240,Small integers in mathematical problem-solving contexts,"[1662, 12893, 3517, 2819, 2610, 6398, 7099, 15084, 7934, 19388]"
+2247,Mathematical equation manipulation and algebraic reasoning,"[6182, 4835, 2180, 15613, 2182, 5580, 5581, 3753, 14248, 6073]"
+2256,Another example in programming problem solutions,"[2553, 1998, 2262, 2249, 3426, 3152, 2897, 1515, 4393, 10472]"
+2258,Parameter variables in programming and mathematical contexts,"[8368, 2865, 1820, 7165, 11654, 1063, 2297, 7111, 2725, 2192]"
+2271,Mathematical problem solving,"[11758, 1618, 486, 5630, 4690, 3373, 5697, 8631, 4382, 1911]"
+2282,Mathematical problem-solving reasoning,"[2357, 1233, 14103, 5456, 2326, 1902, 4933, 1208, 498, 1878]"
+2285,mathematical optimization achievement,"[11821, 1388, 11576, 5850, 4374, 2185, 2341, 4336, 1524, 1821]"
+2307,Mathematical notation and algebraic expressions,"[656, 605, 1295, 5633, 392, 3542, 173, 9886, 597, 5632]"
+2320,Mathematical problem-solving tasks,"[212, 7, 109, 272, 46, 7, 7, 288, 20, 18]"
+2321,Mathematical variable operations and indexing,"[7011, 136, 18504, 13995, 149, 4387, 1597, 3770, 1410, 14888]"
+2329,Analyzing specific cases in mathematical problem-solving,"[790, 12585, 1140, 4118, 1958, 2812, 888, 3442, 2296, 1247]"
+2345,Subtraction operations in mathematical calculations,"[2153, 1050, 8821, 1099, 1120, 2554, 2394, 2377, 12117, 7540]"
+2355,mathematical comparison and quantitative reasoning,"[9468, 7375, 2505, 10840, 7867, 7364, 6026, 5763, 2291, 6612]"
+2389,Line breaks in mathematical reasoning,"[336, 2070, 1531, 765, 1578, 4407, 1179, 1054, 1955, 1169]"
+2403,Mathematical and programming syntax elements,"[12655, 33, 6518, 611, 48, 3610, 9086, 266, 398, 4266]"
+2408,Small integers in programming and mathematical contexts,"[5693, 6817, 11279, 11205, 12181, 11420, 2120, 12175, 5612, 12736]"
+2417,Confusion and problem identification,"[4934, 2399, 6053, 4735, 4929, 3858, 3027, 3175, 6124, 10029]"
+2441,Mathematical expressions and variable assignments,"[2178, 1485, 9204, 2329, 13744, 9507, 2330, 11388, 1516, 7932]"
+2450,Mathematical computation and calculation,"[2903, 1608, 2494, 8929, 4146, 8137, 2401, 2965, 2297, 512]"
+2454,Algorithmic problem-solving explanations,"[1292, 9195, 6610, 9893, 15472, 14824, 9756, 6404, 6854, 11773]"
+2457,Mathematical and logical problem solving,"[3993, 1078, 3525, 2145, 2164, 1822, 1668, 8239, 1105, 1359]"
+2483,Mathematical algorithm implementation and reasoning,"[2387, 2081, 5647, 3290, 13674, 5864, 4464, 9587, 11242, 1472]"
+2489,Probability and randomness concepts,"[191, 191, 191, 191, 345, 197, 68, 97, 503, 166]"
+2497,Mathematical algorithm reasoning in computational problems,"[163, 398, 49, 380, 47, 275, 436, 8656, 10976, 10751]"
+2500,Mathematical calculations and operations,"[17442, 3688, 1787, 1896, 2493, 1871, 2209, 2618, 2604, 6734]"
+2510,Extending algorithms or mathematical concepts,"[2820, 1946, 1189, 3161, 5317, 702, 11102, 396, 12218, 2558]"
+2514,Mathematical conversion operations,"[1093, 237, 7660, 504, 986, 18688, 1246, 9288, 3309, 1544]"
+2537,Mathematical sequences and numerical representations,"[3119, 1161, 1631, 1929, 1463, 1424, 2488, 10218, 5329, 12167]"
+2540,Small integers in mathematical reasoning,"[1379, 3220, 6826, 1053, 1209, 1828, 3018, 5570, 1462, 1174]"
+2544,Sequences of numbers in mathematical explanations,"[12040, 10668, 3902, 3533, 4558, 3141, 4424, 306, 5632, 1276]"
+2549,Mathematical reasoning with small integers,"[11559, 1155, 4810, 7622, 5663, 7677, 1199, 1656, 12598, 1759]"
+2563,Mathematical notation and variables in problem-solving contexts,"[1944, 2675, 1294, 2792, 1043, 718, 843, 518, 6683, 2162]"
+2570,Algorithmic explanation markers,"[11435, 5775, 7229, 4799, 867, 2927, 11082, 7917, 2714, 8398]"
+2573,mathematical calculation,"[9541, 9883, 9227, 5336, 12890, 6674, 11741, 8408, 4467, 3097]"
+2600,Mathematical problem-solving reasoning,"[12175, 7619, 5132, 1661, 16667, 423, 6456, 1090, 4659, 3971]"
+2607,Mathematical problem solving,"[2882, 738, 469, 218, 9089, 74, 8425, 128, 205, 6975]"
+2610,Range and interval-based mathematical reasoning,"[1611, 2144, 2677, 1964, 806, 6142, 2047, 269, 1436, 1617]"
+2619,End of mathematical solution explanation,"[1894, 1196, 4410, 357, 3461, 1024, 1969, 1901, 6891, 2531]"
+2626,Step-by-step mathematical reasoning,"[129, 2771, 172, 308, 109, 4970, 2254, 71, 3067, 188]"
+2636,Mathematical variables and notation,"[7048, 10466, 14698, 7343, 6707, 7261, 6155, 6616, 14404, 10594]"
+2652,Mathematical calculation and equation processing,"[2811, 12757, 20721, 4215, 4598, 985, 4597, 7968, 11252, 15053]"
+2653,Recognition of the number 2 in mathematical contexts,"[7098, 3014, 3891, 2561, 3328, 8345, 9319, 19112, 7078, 7602]"
+2657,The number 1 in mathematical expressions,"[1566, 2544, 1781, 1760, 926, 1643, 1918, 5845, 1670, 1545]"
+2665,Mathematical variables in equations and algorithms,"[7028, 4368, 8221, 1493, 4316, 1303, 2662, 1532, 3712, 732]"
+2682,Establishing relationships between concepts,"[2511, 761, 11395, 7866, 2488, 858, 3897, 1535, 2146, 1726]"
+2706,Algorithmic problem-solving explanations,"[3321, 946, 2532, 5519, 2144, 1563, 1493, 9310, 5784, 5469]"
+2713,Step-by-step mathematical reasoning,"[303, 949, 253, 1422, 2271, 630, 875, 1519, 180, 1320]"
+2719,Programming algorithm explanation,"[109, 168, 150, 25, 118, 141, 25, 207, 619, 64]"
+2729,Programming problem-solving explanations,"[11854, 5776, 15157, 4959, 12306, 3761, 3627, 3136, 9172, 3633]"
+2744,Mathematical expressions and equations,"[203, 3137, 17970, 15265, 3992, 4370, 17969, 1714, 14808, 8432]"
+2774,Algorithm explanation and mathematical reasoning,"[698, 4557, 3929, 188, 8457, 123, 857, 7274, 455, 14649]"
+2820,Mathematical addition operations,"[9708, 8146, 14203, 3892, 1564, 2062, 9007, 1877, 4556, 19678]"
+2829,Prime numbers in mathematical contexts,"[1198, 4059, 13122, 1563, 2221, 13524, 1807, 2908, 12679, 10009]"
+2844,End of detailed technical explanation,"[9252, 8376, 11285, 12858, 16004, 11056, 11294, 7532, 10831, 20181]"
+2847,Key numerical values in mathematical problem-solving,"[6322, 808, 2479, 1670, 2867, 1077, 944, 2874, 1413, 953]"
+2859,Equation solving and mathematical reasoning,"[12405, 5364, 4013, 12093, 3271, 4012, 3860, 12848, 12229, 2330]"
+2860,Mathematical pattern templates and formulas,"[524, 720, 1146, 3775, 2417, 407, 6167, 372, 2277, 2443]"
+2862,Problem solving explanation,"[911, 2764, 1725, 7239, 1594, 1177, 2282, 699, 1042, 5002]"
+2866,Mathematical operations and algebraic manipulation,"[10233, 9852, 2608, 6086, 9851, 10146, 1676, 10983, 2467, 766]"
+2879,Computational problem-solving and algorithm explanation,"[403, 406, 274, 348, 127, 585, 19, 2397, 19, 515]"
+2912,Mathematical addition operations,[]
+2933,Detailed technical algorithm explanations,[]
+2952,Mathematical reasoning and logical operations,[]
+2964,Mathematical conditional reasoning,"[3774, 1788, 947, 2503, 3165, 914, 601, 1949, 938, 3641]"
+2966,Mathematical and algorithmic problem-solving,"[2844, 4020, 8037, 6985, 3711, 2081, 6383, 2906, 4040, 6819]"
+2975,Mathematical operations and calculations,"[2235, 9784, 1125, 11051, 4132, 3125, 10023, 9040, 10699, 13736]"
+2982,Algorithmic problem-solving explanations,"[11318, 11106, 1538, 4549, 1667, 5389, 3302, 6490, 13459, 2756]"
+2988,The digit 1 in programming and mathematical contexts,[]
+2993,geometric shapes and spatial relationships,[]
+3000,Formal mathematical reasoning,[]
+3015,Algorithmic problem-solving explanations,[]
+3022,Algorithmic problem-solving explanations,[]
+3028,Mathematical notation and expressions,[]
+3075,Mathematical variables and parameters in problem-solving contexts,[]
+3094,Mathematical divisibility concepts,[]
+3117,Mathematical operators and symbols in programming explanations,[]
+3121,Mathematical calculation steps,[]
+3122,Mathematical problem-solving,[]
+3126,Mathematical problem-solving and algorithmic reasoning,[]
+3138,Key insight that simplifies a programming problem,[]
+3155,Everyday objects and their properties,[]
+3165,Mathematical expressions and equation parsing,[]
+3169,Mathematical non-existence reasoning,[]
+3170,Mathematical reasoning with small integers,[]
+3209,Mathematical reasoning through algebraic manipulations,[]
+3220,Mathematical reasoning and calculation steps,[]
+3227,Reasoning through a complex problem or algorithm,[]
+3234,Mathematical reasoning about relationships between values,[]
+3250,Mathematical reasoning with numbers and calculations,[]
+3254,Mathematical relationships between objects,[]
+3260,Mathematical equation processing,[]
+3269,Detailed mathematical and algorithmic explanations,[]
+3288,Programming concepts and algorithms,[]
+3306,Period at the end of a technical explanation or algorithmic solution,[]
+3323,Algorithm and computational problem descriptions,[]
+3330,Mathematical summation operations in algorithms,[]
+3337,Mathematical calculation and numerical computation,[]
+3357,Numbers and numerical expressions in problem-solving contexts,[]
+3382,Mathematical relationships between values in explanations,[]
+3384,Mathematical definition statements,[]
+3386,Mathematical operators and equations,[]
+3404,Mathematical notation and numerical calculations,[]
+3414,Algorithm problem solving explanations,[]
+3430,Algorithm explanation in programming solutions,[]
+3446,Mathematical and algorithmic explanations,[]
+3460,Problem-solving explanation and algorithm description,[]
+3470,probability that - mathematical expectation contexts,[]
+3477,mathematical equations and equality statements,[]
+3484,Mathematical and algorithmic problem statements,[]
+3491,detailed mathematical and algorithmic problem solving,[]
+3504,Programming problem-solving explanations,[]
+3508,The assistant is solving a complex algorithmic or mathematical problem,[]
+3514,Geometric reasoning and mathematical notation,[]
+3527,Mathematical algorithm explanation,[]
+3531,Algorithm explanation for computational problems,[]
+3556,Mathematical equation syntax,[]
+3572,Programming algorithm explanations,[]
+3583,Mathematical calculation steps,[]
+3593,"Mathematical theorems and properties, especially about the number 4",[]
+3628,Algorithmic problem-solving explanations,[]
+3652,Mathematical and programming variables in formulas,[]
+3663,Variable 'k' in algorithms and mathematical contexts,[]
+3667,Mathematical reasoning with complex numbers and trigonometry,[]
+3672,Mathematical expressions and variables,[]
+3674,Mathematical problem-solving and algorithm design,[]
+3676,Small numbers and spatial dimensions,[]
+3692,Mathematical programming problems,[]
+3710,Mathematical notation and expressions,[]
+3712,Mathematical notation and geometric squares,[]
+3713,Mathematical variables and operations in problem-solving,[]
+3725,Mathematical operations in code and equations,[]
+3750,Mathematical addition operations,[]
+3769,Algorithm explanation in programming solutions,[]
+3779,Algorithmic problem-solving explanations,[]
+3781,Mathematical reasoning and notation,[]
+3803,Mathematical equations and expressions,[]
+3815,Explaining numerical results in computational problems,[]
+3818,Mathematical reasoning in algorithmic problem solving,[]
+3820,Divisibility concepts in mathematical problems,[]
+3825,Mathematical problem-solving reasoning,[]
+3838,Programming problem-solving explanations,[]
+3843,Mathematical addition and numeric sequences,[]
+3900,Performing mathematical or algorithmic operations,[]
+3905,Mathematical calculations and equations,[]
+3919,Recognizes crucial mathematical insights,[]
+3925,mathematical equations and variable assignments,[]
+3931,Mathematical difference between values,[]
+3932,Problem constraints and conditions in mathematical problems,[]
+3933,mathematical reasoning and verification,[]
+3937,Length and distance relationships in geometric reasoning,[]
+3981,Scientific notation and mathematical expressions,[]
+3984,length-related concepts in algorithms and mathematics,[]
+3991,Numbers in mathematical expressions,[]
+4024,Programming and mathematical problem statements,[]
+4026,Algorithm description and implementation,[]
+4037,Mathematical problem solving and calculation,[]
+4040,mathematical problem solving and algorithm development,[]
+4051,Mathematical calculation steps,[]
+4054,Mathematical formula explanations,[]
+4059,Mathematical reasoning and calculation steps,[]
+4061,Step-by-step mathematical reasoning,[]
+4062,Analyzing concrete examples in algorithmic problem-solving,[]
+4081,The number 2 and its mathematical properties,[]
+4085,Numerical digits in mathematical contexts,[]
+4093,Mathematical reasoning in algorithmic problem-solving,[]
+4108,Mathematical expressions involving variables in programming,[]
+4116,Problem statement introducing key object or concept,[]
+4125,Algorithm explanation and implementation,[]
+4150,Mathematical reasoning and variable manipulation,[]
+4178,Algorithm explanation and problem-solving approaches,[]
+4194,Numbers in programming contexts,[]
+4204,mathematical reasoning and calculation,[]
+4206,The number 2 in mathematical contexts,[]
+4209,Mathematical calculation steps and arithmetic reasoning,[]
+4240,Negative numbers in programming contexts,[]
+4242,Mathematical equation processing in algorithmic reasoning,[]
+4258,Programming and mathematical reasoning with variable n,[]
+4289,Mathematical variables and parameters in algorithmic reasoning,[]
+4305,Considering edge cases in mathematical reasoning,[]
+4336,Algorithm explanation for programming problems,[]
+4344,Mathematical diagram interpretation,[]
+4346,Mathematical expressions and operations in problem solving,[]
+4350,Lists of numbers in mathematical contexts,[]
+4363,Mathematical confusion and conceptual uncertainty,[]
+4380,Mathematical computation and numerical operations,[]
+4383,Mathematical comparison operations,[]
+4405,Algorithm explanation and implementation,[]
+4406,Integer division operations in mathematical contexts,[]
+4412,problem-solving explanation with time-related concepts,[]
+4416,Mathematical reasoning in competitive programming problems,[]
+4417,Algorithmic explanations and computational problem-solving,[]
+4443,Mathematical programming problems requiring algorithmic solutions,[]
+4462,Mathematical reasoning and calculation,[]
+4474,Mathematical beauty conditions,[]
+4477,Mathematical and algorithmic numerical tokens,[]
+4496,Mathematical reasoning about non-negative integers and variable constraints,"[2010, 14665, 1251, 1575, 1628, 510, 739, 747, 7833, 1647]"
+4501,Sequential numbers in algorithm explanations,[]
+4511,Algorithmic problem-solving explanations,"[7317, 6560, 7625, 11356, 7614, 13935, 1239, 5796, 8854, 882]"
+4529,Mathematical operations (subtraction and division),"[1825, 2875, 1799, 1721, 3002, 2896, 11345, 6627, 1943, 10313]"
+4541,Mathematical relationships where quantities increase or decrease,"[4770, 15654, 17258, 7764, 17259, 3771, 4621, 7238, 2392, 1286]"
+4546,Mathematical reasoning about distribution and allocation,"[590, 1337, 1627, 2903, 2974, 6214, 13267, 7214, 3220, 1520]"
+4558,Numbers in mathematical contexts,"[9243, 1362, 4341, 1218, 12884, 6648, 8540, 1117, 2933, 6077]"
+4564,Mathematical equivalence explanations,"[468, 470, 5496, 356, 275, 519, 393, 264, 184, 1626]"
+4574,Flexible ordering in mathematical contexts,"[1950, 250, 167, 437, 1144, 940, 1716, 167, 778, 6149]"
+4580,Reasoning through mathematical problems,"[5382, 7819, 3113, 10340, 6428, 3024, 643, 8954, 5108, 2960]"
+4615,Mathematical problem solving steps,"[5052, 6272, 3523, 2082, 4671, 5950, 8638, 6353, 1556, 1246]"
+4640,Mathematical problem-solving,"[5884, 7984, 3543, 8677, 3566, 3528, 4107, 739, 597, 12118]"
+4647,Mathematical reasoning and equation solving,"[4858, 5254, 5253, 12356, 8046, 10559, 15792, 2799, 19249, 6877]"
+4653,Mathematical expressions and assignments,"[11411, 12254, 15257, 23862, 15633, 11530, 4070, 12659, 4733, 10860]"
+4657,Step-by-step mathematical reasoning,"[217, 156, 2523, 2524, 2293, 1302, 1695, 2367, 16119, 1072]"
+4668,Technical problem-solving and algorithm explanation,"[94, 39, 622, 94, 122, 125, 51, 117, 574, 269]"
+4669,Mathematical reasoning and calculation,"[1171, 706, 10678, 6842, 14119, 2541, 979, 7926, 5430, 5609]"
+4670,Mathematical reasoning with logarithms,"[1924, 4892, 9199, 734, 790, 10640, 389, 1311, 696, 10764]"
+4678,Mathematical problem-solving and algorithmic thinking,"[2531, 2178, 270, 5913, 795, 15233, 632, 20939, 16045, 18212]"
+4682,Calculating sums and differences in mathematical explanations,"[5108, 699, 16591, 12938, 5609, 3560, 16828, 1304, 5779, 11863]"
+4690,Mathematical calculation steps and numerical reasoning,"[2817, 845, 823, 1661, 2500, 1701, 1406, 355, 2818, 1649]"
+4715,Small integers and numerical symbols in programming contexts,"[4869, 8739, 5256, 1333, 4119, 3227, 6843, 4870, 8205, 10668]"
+4716,Mathematical and computational representations,"[11365, 6754, 6142, 6137, 7930, 2793, 6108, 587, 14308, 1723]"
+4728,Numbers in programming and algorithm contexts,"[477, 824, 240, 325, 360, 272, 293, 375, 199, 293]"
+4732,Mathematical calculation transitions and operations,"[21, 1327, 1700, 30, 1352, 7512, 686, 611, 1088, 965]"
+4749,Definitions of self-contained concepts that convey meaning,"[40, 40, 40, 40, 40, 40, 49, 49, 49, 49]"
+4751,Mathematical variables and expressions in equations,"[936, 918, 395, 2054, 474, 1198, 1197, 718, 537, 2170]"
+4755,Algorithm design and mathematical problem-solving thought process,"[9182, 1075, 3302, 4892, 6327, 1125, 7924, 3480, 1559, 11783]"
+4758,Algorithmic problem-solving explanations,"[16, 106, 16, 121, 71, 55, 48, 86, 221, 413]"
+4759,Mathematical computation and algebraic manipulation,"[1278, 9403, 2722, 3747, 2404, 947, 1635, 1517, 1618, 6311]"
+4794,Numerical values and quantities,"[10329, 1814, 1680, 15963, 5478, 4291, 1179, 1215, 6541, 3423]"
+4795,Problem-solving with mathematical modeling,"[8, 8, 7, 8, 7, 8, 7, 9, 13, 7]"
+4799,mathematical reasoning and condition evaluation,"[4702, 5060, 13105, 7853, 11229, 5015, 7043, 8730, 4565, 4968]"
+4804,Mathematical reasoning and notation,"[13747, 18398, 2899, 8022, 4896, 3834, 4141, 2786, 1991, 10922]"
+4808,Mathematical coefficients and powers in algorithms,"[2360, 466, 8986, 1390, 9519, 481, 795, 9516, 628, 6866]"
+4827,Mathematical operations and arithmetic calculations,"[4668, 9289, 6521, 6182, 5632, 6419, 2393, 12740, 6109, 6413]"
+4835,Algorithm explanation in programming problem solutions,"[17939, 11235, 18634, 18337, 12077, 13568, 15971, 13061, 18632, 14424]"
+4851,Assistant's mathematical reasoning process,"[48, 32, 46, 29, 22, 45, 39, 29, 35, 36]"
+4853,Mathematical expressions and formulas,"[1222, 19675, 1990, 686, 7274, 2868, 930, 18911, 4052, 3718]"
+4856,Mathematical variables and notation,"[20809, 1035, 8754, 2544, 2453, 2812, 12854, 722, 3347, 11632]"
+4859,End of mathematical reasoning step,"[4964, 3910, 659, 5039, 2033, 1755, 6894, 1857, 1760, 929]"
+4863,Mathematical operations in code,"[15710, 22157, 7860, 18643, 1378, 14620, 7688, 16602, 10363, 9550]"
+4876,Mathematical variables in equations and formulas,"[485, 7654, 1182, 4682, 1552, 1251, 7557, 13073, 1461, 7105]"
+4877,Mathematical reasoning and calculation,"[8158, 1952, 1953, 7746, 13747, 7475, 11792, 7745, 5543, 7547]"
+4887,Mathematical and algorithmic problem-solving,"[673, 1850, 1195, 9012, 133, 1187, 2833, 4349, 1132, 15]"
+4895,Algorithmic problem-solving explanations,"[14523, 7996, 5152, 12915, 2118, 2945, 8634, 6392, 12904, 2576]"
+4896,Mathematical reasoning in code,"[8536, 20232, 14279, 6178, 22718, 14280, 3163, 8820, 8537, 6823]"
+4898,Summation operations in computational contexts,"[9336, 4264, 4456, 4737, 3947, 7887, 2477, 1970, 5422, 3280]"
+4905,Step-by-step mathematical reasoning and problem-solving,"[106, 279, 603, 249, 65, 104, 1273, 439, 299, 299]"
+4906,small integer values in algorithmic explanations,"[3739, 6247, 5749, 9877, 11617, 4062, 1591, 2129, 7388, 16901]"
+4916,The model is explaining a technical concept or approach,"[2217, 5258, 11547, 2049, 5001, 27588, 11509, 3188, 1618, 7895]"
+4935,Explaining numerical algorithms and solutions,"[8701, 11668, 16395, 11342, 17192, 7975, 10241, 3843, 3164, 13693]"
+4955,Small integers in mathematical reasoning,"[9518, 7357, 10054, 10237, 4072, 909, 10799, 1844, 2371, 1663]"
+4960,Mathematical reasoning and computation,"[8289, 3078, 10184, 6469, 970, 7589, 3262, 4413, 8847, 15231]"
+4964,Computing sums and totals in mathematical contexts,"[1151, 1150, 10594, 674, 501, 2784, 1043, 938, 1828, 1068]"
+4975,Mathematical variables in equations,"[894, 1782, 1923, 798, 1528, 9526, 639, 8679, 708, 2057]"
+4987,Mathematical reasoning with powers and exponents,"[3879, 859, 4989, 1693, 9768, 5874, 5614, 7575, 2870, 5220]"
+4993,Mathematical constraint and property language,"[2796, 8270, 7567, 2214, 2553, 803, 402, 3350, 4009, 3139]"
+5008,Mathematical computations,"[12555, 4131, 2981, 6998, 3758, 657, 2609, 6284, 1029, 9704]"
+5016,Mathematical problem-solving,"[12750, 5304, 3855, 15940, 3276, 4298, 4269, 3850, 4625, 5022]"
+5034,Explaining mathematical operations and procedures,"[201, 329, 469, 208, 1059, 559, 2701, 184, 42, 143]"
+5040,Mathematical evaluation and calculation,"[15807, 1343, 35, 803, 13378, 14818, 2151, 1516, 741, 3144]"
+5060,Numbers and mathematical notation,"[3458, 400, 4067, 3188, 754, 5803, 1212, 1469, 1121, 1885]"
+5069,The digit 1 in mathematical contexts,"[718, 1245, 1474, 680, 964, 891, 891, 1841, 891, 1637]"
+5082,Math problem solving,"[5763, 15601, 4453, 6390, 16173, 2229, 13191, 1188, 13391, 3907]"
+5085,Mathematical calculation operations,"[709, 1798, 367, 2398, 405, 2449, 763, 15567, 12357, 1707]"
+5123,Mathematical notation and equation structure,"[4510, 1175, 1623, 16299, 1085, 3510, 14925, 2162, 1096, 2590]"
+5125,Mathematical variable names in problem-solving contexts,"[7415, 1873, 2030, 4002, 5915, 6785, 493, 7881, 3306, 3799]"
+5129,Mathematical operations and algorithmic reasoning,"[309, 249, 300, 267, 223, 267, 305, 433, 5587, 5162]"
+5135,Mathematical reasoning,"[10072, 12395, 8254, 3827, 4395, 3858, 9109, 3480, 4792, 1910]"
+5139,Analytical reasoning flow markers in mathematical explanations,"[3474, 11719, 36, 11563, 11975, 13630, 4222, 453, 4104, 3158]"
+5147,Mathematical problem solving,"[8314, 2069, 8465, 5841, 502, 5185, 4317, 9801, 9766, 1823]"
+5156,Mathematical formula variables,"[3032, 6667, 3682, 7207, 7311, 10229, 13350, 16224, 13188, 12702]"
+5160,Mathematical expressions in problem-solving,"[6699, 5732, 3531, 6462, 13773, 3826, 4082, 4342, 1002, 1191]"
+5162,Mathematical reasoning and calculation,"[3661, 3635, 853, 9176, 663, 793, 2233, 592, 2208, 6332]"
+5170,Technical explanation tokens in mathematical and computational contexts,"[16459, 2266, 1767, 7138, 2776, 8993, 1760, 10075, 4609, 12628]"
+5186,Mathematical operations and expressions,"[19254, 2896, 2897, 4938, 5923, 15861, 4844, 9967, 2039, 1792]"
+5189,Algorithm explanation and problem-solving approaches,"[65, 114, 191, 65, 65, 85, 35, 360, 29, 111]"
+5193,Mathematical reasoning and equation solving,"[8068, 5571, 16750, 3963, 3807, 4187, 15414, 2893, 9968, 7210]"
+5200,parity concepts in mathematics,"[693, 4692, 1220, 634, 877, 839, 758, 1993, 707, 857]"
+5223,Mathematical addition operations,"[2146, 2416, 12082, 3421, 2559, 7184, 10974, 2859, 8660, 8420]"
+5227,Multiplication operations in mathematical contexts,"[4231, 1709, 4755, 6898, 12645, 4639, 7488, 9036, 5154, 3549]"
+5247,Mathematical calculation and formula explanation,"[4774, 1375, 11267, 18755, 8342, 19901, 6744, 2669, 16062, 5704]"
+5260,Mathematical and algorithmic problem-solving elements,"[7265, 985, 2883, 7757, 1079, 4955, 4082, 1494, 904, 3079]"
+5270,Problem statements and explanations of puzzles or algorithms,"[163, 15, 18, 14, 32, 37, 35, 89, 25, 16]"
+5272,Math problem solving,"[6193, 2196, 5500, 1368, 629, 3388, 2227, 117, 6457, 787]"
+5300,Numbers in mathematical sequences and patterns,"[6182, 4507, 4553, 1905, 7682, 1928, 1677, 9339, 7912, 8822]"
+5318,mathematical parity concepts,"[2466, 2443, 2074, 9058, 2484, 2437, 3227, 3130, 3101, 2945]"
+5369,Mathematical calculation and equation processing,"[612, 1495, 549, 1978, 1122, 8820, 1157, 16183, 5071, 3739]"
+5372,Mathematical formulas and expressions,"[5697, 2464, 1340, 5983, 4732, 12995, 5923, 3013, 1702, 1654]"
+5396,mathematical variables and symbols in code and equations,"[155, 155, 233, 96, 272, 3269, 292, 202, 136, 305]"
+5399,Small integers (0-2) in mathematical contexts,"[86, 82, 125, 47, 104, 81, 83, 94, 72, 78]"
+5403,Mathematical equations and variable assignments,"[7986, 13342, 4428, 1774, 4163, 6080, 18518, 1228, 8652, 5731]"
+5406,Mathematical problem-solving and algorithmic reasoning,"[743, 1392, 6683, 4998, 236, 643, 1702, 795, 2653, 6367]"
+5407,Intermediate calculation steps in mathematical reasoning,"[1727, 837, 1433, 799, 8840, 1082, 7672, 3191, 4809, 10218]"
+5441,Algorithm explanation and computational problem-solving,"[21237, 14584, 12273, 14174, 11561, 11500, 8051, 15052, 15457, 14835]"
+5444,Algorithm explanation and problem-solving,"[11528, 14067, 10026, 9380, 9030, 8579, 5275, 13710, 11438, 6751]"
+5448,Quantities and measurements,"[176, 331, 205, 348, 253, 1111, 3387, 122, 1267, 194]"
+5450,Explanations of mathematical and computational algorithms,"[3246, 12448, 5504, 9511, 2771, 3097, 5148, 6739, 11900, 6322]"
+5457,Mathematical reasoning steps in internal thinking,"[2937, 4213, 5482, 956, 1417, 5121, 4882, 2296, 472, 5362]"
+5487,Variable tokens in mathematical explanations,"[1565, 8901, 2002, 7064, 9413, 7070, 7513, 9920, 6244, 6027]"
+5492,Expressing mathematical variables or expressions in terms of others,"[391, 511, 422, 248, 253, 318, 384, 1383, 1021, 395]"
+5496,Mathematical variables and algebraic expressions,"[2610, 1412, 3474, 5633, 5059, 4088, 727, 1002, 1046, 2100]"
+5503,Programming problem-solving and algorithm explanation,"[118, 223, 270, 66, 9875, 31, 48, 159, 28, 28]"
+5506,Mathematical reasoning steps and calculations,"[8376, 19835, 1509, 11007, 735, 4305, 1818, 2734, 3301, 1464]"
+5509,Providing examples in explanations,"[4623, 1097, 1103, 4829, 4836, 3406, 3398, 1417, 15270, 1152]"
+5510,Mathematical problems with 2N objects,"[173, 234, 234, 173, 170, 1550, 389, 3671, 219, 32]"
+5523,Subtraction operations and negative numbers in mathematical contexts,"[2518, 6435, 7959, 470, 8749, 1527, 8049, 345, 2271, 9036]"
+5525,Reasoning about examples in problem-solving,"[6981, 5808, 1756, 4318, 1338, 5250, 1949, 6857, 5249, 4633]"
+5533,The number 1 and small integers in programming contexts,"[2071, 7972, 9201, 7848, 6085, 15473, 10208, 7058, 3583, 23054]"
+5545,Mathematical problem-solving reasoning,"[3045, 890, 1557, 1770, 2500, 2444, 4364, 2189, 1240, 3274]"
+5553,Mathematical reasoning with numbers and sequences,"[4259, 2570, 19570, 376, 12574, 329, 3274, 243, 284, 12844]"
+5561,Index variables in mathematical reasoning,"[9668, 5655, 6170, 9290, 2507, 9618, 1153, 1284, 7847, 4678]"
+5572,Technical terms in algorithmic problem-solving explanations,"[3724, 10417, 10144, 8621, 6053, 1109, 2509, 5416, 9355, 7570]"
+5578,Mathematical problem-solving reasoning,"[4064, 22797, 7568, 12821, 2037, 545, 10248, 3953, 9588, 24023]"
+5593,Mathematical operators and symbols in programming explanations,"[7956, 2624, 12476, 18641, 10975, 12148, 22508, 19400, 1549, 8900]"
+5597,Mathematical divisibility explanations,"[18982, 1263, 2212, 4248, 3343, 1420, 4080, 19116, 1183, 745]"
+5629,Mathematical equation manipulation and algebraic reasoning,"[3323, 3648, 1202, 2198, 1297, 12238, 1921, 3457, 3224, 863]"
+5642,Explaining solutions using algorithms or techniques,"[5930, 11593, 6768, 17099, 8743, 4200, 2775, 4428, 6411, 8298]"
+5643,Mathematical operations in algorithmic problem solving,"[8700, 5037, 9984, 8596, 4723, 9905, 3851, 9786, 4487, 16024]"
+5647,The number 1 in mathematical expressions,"[1358, 313, 6921, 3363, 2583, 1711, 784, 2908, 4568, 2777]"
+5650,Case 3 in programming and mathematical contexts,"[6903, 19053, 7821, 2647, 2438, 8944, 1491, 7859, 635, 25342]"
+5681,"Mathematical equation processing, especially fractions and arithmetic operations","[3335, 900, 961, 815, 868, 760, 11398, 1211, 1471, 3336]"
+5683,Addition operations in mathematical explanations,"[3515, 2372, 3610, 1922, 3926, 1765, 2088, 5704, 1050, 4223]"
+5688,programming algorithm explanation,"[6612, 10114, 9727, 2993, 7811, 8859, 10739, 7851, 5588, 8651]"
+5691,Mathematical variables in problem-solving contexts,"[9897, 12139, 1805, 5648, 1668, 7730, 1964, 4503, 12640, 6209]"
+5736,Mathematical reasoning and calculation,"[296, 6279, 4286, 401, 8247, 13342, 264, 297, 7025, 1047]"
+5740,Mathematical calculations and numerical operations,"[1639, 14498, 1783, 3761, 1871, 1057, 1782, 477, 1198, 15090]"
+5744,Mathematical equations and calculations,"[14111, 2254, 728, 11226, 17286, 9632, 1265, 166, 1712, 8099]"
+5767,Mathematical problem solving,"[21648, 14922, 19166, 6267, 6494, 16781, 13016, 17027, 3729, 9925]"
+5769,Programming method and function explanations,"[8750, 9182, 1222, 4687, 8225, 9020, 1096, 1533, 1669, 8522]"
+5782,Algorithm explanation and problem-solving,"[138, 190, 134, 83, 147, 150, 113, 435, 116, 115]"
+5783,Sum of quantities in mathematical contexts,"[1774, 9406, 2643, 5286, 3990, 15358, 12191, 1691, 9920, 4010]"
+5792,"Game theory concepts, especially Grundy numbers and mex functions","[3958, 1135, 7359, 1060, 9529, 2103, 3314, 595, 1589, 1139]"
+5795,Undirected graph descriptions in mathematical problems,"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8]"
+5802,Mathematical equation processing,[]
+5803,"Mathematical expressions and operations, especially exponentiation and modular arithmetic",[]
+5805,Mathematical expressions and formulas,[]
+5807,"Mathematical operations, particularly multiplication and division",[]
+5814,Mathematical reasoning and calculation,[]
+5822,Mathematical expressions and equations,[]
+5830,Mathematical possibility and existence checking,[]
+5841,Mathematical calculation and step-by-step reasoning,[]
+5850,Mathematical problem solving,[]
+5855,Explaining programming problem solutions,"[12931, 9749, 4193, 7543, 11029, 9582, 1402, 365, 3054, 345]"
+5861,Mathematical calculation and numerical reasoning,"[671, 10941, 21390, 1701, 4298, 7129, 2341, 4743, 625, 658]"
+5863,Algorithm explanation and mathematical reasoning,"[2137, 977, 476, 836, 1687, 1203, 2134, 5843, 3357, 4532]"
+5868,Programming problem solution explanations,"[4299, 7194, 1814, 13537, 5081, 3960, 7177, 5786, 1994, 7014]"
+5872,Mathematical term manipulation and analysis,"[1062, 2554, 15296, 726, 7185, 1163, 2390, 5609, 163, 668]"
+5877,Mathematical calculations and operations,[]
+5893,Mathematical calculation and numerical reasoning,[]
+5897,Geometric and spatial reasoning in mathematical problems,[]
+5904,Mathematical reasoning transitions in calculations,[]
+5914,Mathematical reasoning reflection,[]
+5919,Mathematical variables in equations,[]
+5924,Mathematical algorithm explanation,[]
+5939,Problem statement understanding,[]
+5963,Mathematical reasoning about numerical magnitudes and ranges,[]
+5990,The number 1 in mathematical contexts,[]
+6001,Numbers in mathematical operations,[]
+6002,Mathematical explanation and algorithmic reasoning,[]
+6005,Self-questioning during mathematical reasoning,[]
+6019,Beauty as a mathematical or computational property,[]
+6023,Small integers in mathematical reasoning,[]
+6027,Internal mathematical structures,[]
+6039,Explanation of mathematical reasoning with source attribution,[]
+6046,Mathematical and programming operators and expressions,[]
+6053,Mathematical reasoning about large numbers and exponents,[]
+6061,Algorithmic and mathematical problem solving,[]
+6084,Mathematical reasoning and step-by-step calculations,[]
+6088,Solving math and programming problems,[]
+6089,Subtraction operations in algorithmic explanations,[]
+6126,Variable quantity manipulation in algorithms,[]
+6148,Mathematical equation operations,[]
+6149,Integer math operations in programming,[]
+6169,Detailed mathematical problem-solving,[]
+6185,Algebraic equation manipulation and mathematical reasoning,[]
+6219,Algorithm explanation and computational problem-solving,[]
+6236,Mathematical reasoning and constraint satisfaction,[]
+6238,Algorithm explanation in programming solutions,[]
+6244,computational geometry algorithms and concepts,[]
+6245,Mathematical expressions in dynamic programming solutions,[]
+6248,Mathematical problems requiring numerical rather than analytical solutions,[]
+6257,Geometric series in mathematical reasoning,[]
+6269,The digit 1 in programming and mathematical contexts,[]
+6276,Mathematical equations and variables,[]
+6280,Mathematical calculations and arithmetic operations,[]
+6285,Algorithmic problem-solving explanations,[]
+6296,Programming and mathematical notation,[]
+6306,Mathematical and numerical concepts,[]
+6308,Negative numbers in mathematical contexts,[]
+6314,Slope detection in mathematical contexts,[]
+6320,Mathematical reasoning and step-by-step problem solving,[]
+6344,Mathematical equations and variable assignments,[]
+6359,Mathematical values and calculations,[]
+6368,Mathematical optimization reasoning in problem-solving,[]
+6374,Algorithmic problem-solving explanations,[]
+6381,mathematical operations and computational problem-solving,[]
+6401,Logical reasoning and mathematical relationships,[]
+6431,Definite article in mathematical reasoning,[]
+6437,Algorithm explanation and problem-solving reasoning,[]
+6448,Mathematical reasoning with variables and constraints,[]
+6451,Mathematical reasoning and calculation,[]
+6481,mathematical summation concepts,[]
+6483,Mathematical calculation and numerical reasoning,[]
+6500,Mathematical reasoning and calculation steps,[]
+6524,Mathematical and computational problem-solving content,[]
+6548,Mathematical code in Python,[]
+6555,Mathematical algorithm implementation,[]
+6564,Programming problem-solving explanations,[]
+6576,Mathematical reasoning about valid values and relationships,[]
+6599,Geometric and mathematical problem-solving,[]
+6613,Mathematical number decomposition and pattern recognition,[]
+6630,mathematical terms in equations and expressions,[]
+6632,Mathematical and algorithmic problem solving,[]
+6643,Uniqueness concepts,[]
+6652,Small integer values in dynamic programming explanations,[]
+6653,Economic theory and mathematical formalism,[]
+6675,Mathematical variables and their values,[]
+6676,Function concepts in mathematics and programming,[]
+6698,Mathematical and algorithmic problem-solving,[]
+6700,Mathematical problem-solving reasoning,[]
+6701,Mathematical sequences and patterns,[]
+6719,Mathematical reasoning that references previous equations or steps,[]
+6738,mathematical reasoning and calculation,[]
+6755,Mathematical relationships and conditions,[]
+6772,Mathematical notation and reasoning,[]
+6775,Mathematical function notation,[]
+6783,Large number recognition in mathematical calculations,[]
+6798,Mathematical operators in code,[]
+6804,Algorithm explanation in programming problems,[]
+6806,Mathematical variables and parameters,[]
+6816,Starting point for mathematical sequences or calculations,[]
+6840,Mathematical computation in computational geometry,[]
+6842,Beginning of mathematical expressions,[]
+6862,Mathematical variables and indices,[]
+6863,Mathematical problem solving,[]
+6871,Mathematical and geometric notation tokens,[]
+6892,Mathematical relationships between numbers,[]
+6899,Algorithmic problem-solving and mathematical computation,[]
+6900,Mathematical reasoning through testing specific cases,[]
+6916,Algorithm problem-solving explanations,[]
+6920,Applying methods or operations in mathematical and computational contexts,[]
+6939,Numbers and mathematical operators,[]
+6949,Rejecting a mathematical hypothesis or approach,[]
+6959,Thinking through mathematical problem-solving,[]
+6961,Programming algorithm explanation language,[]
+6971,Mathematical comparison operations,[]
+7004,Concepts beyond boundaries or limits,[]
+7031,Mathematical calculation and reasoning,[]
+7033,Explaining algorithmic solutions and computational problem-solving,[]
+7042,Multiplication operations in mathematical reasoning,[]
+7056,Mathematical statement initiators in programming problems,[]
+7068,mathematical calculation steps,[]
+7075,The number 1 in mathematical and programming contexts,[]
+7092,Algorithm explanation in problem solving,[]
+7117,Problem identification in reasoning,[]
+7120,Mathematical problem-solving explanations,[]
+7122,Mathematical programming problem tokens,[]
+7131,Mathematical problem solving,[]
+7132,Combinatorial mathematics terminology,[]
+7133,Numbers in educational contexts,[]
+7139,Mathematical calculations and numerical reasoning,[]
+7140,Algorithmic problem-solving explanations,[]
+7141,Algorithmic problem-solving explanations,[]
+7143,Arbitrary values or quantities in problem statements,[]
+7147,Representing data structures and concepts in programming,[]
+7158,Mathematical expressions in programming problems,[]
+7159,Mathematical and algorithmic problem-solving content,[]
+7162,Algorithmic problem solving explanations,[]
+7163,Numbers used in mathematical calculations,[]
+7170,Mathematical and algorithmic terminology,[]
+7182,Mathematical step-by-step reasoning,[]
+7195,Mathematical problem solving,[]
+7221,Algorithm explanation and implementation,[]
+7227,Mathematical problem solving,[]
+7237,formal mathematical definitions,[]
+7246,Math word problems,[]
+7250,Mathematical reasoning with numerical examples,[]
+7282,Mathematical calculation and arithmetic operations,[]
+7291,Mathematical problem-solving in algorithms,[]
+7296,Collective consideration in mathematical reasoning,[]
+7298,Numbers in computational contexts,[]
+7310,performing mathematical or computational procedures,[]
+7314,Algorithmic problem-solving explanations,[]
+7318,Mathematical subtraction and removal operations,[]
+7321,Mathematical pattern explanations with modular arithmetic and sequences,[]
+7327,Numerical reasoning and calculation,[]
+7343,Variable tokens in mathematical and programming contexts,[]
+7344,Integer properties and mathematical relationships,[]
+7378,Variable assignment in mathematical reasoning,[]
+7385,Mathematical reasoning with powers and exponents,[]
+7390,Mathematical reasoning and calculation,"[2549, 4866, 8857, 13965, 5189, 2172, 2744, 859, 322, 9341]"
+7393,Algorithm explanation in programming contexts,"[1918, 2785, 14903, 8505, 2390, 4651, 7718, 4140, 6886, 11740]"
+7412,Mathematical reasoning about binary operations,"[4554, 14826, 2218, 497, 317, 4555, 1712, 11454, 2051, 5761]"
+7415,Mathematical expressions and calculations,[]
+7418,Mathematical equations and equation-related discussions,"[5676, 3584, 7896, 4406, 7219, 1446, 5594, 15788, 44, 12536]"
+7422,Identifying specific elements that satisfy a condition during mathematical reasoning,"[773, 1123, 1842, 4423, 496, 4525, 2239, 4500, 713, 2928]"
+7427,Numbers in mathematical expressions,"[19317, 13561, 7183, 4586, 1310, 6082, 7999, 8093, 9117, 3666]"
+7443,Mathematical calculations and arithmetic operations,"[7246, 7454, 7308, 2701, 2624, 9258, 9137, 12203, 14887, 4368]"
+7461,Computational geometry and squared terms in mathematical expressions,"[11808, 11687, 6861, 8948, 23292, 12928, 11899, 6054, 5885, 5675]"
+7465,Optimization problem quantity phrases,"[225, 225, 192, 5458, 18284, 1219, 2973, 277, 2837, 3781]"
+7475,Introduction of key mathematical parameters in problem statements,"[24, 20, 25, 23, 63, 211, 20, 54, 13, 25]"
+7494,Mathematical reasoning and calculation steps,"[4600, 2395, 1062, 8216, 6915, 719, 4023, 3022, 2267, 2982]"
+7501,Mathematical calculation components,"[3072, 532, 11891, 1400, 1736, 1706, 1399, 982, 8301, 6377]"
+7511,Mathematical reasoning and algorithmic problem-solving,"[1588, 9870, 12398, 3322, 3272, 5994, 3428, 5080, 1992, 16337]"
+7519,Mathematical operators in programming contexts,"[3293, 14461, 5982, 6268, 425, 2189, 9825, 13413, 15212, 112]"
+7532,The number 2 in mathematical expressions,"[177, 481, 1130, 536, 4157, 14426, 2920, 3204, 4376, 626]"
+7552,Mathematical reasoning and order of operations,"[273, 16667, 394, 1, 13202, 6466, 7566, 42, 3562, 549]"
+7585,Mathematical calculations and numerical reasoning,"[10155, 605, 4662, 9560, 4675, 3015, 9459, 1975, 5742, 9458]"
+7600,Mathematical operations (especially addition and subtraction),"[4509, 1800, 2179, 6799, 5412, 3984, 8663, 1840, 4397, 11059]"
+7605,Numbers in mathematical expressions and equations,"[916, 2907, 2851, 3290, 7939, 1586, 3041, 7296, 1696, 6307]"
+7651,Mathematical addition operations,"[3811, 10671, 2049, 2924, 8911, 9438, 965, 1626, 1404, 1019]"
+7673,Variable n in mathematical expressions and algorithms,"[3152, 2104, 3980, 3868, 2468, 3401, 2565, 2307, 3024, 2236]"
+7680,Mathematical reasoning and algorithmic explanation,"[9809, 9814, 135, 17728, 881, 14885, 4982, 9352, 6794, 67]"
+7693,Numbers in programming and mathematical contexts,"[219, 476, 1015, 681, 516, 503, 737, 607, 573, 394]"
+7708,Mathematical comparison and subtraction operations,"[1960, 5331, 2141, 16920, 16921, 11171, 4368, 4081, 2372, 5332]"
+7710,Mathematical notation in competitive programming explanations,"[20656, 17050, 14908, 5496, 9563, 16841, 4264, 7601, 5295, 6228]"
+7711,Mathematical expressions in algorithmic reasoning,"[14191, 8952, 6100, 12421, 5075, 7106, 1606, 6658, 4355, 5635]"
+7719,Mathematical calculation and numerical reasoning,"[3258, 6179, 792, 11566, 10478, 4065, 3336, 985, 1106, 15255]"
+7720,Problem-solving and explanation reasoning,"[5396, 1001, 737, 762, 1580, 412, 7267, 1074, 828, 351]"
+7729,Prime numbers in mathematical contexts,"[13386, 2461, 16283, 6591, 10763, 10643, 10287, 9016, 4776, 2980]"
+7758,Mathematical reasoning and calculation,"[9403, 1520, 13723, 5562, 15316, 1623, 17322, 1521, 5286, 89]"
+7766,Mathematical computation steps in problem solving,"[1929, 1865, 1052, 1731, 775, 2216, 752, 1506, 591, 1052]"
+7771,Mathematical reasoning and step-by-step calculation,"[7775, 3220, 13571, 3111, 254, 6612, 10158, 3205, 9546, 8848]"
+7811,Mathematical operations in algorithmic code,"[6882, 12221, 12864, 5601, 5410, 7966, 8894, 10064, 4716, 13835]"
+7817,The digit 1 in mathematical and programming contexts,"[1425, 703, 2316, 4949, 7612, 4416, 2513, 721, 3986, 421]"
+7849,Algorithm explanation sequences,"[501, 717, 501, 805, 735, 318, 560, 322, 390, 743]"
+7860,Mathematical variable tokens in algorithms and equations,"[2738, 14739, 18657, 3045, 5961, 15776, 12189, 9916, 795, 3464]"
+7862,Mathematical reasoning and calculation steps,"[8170, 3015, 9822, 10695, 7184, 11846, 13414, 7111, 11136, 2193]"
+7863,Algorithm explanation and implementation,"[20310, 5293, 3525, 816, 870, 3407, 6357, 6373, 17529, 602]"
+7886,Mathematical term assignment in programming,"[16429, 17012, 15456, 4635, 16920, 10845, 9822, 17660, 10976, 11864]"
+7894,Problem-solving approach explanation,"[30, 22, 20, 46, 30, 52, 18, 48, 19, 18]"
+7909,Algorithm explanation in programming solutions,"[4350, 4349, 6027, 12036, 10310, 4351, 14547, 1420, 6282, 2532]"
+7920,Algebraic operations and mathematical expressions,"[5355, 1590, 4395, 2140, 1605, 7584, 2308, 621, 1024, 2487]"
+7934,Computational reasoning and calculation,"[6181, 2313, 4259, 1807, 1755, 6253, 6321, 3733, 2190, 5509]"
+7938,Problem-solving approach explanation,"[6947, 8256, 6075, 10745, 4839, 5681, 2646, 4977, 5295, 3507]"
+7939,Variable assignment operations during mathematical reasoning,"[5550, 3030, 3279, 12367, 7584, 4429, 6816, 6314, 7568, 11707]"
+7956,Let's take an example to illustrate this concept,"[12508, 3109, 3490, 5399, 789, 4581, 4300, 1115, 3778, 7930]"
+7970,Mathematical expression formulation in geometry problems,"[1188, 1955, 799, 1784, 506, 1357, 616, 1785, 429, 1997]"
+7973,The output of a programming problem or algorithm,"[9398, 4441, 8433, 7362, 5346, 3596, 11940, 5919, 1574, 7090]"
+7978,Explaining how or why something works,"[3849, 891, 164, 3322, 683, 3502, 6017, 1035, 5974, 155]"
+7985,Mathematical calculation and numerical reasoning,"[1897, 2403, 5042, 695, 5289, 6520, 4914, 2424, 2622, 7247]"
+7986,Mathematical reasoning with numerical values,"[4663, 599, 602, 3569, 2010, 598, 1119, 1592, 1164, 574]"
+7990,Explanation or example introduction,"[5263, 8815, 6096, 15153, 13538, 8816, 9138, 8883, 1435, 7961]"
+7993,Mathematical and algorithmic problem solving,"[9808, 11992, 13761, 6164, 11207, 588, 12781, 6147, 8801, 3000]"
+8012,Small integers (0 and 1) in mathematical and programming contexts,"[86, 147, 154, 549, 227, 84, 186, 198, 99, 211]"
+8020,Mathematical assignment operations with addition,"[12655, 6584, 4233, 7627, 8204, 8170, 2623, 10026, 8021, 10084]"
+8037,Dynamic programming with mathematical operations,"[791, 3934, 4124, 3933, 4877, 11159, 2529, 790, 3713, 589]"
+8038,Numbers in mathematical calculations,"[11242, 763, 223, 3460, 2197, 343, 517, 2833, 416, 17768]"
+8042,Mathematical variables in equations and algorithms,"[252, 17490, 2381, 2640, 9879, 11223, 14668, 7763, 11517, 7449]"
+8046,Recalling mathematical formulas during problem-solving,"[67, 96, 70, 86, 74, 87, 71, 52, 59, 93]"
+8047,Mathematical constraint reasoning,"[1395, 8038, 7352, 6536, 4432, 2612, 7724, 2743, 1598, 1544]"
+8050,Mathematical and programming syntax elements,"[1683, 1381, 997, 1144, 1150, 1167, 2042, 483, 1152, 5520]"
+8067,Algorithm explanation and problem-solving,"[81, 108, 191, 103, 145, 104, 224, 174, 25, 18137]"
+8069,Numbers in programming problem contexts,"[337, 602, 402, 311, 309, 209, 400, 419, 2894, 343]"
+8070,Geometric reasoning and spatial relationships,"[3815, 4843, 4899, 2799, 2732, 2798, 13020, 11109, 3144, 1593]"
+8083,Punctuation in mathematical or technical explanations,"[3539, 5699, 3286, 1428, 2805, 16047, 13473, 3356, 4815, 2931]"
+8086,Mathematical notation and symbols,"[1701, 5292, 12401, 16982, 16125, 11213, 3460, 7624, 3230, 3175]"
+8092,References to specific elements or operations within mathematical problems,"[215, 366, 1061, 13723, 7481, 487, 681, 2024, 2619, 312]"
+8110,Mathematical calculations and formulas,"[6330, 3267, 9593, 595, 2509, 5106, 10959, 451, 1322, 4122]"
+8118,Mathematical reasoning verification and pattern recognition,"[1974, 1118, 1091, 1180, 5351, 1975, 383, 1092, 970, 898]"
+8141,Numerical quantity descriptors,"[2180, 7457, 1140, 1123, 1875, 10360, 2555, 7735, 5238, 843]"
+8157,Explanation of algorithm or approach in programming solutions,"[3256, 3099, 2542, 6421, 3018, 11441, 6646, 2170, 4026, 6027]"
+8167,Algorithm explanation and problem-solving strategies,"[14353, 9439, 18619, 1321, 4216, 8215, 12241, 18262, 19633, 878]"
+8173,Algorithmic problem-solving explanations,"[44, 297, 105, 223, 14880, 43, 14784, 1506, 80, 1075]"
+8180,Variables in mathematical expressions,"[10962, 5593, 13786, 288, 385, 3245, 16681, 2064, 9946, 386]"
+8209,Mathematical formula presentation in LaTeX,"[7933, 3789, 3795, 3788, 15792, 8907, 3790, 16003, 4925, 5158]"
+8212,Small integers in mathematical contexts,"[3836, 3620, 6386, 7063, 3129, 1570, 5649, 1304, 8745, 1336]"
+8255,Logical connections and relationships between concepts,"[485, 10020, 11376, 244, 1901, 377, 3211, 4789, 9329, 13640]"
+8298,Mathematical calculation and numerical reasoning,"[809, 18664, 1544, 192, 164, 107, 73, 55, 9057, 4654]"
+8318,Mathematical and logical symbols in context,"[6416, 700, 6090, 311, 6074, 3478, 2046, 7940, 4020, 13029]"
+8328,small numbers in technical contexts,"[823, 520, 453, 680, 677, 804, 419, 309, 577, 779]"
+8337,Mathematical number concepts,"[8627, 329, 1483, 847, 4012, 322, 4972, 1108, 4880, 8121]"
+8339,Algorithmic mathematical operations in competitive programming,"[13975, 11652, 9065, 4470, 13709, 1925, 5532, 12792, 9365, 12215]"
+8342,Thinking through mathematical optimization problems,"[4020, 2976, 2335, 788, 2390, 1560, 7386, 2158, 7264, 3063]"
+8354,Mathematical reasoning and comparison operations,"[7760, 6220, 7793, 14878, 178, 2459, 7082, 18240, 2527, 4913]"
+8358,Mathematical calculation steps,"[7854, 1058, 900, 8539, 8763, 7564, 14777, 2475, 5115, 4686]"
+8359,Mathematical problem-solving,"[10885, 11575, 14801, 5856, 3670, 11265, 2136, 8445, 8277, 6321]"
+8362,Numerical value verification in mathematical reasoning,"[577, 324, 2505, 724, 772, 1059, 870, 2655, 826, 1605]"
+8378,Mathematical floor operations in explanations,"[12535, 3508, 858, 4676, 3833, 8945, 1314, 2897, 2736, 6527]"
+8379,mathematical solution sets requested,"[46, 32, 55, 1614, 75, 43, 10575, 2294, 46, 45]"
+8392,Number patterns and sequences in mathematical reasoning,"[1661, 1659, 4432, 6944, 1660, 8310, 8302, 1459, 4434, 4436]"
+8397,The assistant is solving complex mathematical or algorithmic problems,"[6896, 3233, 5654, 19122, 11579, 234, 18059, 218, 4238, 2327]"
+8400,Mathematical calculation and algorithmic reasoning steps,"[294, 8747, 3814, 1219, 1841, 3590, 2991, 6882, 1997, 1980]"
+8417,Mathematical expressions and calculations,"[1826, 1253, 1203, 1308, 2341, 2247, 1229, 1421, 1899, 567]"
+8419,Calculating or stating sums in mathematical contexts,"[10327, 1297, 8916, 11096, 8240, 11448, 3002, 6772, 1546, 1519]"
+8421,Mathematical reasoning with small integers,"[631, 1621, 973, 9085, 3971, 2941, 3526, 627, 647, 881]"
+8424,Mathematical calculation and numerical reasoning,"[1050, 13897, 2129, 9161, 256, 3399, 5156, 5424, 1415, 299]"
+8428,Explaining implementation methods or algorithms,"[8661, 8120, 10839, 4208, 8901, 1459, 5979, 2471, 4946, 6675]"
+8434,Numbers in mathematical calculations,"[3915, 892, 2390, 2475, 16448, 1091, 12609, 8179, 6604, 1654]"
+8460,Mathematical formula manipulation,"[1225, 2283, 1352, 1353, 11661, 645, 11024, 11023, 5274, 2166]"
+8485,Algorithmic explanation definite article,"[2563, 2511, 1486, 1717, 1486, 11872, 7276, 2585, 466, 1734]"
+8486,Mathematical multiplication operations,"[7084, 16755, 10338, 17548, 6372, 6027, 14258, 4783, 4945, 5658]"
+8490,Mathematical expression parsing,"[1404, 7560, 6396, 7891, 2806, 2986, 2379, 16456, 7309, 20759]"
+8491,Mathematical optimization problems,"[9120, 134, 70, 18, 34, 373, 134, 9737, 408, 39]"
+8492,Mathematical calculation steps,"[12134, 15844, 1411, 3066, 18136, 17979, 9225, 9295, 9591, 5227]"
+8497,Multiplication operations in mathematical reasoning,"[578, 222, 582, 630, 448, 385, 418, 359, 237, 290]"
+8498,Mathematical variables and expressions,"[3103, 2717, 11661, 1916, 3733, 2602, 4618, 2572, 1445, 3190]"
+8504,Example-providing in technical explanations,"[2057, 3613, 2073, 5097, 3828, 2996, 1820, 2060, 2885, 1689]"
+8507,Mathematical function notation,"[6162, 4580, 2893, 11062, 12284, 4218, 3882, 3875, 6394, 3916]"
+8531,Mathematical reasoning and computation,"[4568, 878, 2628, 4748, 966, 2753, 8375, 1691, 1256, 5154]"
+8570,The user has posed an analytical or mathematical problem,"[1, 1, 1, 1, 1, 1, 1, 1401, 7742, 1]"
+8585,Algorithm problem-solving explanations,"[9008, 12321, 7637, 16380, 7312, 21629, 12021, 16457, 16848, 1594]"
+8593,Mathematical reasoning with variables,"[5676, 449, 9006, 9804, 361, 8044, 1131, 2641, 465, 7409]"
+8601,Mathematical or logical relationships expressed in terms of other concepts,"[11464, 11615, 385, 11514, 433, 331, 1011, 781, 6040, 4311]"
+8609,Detailed algorithmic and mathematical problem-solving explanations,"[9979, 9789, 4812, 15669, 10657, 3867, 8005, 6453, 8391, 10372]"
+8614,Viewing problems as mathematical models,"[2370, 2765, 2270, 1157, 3789, 2968, 1824, 3706, 5170, 5464]"
+8632,Mathematical notation and variables in problem-solving,"[6702, 2044, 484, 11682, 2006, 5287, 619, 1535, 4459, 4817]"
+8635,Mathematical notation and expressions,"[165, 11, 3322, 483, 13, 3321, 191, 606, 7242, 2812]"
+8682,Mathematical explanation connective syntax,"[85, 5407, 1054, 5406, 750, 7547, 835, 132, 1952, 763]"
+8683,Algorithm explanation in programming problems,"[5127, 6803, 6815, 5690, 2573, 8549, 12059, 5134, 11167, 9205]"
+8694,Mathematical notation and symbols,"[4996, 1839, 1077, 3934, 5030, 2600, 1415, 484, 1333, 4218]"
+8728,Mathematical computation and algorithms,"[332, 92, 332, 192, 2167, 344, 1043, 308, 142, 641]"
+8731,Mathematical reasoning about results or outcomes,"[613, 977, 2953, 757, 1431, 751, 425, 823, 700, 2488]"
+8762,Programming problems and algorithmic thinking,"[665, 142, 166, 51, 85, 291, 16603, 28, 169, 567]"
+8767,Algorithm explanation in programming solutions,"[2031, 7516, 8527, 9010, 12775, 7292, 7057, 10149, 2640, 7222]"
+8791,Mathematical and logical assertions during problem-solving,[]
+8796,Detailed algorithmic and mathematical explanations,[]
+8818,Mathematical problem solving,"[12048, 15661, 10689, 7578, 10910, 6021, 4588, 4602, 15254, 7004]"
+8828,Small integers in mathematical contexts,"[6359, 2310, 7871, 12121, 2973, 11257, 1311, 2633, 1980, 8783]"
+8839,Mathematical expressions and problem-solving steps,"[880, 372, 1081, 2278, 3945, 781, 10960, 3993, 883, 1179]"
+8841,Mathematical problem solving,"[4914, 4377, 3848, 2914, 2503, 1862, 9353, 8750, 13804, 1647]"
+8846,Mathematical variables in equations and expressions,"[8873, 7254, 6314, 8064, 7574, 11170, 6701, 8622, 6316, 1006]"
+8848,Mathematical definition or qualification phrases,"[68, 221, 125, 21, 293, 78, 199, 132, 259, 339]"
+8858,Algorithm and data structure explanations in programming problems,"[6595, 2859, 26, 6127, 148, 243, 4718, 1612, 10037, 3421]"
+8867,Division operations in mathematical reasoning,"[3181, 2633, 2911, 926, 4588, 3986, 3379, 1790, 1251, 2529]"
+8870,Mathematical operations and equality relationships,"[820, 1719, 6238, 1246, 4683, 9720, 7792, 765, 7419, 8347]"
+8872,Mathematical calculations and algebraic manipulations,"[8438, 850, 3946, 3512, 1044, 3779, 733, 1359, 495, 2405]"
+8880,Numbers in mathematical problem statements and constraints,"[618, 3894, 4286, 2414, 4416, 3865, 5600, 2415, 5503, 1848]"
+8882,Programming problem solving and explanation,"[143, 364, 223, 39, 77, 313, 77, 662, 156, 194]"
+8883,Mathematical properties and relationships,"[4012, 2631, 2032, 2200, 3858]"
+8890,Mathematical objects defined as 'nice' when satisfying specific conditions,"[8, 28, 27, 76, 28, 39, 7, 36, 9, 50]"
+8897,Mathematical variables in explanations,"[6235, 3971, 11813, 7199, 6201, 5375, 14751, 6338, 1800, 6919]"
+8906,Mathematical calculation steps,"[5717, 10814, 1146, 12070, 3081, 8729, 5279, 1190, 5810, 3895]"
+8934,Problem-solving reasoning in algorithmic and mathematical contexts,"[40, 40, 733, 213, 40, 107, 1176, 459, 508, 168]"
+8948,Mathematical notation and symbols in algorithms,"[41, 109, 6820, 59, 6632, 562, 43, 5695, 6383, 6819]"
+8966,Mathematical and computational problem-solving reasoning,"[5737, 963, 1352, 2649, 2980, 1326, 716, 462, 133, 1022]"
+8969,Algorithm explanation and implementation,"[4031, 8845, 13724, 6804, 6670, 12953, 11637, 10662, 1751, 13581]"
+8971,Mathematical reasoning and problem-solving,"[115, 47, 535, 75, 39, 118, 59, 1581, 23, 2749]"
+8978,Mathematical problem-solving in competitive programming tasks,"[6480, 9121, 2839, 9015, 5354, 3547, 1690, 9566, 3337, 2699]"
+8979,Mathematical problem solving,"[14223, 10776, 23943, 9926, 15619, 18174, 14438, 16681, 13125, 15130]"
+8990,Mathematical notation and variables in problem solving,"[2779, 9387, 386, 6042, 8969, 7128, 2810, 6554, 3117, 4907]"
+8993,Algorithm and data structure terminology,"[1695, 4642, 1813, 2351, 8182, 6844, 2967, 2285, 5388, 5231]"
+8995,Mathematical equation rearrangement and algorithmic reasoning,"[3890, 8229, 717, 540, 631, 8327, 3977, 373, 4648, 8817]"
+9001,Discussing numerical outputs or answers in mathematical contexts,"[8808, 8813, 2034, 8809, 8812, 6365, 5327, 5637, 5696, 6646]"
+9070,Mathematical problem-solving reasoning,"[2582, 12255, 11422, 9477, 16979, 10835, 6721, 6338, 5394, 11967]"
+9084,Mathematical calculations and equality operations,"[3972, 2106, 3238, 3240, 844, 13492, 1407, 1497, 307, 308]"
+9101,Mathematical operators and symbols in algorithmic reasoning,"[1721, 9570, 16846, 6274, 7524, 7900, 1734, 20413, 7297, 6910]"
+9113,Mathematical notation and constraints in problem statements,"[469, 154, 138, 163, 482, 401, 402, 318, 297, 284]"
+9117,Mathematical problem-solving and computational reasoning,"[46, 422, 348, 17646, 286, 235, 2460, 225, 970, 170]"
+9123,Algorithmic problem-solving explanations,"[5749, 4278, 8861, 10954, 3582, 8212, 7282, 8410, 7965, 9006]"
+9125,Numbers in mathematical calculations,"[5523, 16331, 14548, 7309, 6092, 13689, 2881, 5064, 12008, 6321]"
+9135,Problem-solving approach explanation,"[939, 825, 1066, 1008, 661, 1171, 994, 897, 962, 539]"
+9140,Mathematical notation and variables in problem statements,"[147, 223, 286, 45, 101, 110, 407, 100, 15707, 157]"
+9142,Numbers in mathematical calculations and problem solutions,"[8167, 3776, 3198, 2856, 1646, 6705, 3969, 3893, 1979, 2627]"
+9146,Mathematical notation and syntax,"[8951, 11443, 7464, 4042, 9927, 15300, 13284, 12684, 6486, 13134]"
+9154,mathematical problem solving,"[534, 483, 483, 417, 485, 485, 582, 532, 325, 532]"
+9158,Multiplication operations in mathematical contexts,"[4534, 3296, 4656, 6261, 4949, 5282, 6898, 14899, 1553, 14372]"
+9220,Algorithmic problem-solving explanations,"[5540, 8642, 11696, 20901, 3115, 13657, 3344, 11687, 2386, 13662]"
+9245,Numerical answers in programming and mathematical problems,"[221, 207, 227, 565, 496, 273, 312, 507, 475, 250]"
+9247,Mathematical problem solving,"[3411, 1426, 424, 2393, 1375, 15609, 1919, 1235, 5921, 1940]"
+9263,Algorithmic problem-solving explanations,"[476, 476, 461, 593, 593, 556, 691, 571, 430, 691]"
+9269,Mathematical problem-solving and algorithmic reasoning,"[9375, 8093, 8514, 12353, 3269, 3571, 6297, 2818, 2732, 9096]"
+9272,Mathematical operations and value merging in programming contexts,"[8518, 8771, 10520, 8519, 7847, 12733, 4504, 9446, 6728, 9447]"
+9274,Relational phrases in logical and mathematical contexts,"[16, 15, 15, 8, 7, 18, 69, 6, 32, 31]"
+9275,Step-by-step problem solving in mathematical contexts,"[5639, 4765, 2490, 1665, 2516, 729, 1713, 12826, 1805, 4740]"
+9282,Mathematical reasoning and problem-solving,"[1068, 1251, 1646, 731, 2632, 660, 1155, 2145, 2093, 6389]"
+9288,Mathematical and programming syntax,"[4237, 3717, 3898, 9182, 4283, 4159, 3290, 4868, 3006, 3120]"
+9322,Logical necessity and mathematical equality,"[535, 10607, 8065, 9350, 5052, 8169, 12246, 8274, 582, 4029]"
+9346,Dynamic programming concepts and problem-solving,"[7592, 5012, 6238, 6910, 8005, 5770, 16979, 11365, 7732, 6475]"
+9347,Algorithm explanation in programming problem solutions,"[13984, 13016, 3881, 14268, 13736, 9973, 3676, 4606, 7623, 7618]"
+9352,Numbers and numerical concepts,"[14018, 2470, 842, 631, 206, 21226, 1073, 1491, 1532, 5041]"
+9359,Mathematical commas in algorithms and numerical explanations,"[3366, 1582, 7411, 10854, 13260, 3131, 6091, 6896, 11671, 3791]"
+9367,Mathematical explanation flow markers,"[1293, 8845, 2992, 496, 7368, 2540, 561, 6156, 315, 9286]"
+9370,Mathematical calculation and step-by-step reasoning,"[1210, 5605, 226, 300, 5320, 5110, 1207, 9082, 10978, 4365]"
+9382,Mathematical problem-solving steps,"[1738, 5420, 1032, 626, 2366, 12833, 5035, 4384, 1979, 2485]"
+9384,Mathematical expressions and calculations,"[11690, 6356, 1616, 8068, 1855, 1491, 4555, 8252, 3119, 767]"
+9397,Mathematical variables and symbols in equations,"[3065, 9619, 1345, 15785, 517, 7333, 3281, 479, 4719, 6087]"
+9418,Analysis of subjects (mathematical or computational reasoning),"[38, 9, 824, 4, 71, 71, 9, 2328, 10111, 7330]"
+9454,Mathematical reasoning with case analysis,"[12276, 1983, 3012, 13542, 3185, 1140, 12345, 1306, 6693, 906]"
+9456,Mathematical operators and values in code,"[8651, 6401, 2964, 5480, 7348, 10890, 10825, 1867, 7377, 11788]"
+9467,Programming problem understanding and analysis,"[5062, 1211, 8221, 8120, 11148, 7626, 5779, 6184, 3194, 3138]"
+9485,Algorithm explanation and problem-solving approach,"[42, 10040, 378, 113, 128, 12098, 561, 232, 17721, 262]"
+9499,Mathematical notation and algorithmic explanations,"[74, 1622, 10230, 37, 188, 2905, 2990, 11449, 10781, 10478]"
+9511,Programming syntax for mathematical operations,"[7619, 2419, 4853, 6739, 5180, 9162, 955, 9025, 5455, 1995]"
+9515,Optimization objectives in mathematical problems,"[347, 377, 310, 224, 237, 227, 369, 323, 161, 145]"
+9516,Mathematical reasoning transitions,"[10328, 13672, 1730, 12576, 6488, 2219, 5377, 15185, 1694, 8422]"
+9539,Mathematical calculation and numerical reasoning,"[2876, 11367, 11110, 2007, 1155, 5660, 12584, 1452, 2687, 3583]"
+9549,Simplification indicator in mathematical reasoning,"[613, 107, 232, 615, 1223, 120, 306, 829, 132, 206]"
+9562,Mathematical calculations and arithmetic operations,"[750, 476, 751, 3266, 751, 2295, 1787, 749, 3608, 14683]"
+9607,Mathematical problem solving,"[2020, 2073, 8078, 15686, 16967, 6148, 17388, 13091, 7813, 2751]"
+9620,Mathematical variables in equation solving,"[3500, 2382, 1849, 9455, 2353, 2960, 1525, 7014, 10521, 2483]"
+9622,Explanatory text about programming problem examples,"[246, 300, 300, 322, 358, 454, 453, 379, 454, 294]"
+9634,Algorithm problem-solving explanations,"[16660, 11922, 11857, 10833, 14528, 17419, 19184, 13200, 20468, 15671]"
+9644,Mathematical reasoning and equation solving,"[1679, 12947, 10781, 1093, 945, 11286, 6984, 11992, 2536, 2328]"
+9649,Mathematical calculations and numerical operations,"[1823, 6764, 3080, 609, 557, 5702, 6771, 1315, 1292, 1638]"
+9650,Algorithmic problem solving explanations,"[12569, 13655, 11521, 9650, 16481, 11539, 6939, 11492, 11980, 9456]"
+9653,Mathematical problem solving,"[5849, 3536, 6264, 18254, 5967, 1624, 4394, 1514, 36, 5]"
+9661,Mathematical calculation and algorithmic problem-solving,"[6552, 2641, 2016, 7881, 1851, 2642, 771, 1850, 994, 2708]"
+9682,Variable assignment in mathematical problem-solving,"[3662, 5841, 3663, 10422, 5445, 5824, 9828, 3937, 10469, 7638]"
+9690,Mathematical multiplication operations,"[2457, 5799, 4780, 1051, 9566, 3816, 3713, 1666, 1781, 12997]"
+9704,Mathematical problem-solving and algorithmic reasoning,"[8513, 4868, 3251, 14835, 8071, 12515, 2669, 2977, 12896, 2108]"
+9707,Explaining mathematical or computational aggregation operations,"[3393, 375, 1679, 4995, 844, 3885, 3886, 250, 1949, 2477]"
+9717,Multiplication operations in mathematical contexts,"[3809, 2298, 18741, 3945, 9791, 12523, 8689, 6582, 15176, 12678]"
+9719,Formal mathematical reasoning and problem-solving,"[478, 812, 1529, 545, 7621, 1994, 2189, 4650, 1368, 3186]"
+9729,Algorithm explanation in programming problems,"[78, 329, 161, 79, 78, 95, 79, 79, 79, 238]"
+9737,Numbers and numerical values,"[6892, 3717, 2817, 8369, 6014, 4945, 9578, 14440, 1451, 1670]"
+9747,Mathematical variables and parameters in algorithmic explanations,"[1299, 5157, 6364, 16855, 3978, 5141, 7094, 11290, 7920, 3307]"
+9762,Recognizes computer science concepts,"[17735, 9976, 10855, 12567, 1053, 4657, 766, 13169, 8733, 7759]"
+9763,Mathematical comparison operations,"[13779, 5620, 4046, 6884, 3193, 2574, 3635, 1077, 5056, 5129]"
+9768,Mathematical calculations and expressions in problem-solving,"[1538, 620, 2471, 1078, 5185, 817, 1353, 3800, 2811, 831]"
+9823,Mathematical and programming problem statements,"[3638, 3637, 710, 4277, 1146, 2429, 163, 3867, 2430, 1739]"
+9858,Logical reasoning and mathematical relationships,"[12535, 693, 333, 1335, 12587, 263, 806, 565, 2851, 3091]"
+9861,find or determine a mathematical or computational result,"[399, 240, 210, 484, 997, 476, 832, 330, 315, 356]"
+9862,Mathematical and algorithmic problem-solving,"[272, 375, 473, 496, 340, 2199, 152, 2114, 9763, 16443]"
+9866,Mathematical pattern recognition in algorithmic problems,"[9726, 3325, 10352, 15869, 1481, 586, 1870, 12060, 3332, 9733]"
+9899,Mathematical calculation results in programming problems,"[4385, 1964, 1452, 1298, 894, 4120, 4014, 3554, 1094, 1314]"
+9937,Reasoning through mathematical problems,"[10939, 10478, 847, 10069, 5788, 15088, 3757, 1852, 1727, 4401]"
+9938,Enumeration or iteration in mathematical reasoning,"[2541, 1298, 1982, 925, 10208, 1230, 4722, 4629, 4891, 13591]"
+9939,Programming syntax and mathematical operations,"[139, 115, 115, 103, 139, 18224, 35, 44, 10, 7770]"
+9941,Mathematical variable definitions and relationships,"[4852, 3903, 9206, 6193, 5056, 382, 2304, 98, 225, 258]"
+9945,Mathematical variable assignments in algorithms,"[15666, 8196, 9729, 6124, 5657, 6173, 8711, 12252, 6827, 17615]"
+9952,Mathematical reasoning involving the number 2,"[16262, 11084, 7004, 2302, 5927, 5370, 11476, 14559, 3296, 7483]"
+9956,Division operations in mathematics and programming,"[5906, 8489, 649, 1911, 12003, 4150, 10684, 16865, 9777, 5676]"
+9961,Mathematical problem-solving reasoning,"[9120, 9121, 2920, 15, 9268, 7173, 58, 82, 58, 1133]"
+9963,Mathematical and programming variables,"[271, 5674, 274, 6337, 3207, 928, 3477, 19162, 2012, 1544]"
+9964,Beginning of detailed explanations in technical problem-solving,"[7174, 6776, 15839, 6224, 1078, 1603, 3640, 15708, 13752, 1334]"
+9972,Algorithm explanation in code,"[128, 6834, 1232, 97, 184, 401, 184, 5893, 12707, 16536]"
+9985,Mathematical reasoning and calculation,"[4238, 12567, 11752, 4179, 18628, 6073, 8748, 4214, 2145, 9428]"
+9993,mathematical calculation steps,"[9099, 14291, 3006, 7660, 14290, 2348, 9953, 14292, 7163, 9181]"
+9999,Algorithmic reasoning and computational mathematics,"[366, 8851, 1827, 772, 1757, 6402, 9724, 133, 1726, 1014]"
+10015,Numbers in mathematical expressions,"[5644, 6287, 3167, 2246, 1461, 1268, 15267, 3693, 1240, 550]"
+10040,beginning of technical explanation in problem-solving contexts,"[243, 144, 203, 91, 162, 120, 179, 114, 112, 167]"
+10041,Numbers being used in mathematical calculations,"[4668, 2198, 866, 5589, 11451, 3779, 5993, 3142, 1717, 1823]"
+10057,Mathematical notation and variables,"[79, 77, 420, 124, 22, 316, 235, 138, 43, 455]"
+10061,Mathematical reasoning confirmation,"[307, 149, 329, 132, 135, 466, 515, 99, 288, 242]"
+10066,Mathematical reasoning and algorithmic problem-solving,"[2667, 3673, 4543, 2462, 1973, 3299, 4763, 7041, 4755, 2416]"
+10069,Mathematical graph description in problem statements,"[43, 44, 44, 43, 118, 118, 119, 119, 47, 41]"
+10075,Mathematical reasoning and explanation,"[6970, 10533, 9822, 1982, 1244, 1243, 4129, 790, 15017, 17243]"
+10079,Mathematical notation in programming explanations,"[1157, 4265, 1733, 1367, 7186, 7488, 1711, 2785, 4026, 2431]"
+10084,Numbers in mathematical calculations,"[11044, 14279, 11056, 3756, 525, 12584, 16205, 3510, 3565, 1202]"
+10088,Mathematical problem-solving with geometric and algorithmic reasoning,"[377, 341, 346, 355, 422, 346, 393, 321, 376, 247]"
+10106,Detailed problem solving explanations,"[10089, 16094, 8207, 9093, 7854, 6295, 6358, 3518, 4558, 3201]"
+10121,Mathematical problem-solving exploration in geometry,"[4565, 6420, 8400, 4197, 2212, 2340, 6032, 1205, 1090, 3958]"
+10131,Algorithm and data structure explanation,"[11413, 1331, 12172, 4394, 5042, 9614, 9368, 9091, 2826, 4578]"
+10144,Mathematical expressions and operations in code,"[9228, 9508, 15427, 13345, 6452, 15317, 6764, 3986, 3157, 14060]"
+10160,Punctuation and connective phrases in mathematical reasoning,"[616, 337, 505, 920, 290, 801, 782, 833, 328, 708]"
+10177,Negative numbers in mathematical contexts,"[374, 15093, 818, 1401, 4448, 830, 3366, 374, 374, 204]"
+10180,Mathematical divisibility concepts,"[391, 372, 782, 433, 7427, 438, 474, 2781, 555, 2786]"
+10183,mathematical reasoning and calculation,"[15401, 4628, 6325, 9684, 5722, 1111, 548, 785, 3347, 2774]"
+10215,Mathematical expressions and algebraic notation,"[9686, 2245, 2485, 14831, 3456, 3399, 1963, 15462, 3999, 206]"
+10233,Mathematical addition operations,"[1204, 500, 1564, 2968, 2108, 10202, 849, 898, 910, 1752]"
+10236,mathematical equality and target value relationships,"[2355, 9980, 11938, 1614, 13147, 901, 1686, 12742, 8775, 2399]"
+10238,Mathematical reasoning calculation steps,"[10389, 1873, 1263, 3851, 816, 1162, 1632, 1456, 3559, 5790]"
+10257,Mathematical computation and calculation,[]
+10285,Mathematical computation and algebraic manipulation,[]
+10287,Mathematical notation and calculations,[]
+10292,Mathematical expressions and numerical computation,[]
+10297,Explaining how a technique helps solve a programming problem,[]
+10301,Mathematical problem solving,[]
+10302,Mathematical operations in programming solutions,[]
+10311,Curved geometric objects and their mathematical properties,[]
+10330,Arithmetic calculation steps in mathematical reasoning,"[991, 3498, 1974, 1511, 3978, 600, 4018, 201, 1069, 1372]"
+10349,Mathematical notation and symbols,"[9917, 407, 4467, 8752, 1167, 6040, 2956, 12937, 303, 10207]"
+10355,Mathematical or programming explanations using 'where' to define variables or conditions,"[6729, 8922, 6334, 11566, 3476, 1765, 4297, 6694, 1449, 4689]"
+10361,Mathematical calculation steps,"[13884, 7667, 1110, 2106, 1375, 1051, 1050, 4661, 1688, 4714]"
+10374,Solving math problems,"[3546, 9848, 2737, 2313, 12196, 25427, 9849, 2667, 3547, 4049]"
+10377,Mathematical notation and operations in problem-solving contexts,"[309, 5312, 292, 786, 5139, 752, 5138, 494, 959, 4031]"
+10383,The number 1 in programming and algorithms,"[13069, 5865, 12473, 4556, 11667, 3674, 5744, 5772, 12063, 11468]"
+10403,Mathematical optimization problems,"[13088, 12797, 12533, 13089, 12923, 4748, 12592, 5379, 5882, 5749]"
+10404,Explaining algorithmic approaches to problem solving,"[11420, 12691, 3646, 3660, 3909, 10903, 10372, 6556, 10141, 4050]"
+10408,Mathematical operations and calculations,"[10332, 14591, 388, 1501, 5197, 6240, 4755, 14905, 832, 5518]"
+10414,Algorithmic problem-solving explanations,"[9474, 15056, 9740, 8799, 17201, 9149, 10854, 9954, 11974, 14689]"
+10426,Small integers in mathematical reasoning,"[4737, 3769, 1738, 936, 5079, 687, 777, 1793, 7809, 1153]"
+10442,Numbers and numerical concepts,"[1746, 1081, 35, 4158, 52, 212, 29, 297, 27, 634]"
+10450,step-by-step mathematical calculation explanations,"[2138, 4131, 14923, 17760, 7754, 2732, 7714, 6623, 7797, 11653]"
+10456,Mathematical algorithm explanation,"[3511, 13114, 1372, 2690, 4266, 12995, 1776, 6982, 657, 12872]"
+10471,The number 2 in mathematical and programming contexts,"[9791, 9981, 13752, 11325, 9262, 6996, 6854, 10480, 6871, 8523]"
+10475,Mathematical calculation steps in problem solving,"[13580, 14994, 7005, 12779, 8598, 9997, 8636, 3404, 6914, 7304]"
+10490,Counting and quantifying in mathematical contexts,"[884, 1888, 319, 3715, 666, 293, 1803, 487, 1615, 552]"
+10507,Mathematical variables in algorithms and code,"[11805, 13972, 5594, 13384, 5593, 12342, 10903, 3982, 2536, 3713]"
+10513,Mathematical variables in expressions and equations,"[1771, 2291, 642, 1477, 1783, 751, 9138, 680, 11006, 3226]"
+10524,Mathematical expressions and equation components,"[3962, 7239, 7639, 2400, 1432, 1513, 2980, 6541, 1667, 8491]"
+10527,Mathematical calculation explanations,"[11741, 12756, 1280, 1281, 4126, 9751, 4026, 5942, 13651, 2185]"
+10544,algorithmic concepts and data structures,"[16764, 20188, 8935, 10837, 7107, 26571, 12330, 13091, 13416, 14867]"
+10586,Mathematical and computational problem-solving tokens,"[118, 928, 106, 928, 175, 446, 102, 15, 446, 469]"
+10629,Mathematical problem solving with numerical calculations,"[73, 14, 514, 383, 13, 182, 99, 13, 15, 13]"
+10635,Algorithm explanation in programming solutions,"[270, 248, 251, 194, 244, 251, 192, 248, 244, 154]"
+10649,Specific numerical values in mathematical problems,"[6332, 1447, 10183, 8825, 3104, 2812, 2706, 14071, 980, 2792]"
+10661,Mathematical uncertainty or possibility,"[203, 97, 7750, 1616, 13626, 4403, 1178, 6872, 4661, 2885]"
+10677,Mathematical problem solving,"[852, 2646, 4549, 1773, 7452, 3176, 1785, 3042, 1289, 1648]"
+10684,Mathematical products and multiplication,"[15247, 218, 6215, 736, 10587, 1695, 243, 3009, 1248, 3805]"
+10713,Mathematical problem-solving reasoning,"[10532, 15593, 14411, 8285, 12954, 7070, 18238, 2418, 7244, 13958]"
+10731,Quantitative reasoning and numerical analysis,"[14849, 7936, 3928, 11187, 5630, 7309, 11210, 6568, 6651, 6042]"
+10741,Mathematical reasoning steps in geometry and algebra problems,"[7722, 1455, 3888, 1314, 4409, 548, 1515, 1220, 12306, 897]"
+10747,Algorithm and data structure concepts,"[6778, 5872, 4436, 4187, 6365, 7440, 11295, 3808, 3795, 11544]"
+10769,Mathematical calculation steps in problem-solving,"[3185, 491, 7766, 3242, 651, 2272, 976, 1699, 9398, 3255]"
+10770,Algorithm explanation in programming solutions,"[4677, 2524, 5264, 9607, 5263, 3265, 9736, 18746, 10543, 4488]"
+10782,Technical explanation reaching computation or result,"[7766, 10354, 6354, 3600, 3532, 3487, 7656, 12448, 4103, 2609]"
+10820,Solving complex algorithmic and mathematical problems,"[13127, 5971, 10558, 14260, 14940, 14058, 14304, 12215, 6381, 6917]"
+10825,Mathematical derivation explanations,"[5444, 17432, 10660, 5877, 5995, 2032, 4861, 6760, 11638, 5434]"
+10827,Mathematical problem-solving code,"[19600, 8675, 11951, 14946, 782, 11935, 10005, 6033, 10375, 20935]"
+10831,Algorithmic problem solving and mathematical reasoning,"[418, 468, 307, 266, 300, 233, 300, 483, 268, 382]"
+10845,Algorithm explanation and computational problem-solving,"[8428, 9093, 1953, 10622, 2298, 1437, 111, 2616, 13341, 6094]"
+10853,Mathematical calculation steps,"[12184, 4511, 1655, 6358, 8122, 5128, 13409, 4628, 806, 863]"
+10862,Variable 'k' in programming and mathematical contexts,"[113, 508, 276, 52, 325, 221, 308, 121, 78, 15592]"
+10868,Mathematical reasoning and equation manipulation,"[4431, 2229, 1393, 5586, 10468, 2369, 5566, 4563, 9610, 2105]"
+10872,Absolute value in mathematical contexts,"[12274, 2965, 13484, 12378, 9704, 5238, 16363, 9602, 4882, 23562]"
+10874,Spatial and relational concepts in programming,"[966, 5, 410, 5283, 1828, 19136, 7339, 463, 4022, 5416]"
+10913,Mathematical and algorithmic explanations,"[237, 468, 1601, 6162, 4136, 363, 9043, 1789, 7298, 5379]"
+10916,Mathematical reasoning and algorithmic problem-solving,"[7803, 11973, 1008, 6815, 8272, 15705, 958, 201, 4766, 6081]"
+10924,Mathematical calculations and equations,"[1954, 3988, 4126, 3041, 7113, 4789, 3039, 3998, 1354, 7055]"
+10944,Mathematical calculation and comparison operations,"[7624, 947, 5355, 9472, 282, 271, 1917, 2411, 1192, 12960]"
+10947,Definition or equation statements,"[2367, 2390, 1191, 1881, 2650, 1450, 9765, 1856, 1656, 5646]"
+10949,Mathematical formulation with variables and equations,"[3524, 4298, 958, 1944, 681, 436, 1415, 438, 3527, 1632]"
+10952,Input/output examples in programming problems,"[526, 302, 587, 877, 384, 554, 553, 723, 469, 266]"
+10960,State-based mathematical and algorithmic reasoning,"[10194, 12899, 10288, 1187, 10183, 9519, 5359, 1089, 10201, 8719]"
+10963,Complex algorithmic and mathematical problem-solving,"[221, 15519, 61, 15497, 756, 189, 419, 41, 419, 539]"
+10967,Mathematical reasoning in thinking,"[7495, 4822, 2683, 978, 5419, 6538, 3123, 2466, 2067, 1756]"
+10970,Explaining specific values in mathematical contexts,"[9749, 8675, 13046, 6191, 11666, 10057, 4161, 5628, 20350, 11663]"
+10972,Small integers in mathematical and computational contexts,"[6778, 9318, 7913, 4941, 3913, 17414, 4428, 5846, 11824, 10913]"
+10976,Mathematical calculation explanations in problem-solving,"[1812, 2143, 1254, 2382, 2383, 1172, 2350, 9347, 1629, 2388]"
+10980,Algorithm explanation in coding problems,"[1640, 2299, 1157, 6359, 1085, 14807, 3877, 2132, 2246, 672]"
+10999,Mathematical computation during problem solving,"[3756, 4005, 6294, 2257, 6038, 2640, 1317, 2861, 1368, 809]"
+11006,Programming problem descriptions and algorithmic reasoning,"[141, 32, 96, 98, 96, 310, 98, 143, 56, 502]"
+11011,Mathematical reasoning about distances and minimality,"[5706, 1395, 1504, 6251, 8010, 1817, 6163, 1843, 4138, 1378]"
+11021,Mathematical problem-solving reasoning,"[2150, 2151, 2178, 6034, 15565, 2148, 9517, 575, 20569, 454]"
+11025,Mathematical subtraction operations,"[8827, 8444, 10679, 19609, 6686, 7956, 6084, 6076, 4018, 6209]"
+11048,Algorithm explanation and computational problem-solving,"[353, 259, 386, 178, 353, 309, 178, 360, 386, 491]"
+11050,Mathematical variables and operators in algorithms,"[4287, 4978, 11927, 12277, 13500, 12957, 17718, 3871, 8593, 8206]"
+11051,Mathematical calculation and numerical reasoning,"[5294, 3139, 14298, 1235, 1597, 1365, 1588, 1570, 12173, 3683]"
+11065,Mathematical definitions and formulas,"[60, 32, 169, 52, 128, 106, 122, 142, 67, 217]"
+11069,Mathematical property attribution in reasoning,"[436, 11608, 1046, 193, 305, 571, 1067, 653, 151, 816]"
+11078,Mathematical problem-solving and calculation,"[4295, 13708, 6656, 4281, 9744, 212, 305, 2175, 9918, 4902]"
+11089,Mathematical operations in code,"[4221, 8226, 3103, 4589, 19574, 4135, 3569, 7910, 16991, 2661]"
+11092,Transformation operations in mathematics and computing,"[6521, 4, 3662, 4, 23, 1687, 9446, 286, 19, 158]"
+11101,Taking specific examples during mathematical reasoning,"[560, 12799, 2776, 403, 5400, 389, 434, 1711, 6386, 939]"
+11144,Mathematical reasoning with logarithms and exponents,"[403, 5133, 6412, 3738, 118, 2542, 8, 19935, 1592, 3602]"
+11151,Reference to problem description or explanation,"[510, 372, 763, 611, 487, 434, 369, 786, 666, 629]"
+11156,Mathematical formula explanations in computational problems,"[1103, 3494, 15187, 3335, 2418, 2320, 7564, 1260, 5471, 1365]"
+11157,"Geometric reasoning about points, lines, and shapes","[4844, 5135, 185, 1028, 1773, 5311, 3307, 1776, 3625, 3685]"
+11168,Integer values in mathematical or programming contexts,"[2899, 4721, 4344, 2505, 2402, 5273, 10131, 1660, 4435, 10362]"
+11171,Mathematical variable assignment and equality reasoning,"[16173, 13249, 14935, 13326, 13461, 11381, 10601, 9761, 14546, 22787]"
+11181,Mathematical conditional reasoning,"[9738, 1250, 18367, 14517, 13383, 7026, 5212, 2822, 3712, 862]"
+11186,Mathematical problem-solving explanations,"[1019, 9856, 4145, 2001, 4624, 14223, 8779, 10059, 1791, 14576]"
+11198,Mathematical and logical reasoning explanations,"[3521, 1115, 528, 4526, 4281, 3641, 8714, 2736, 4855, 379]"
+11199,Mathematical problem-solving,"[10226, 5317, 12422, 4987, 7931, 8691, 9085, 7217, 11990, 9217]"
+11207,Mathematical variables and notation,"[53, 353, 86, 682, 115, 1169, 187, 170, 64, 324]"
+11216,Mathematical symbols and numbers,"[7406, 463, 1085, 9568, 4536, 525, 3915, 7866, 5587, 4657]"
+11217,Mathematical notation and expressions,"[3692, 8358, 10134, 21463, 10164, 6353, 4421, 8205, 2794, 7966]"
+11224,Numbers in programming and algorithm contexts,"[954, 877, 968, 951, 947, 1171, 955, 1112, 924, 763]"
+11227,Explaining possibilities and categorization,"[5192, 5375, 9853, 8987, 1479, 2955, 9434, 7695, 4905, 6821]"
+11230,Mathematical notation and symbols in technical problem solving,"[18885, 1931, 1463, 4732, 8744, 18958, 9628, 19254, 11735, 3258]"
+11249,Mathematical notation and expressions,"[9486, 3246, 1403, 2883, 6231, 2453, 5529, 2660, 7536, 7252]"
+11263,Variable names in mathematical expressions,"[2886, 1644, 4138, 3159, 2899, 2863, 3536, 3611, 4435, 17798]"
+11268,Mathematical operations in formulas and code,"[1558, 4165, 9315, 5755, 5527, 7703, 2547, 4713, 10017, 8377]"
+11291,Mathematical variable definitions and constraints,"[273, 5002, 5756, 13567, 1589, 2236, 440, 3413, 1588, 5364]"
+11299,Mathematical reasoning operation verbs,"[2205, 2399, 244, 580, 1359, 5744, 81, 388, 2685, 1118]"
+11300,Sum operations in programming and mathematics,"[4067, 10304, 5411, 1374, 10552, 1471, 12359, 6303, 13107, 3183]"
+11322,angle-based mathematical reasoning,"[12885, 2473, 5812, 5130, 3737, 627, 664, 2312, 842, 5392]"
+11325,Mathematical notation and expressions,"[3023, 8169, 5221, 8168, 1052, 4240, 3986, 8145, 1163, 17355]"
+11342,Adding values in algorithms and mathematical expressions,"[7177, 3185, 8681, 7538, 7101, 7413, 4152, 8079, 9888, 1854]"
+11358,Mathematical calculations and numerical reasoning,"[8777, 8776, 1562, 6880, 1921, 4840, 7967, 4846, 3629, 5455]"
+11378,Mathematical reasoning about algorithm steps,"[5976, 4080, 5303, 2687, 3003, 1389, 2627, 4541, 5120, 6339]"
+11389,complexity and complex systems,"[678, 14086, 6, 9, 11292, 8, 3505, 5, 35, 5945]"
+11410,Mathematical reasoning and step-by-step problem solving,"[3154, 3648, 22404, 8813, 634, 8801, 16004, 1182, 908, 1828]"
+11417,Computational geometry concepts related to lines and line segments,"[1952, 1505, 1947, 5596, 4175, 1638, 13090, 14694, 9621, 12702]"
+11425,Mathematical reasoning in algorithmic problem solving,"[2227, 2577, 899, 6763, 3562, 5665, 2728, 966, 1776, 5076]"
+11426,Variable names in mathematical and algorithmic contexts,"[1701, 3197, 790, 9793, 1962, 9882, 8694, 2983, 3637, 5087]"
+11446,The variable x in mathematical and programming contexts,"[2180, 9957, 561, 4695, 3679, 4825, 6960, 5667, 4698, 9621]"
+11448,Mathematical problem-solving reasoning,"[2430, 3418, 4436, 5125, 9442, 6871, 4478, 449, 5632, 7128]"
+11451,Mathematical algorithm problem-solving,"[4060, 3148, 8921, 10629, 7513, 15484, 12348, 8429, 8627, 6518]"
+11460,Mathematical variables in equations and formulas,"[4485, 13844, 4486, 3958, 16039, 1170, 4471, 3241, 12306, 2155]"
+11470,Mathematical variables and parameters,"[12335, 2937, 2201, 9032, 10546, 276, 1782, 3413, 361, 2632]"
+11471,Mathematical operations and arithmetic reasoning,"[747, 2501, 1900, 1514, 421, 832, 2166, 1648, 4315, 1711]"
+11475,Mathematical calculations and numerical reasoning,"[3721, 2256, 3909, 1433, 707, 4660, 2941, 2117, 3549, 5633]"
+11478,Explaining which algorithmic approach solves a complex problem,"[711, 1614, 8228, 6355, 3993, 4693, 4756, 9436, 744, 433]"
+11487,searching for mathematical patterns or formulas to solve problems efficiently,"[9172, 10799, 10618, 1117, 1684, 1096, 1008, 2912, 355, 720]"
+11504,mathematical reasoning and pattern analysis,"[5127, 4557, 967, 815, 15374, 1606, 4710, 1658, 787, 2842]"
+11519,Mathematical reasoning and problem solving,"[9519, 11570, 1250, 10825, 14224, 762, 3926, 12970, 6179, 12537]"
+11522,Mathematical reasoning and optimization,"[5992, 7597, 2952, 163, 301, 300, 127, 1201, 7598, 3978]"
+11526,First line of algorithmic explanation,"[15995, 15900, 22884, 11235, 16186, 11429, 21683, 12897, 7575, 17223]"
+11547,Programming problem descriptions and explanations,"[74, 63, 162, 96, 79, 102, 78, 85, 96, 146]"
+11552,Mathematical reasoning and calculations,"[2118, 2837, 1308, 1856, 1261, 1018, 10539, 2892, 10538, 7140]"
+11565,Mathematical notation and symbols in equations,"[1654, 19818, 16795, 4014, 9104, 9366, 9675, 18253, 22043, 772]"
+11566,Mathematical operations in code,"[5292, 4455, 4502, 8547, 15616, 17353, 11648, 20696, 16355, 1750]"
+11567,Real numbers and reality concepts,"[959, 8747, 20710, 6, 14009, 6031, 6068, 13938, 2687, 6707]"
+11574,Code explanation for programming problems,"[2511, 596, 6172, 11543, 2860, 4015, 1316, 210, 7315, 2953]"
+11581,Logical reasoning and mathematical problem-solving,"[5761, 15609, 10831, 8544, 5978, 3912, 14976, 6476, 3578, 4820]"
+11590,Mathematics terminology and concepts,"[6864, 2832, 2730, 2733, 5684, 5672, 5691, 2844, 6861, 3580]"
+11597,Mathematical condition explanations,[]
+11598,Algorithm explanation and programming solutions,[]
+11630,Mathematical expressions and calculations,[]
+11633,Programming problem solution explanations,[]
+11648,Expressing one variable in terms of another in mathematics,[]
+11649,The number 1 in programming and mathematics,[]
+11658,Small integers (1-2) in mathematical and computational contexts,"[9010, 5653, 13818, 5393, 6277, 5834, 3491, 13508, 11513, 13654]"
+11659,Code with numeric values and mathematical operations,"[2229, 5885, 4125, 6983, 2428, 5147, 381, 3118, 2232, 2287]"
+11666,Mathematical terminology related to modular arithmetic and additive groups,"[557, 2068, 991, 3240, 141, 2352, 277, 1003, 4835, 7384]"
+11668,Mathematical expressions and equations,"[7346, 6448, 9594, 2444, 2776, 13939, 10044, 9959, 5663, 1450]"
+11671,Mathematical and algorithmic problem-solving,"[911, 5145, 4855, 5282, 8692, 2675, 1223, 1255, 436, 11553]"
+11692,Mathematical problem solving in competitive programming,[]
+11697,Algorithm explanation in programming solutions,[]
+11701,Algorithmic problem-solving explanations,[]
+11735,Algorithm explanation and mathematical reasoning,[]
+11737,zero in mathematical contexts,[]
+11802,Algorithm and computational problem-solving explanations,[]
+11804,Mathematical reasoning with large numbers,[]
+11817,difference calculations in mathematical reasoning,[]
+11840,End of technical explanation,[]
+11841,Mathematical expressions and equations,[]
+11845,Numbers in computational contexts,[]
+11846,Small integers in mathematical reasoning,[]
+11883,Dynamic programming concepts and implementation,[]
+11908,Mathematical expressions and operations,[]
+11963,Mathematical constraint relationships,[]
+11968,Mathematical calculation steps,[]
+11991,Mathematical reasoning with variables and equations,[]
+11997,Mathematical reasoning and logical constraints,[]
+12016,Mathematical operations in equation solving,[]
+12028,Mathematical equality and operations,[]
+12038,Mathematical reasoning and equation solving,[]
+12042,maximum optimization concepts,[]
+12055,Computational geometry and mathematical problem solving,[]
+12073,Mathematical multiplication operations,[]
+12076,Numbers in mathematical formulas and equations,[]
+12077,Circularity and round-based concepts,[]
+12084,Small integers in mathematical contexts,[]
+12085,Thinking through mathematical problem solving,[]
+12088,Explaining how to solve a problem,[]
+12094,Numbers in programming problems,[]
+12104,Algorithmic examples in explanations,[]
+12105,Mathematical optimization problems,[]
+12120,Mathematical equations and expressions,[]
+12134,Mathematical reasoning in geometry problems,[]
+12142,Variable names in mathematical contexts,[]
+12150,Problem-solving explanation,[]
+12153,Problem-solving and algorithm explanation,[]
+12161,Mathematical addition operator in programming problems,[]
+12196,Mathematical expressions and numerical calculations,[]
+12200,Mathematical and algorithmic patterns,[]
+12202,Mathematical operators in LaTeX expressions,[]
+12213,Thorough mathematical problem solving,[]
+12223,Analyzing examples in problem-solving,[]
+12230,Mathematical reasoning about repetition or multiple instances,[]
+12250,Mathematical notation and algebraic expressions,"[4664, 3633, 10956, 825, 2024, 3992, 535, 12503, 4355, 2637]"
+12255,Mathematical multiplication operations,[]
+12289,Mathematical expressions and notation,[]
+12294,Algorithm and data structure explanations,[]
+12308,Mathematical reasoning,[]
+12314,Maximum value determination in mathematical reasoning,[]
+12328,The number 4 in mathematical expressions,[]
+12343,Mathematical and programming syntax elements,[]
+12347,Mathematical and geometric relationships,[]
+12364,Mathematical variables and equations in problem solving,[]
+12366,Circular objects and concepts,[]
+12371,Small integers in mathematical reasoning,[]
+12372,Self-questioning and verification in mathematical reasoning,[]
+12377,Problem-solving for mathematical and algorithmic challenges,[]
+12384,Mathematical reasoning and calculations,[]
+12437,Mathematical comparison operations,[]
+12464,Technical explanation of code and algorithms,[]
+12472,Mathematical difference explanations,[]
+12543,Algorithm implementation and explanation,[]
+12565,Place value terminology in numbers,[]
+12591,Intermediate calculation results in mathematical reasoning,[]
+12593,Mathematical reasoning with step-by-step calculations,[]
+12601,Mathematical reasoning and problem-solving,[]
+12606,Mathematical problem-solving,[]
+12609,Algorithm and data structure explanations in programming,[]
+12626,Logical reasoning and mathematical problem solving,[]
+12627,Algorithmic problem-solving explanations,[]
+12630,Programming problem-solving explanations,[]
+12639,Mathematical problem solving,[]
+12643,Mathematical variables and expressions in algorithmic problem-solving,[]
+12656,Mathematical reasoning in thinking mode,[]
+12668,Mathematical reasoning and calculation,[]
+12670,Mathematical assignment operations and calculations,[]
+12695,Problem-solving and analytical reasoning,[]
+12733,Example introduction in technical explanations,[]
+12735,Mathematical variables and notation,[]
+12742,Mathematical calculations and numerical reasoning,[]
+12751,Mathematical expressions in programming code,"[16276, 14101, 9721, 17675, 11137, 19460, 13116, 15062, 18793, 13045]"
+12781,Mathematical reasoning with arrays and indices,[]
+12784,Mathematical reasoning in problem-solving steps,[]
+12798,Mathematical problem-solving in programming contexts,[]
+12810,mathematical calculation steps,[]
+12817,Algorithmic problem-solving explanation,[]
+12836,Mathematical reasoning and calculation steps,[]
+12837,Counting and enumeration in mathematical contexts,[]
+12844,Programming problem outputs and mathematical expressions,[]
+12856,Collections and their contents in mathematical problems,[]
+12872,Mathematical operations and algebraic manipulations,[]
+12876,Mathematical reasoning and algorithmic explanation,[]
+12877,Mathematical problem solving,[]
+12909,Mathematical calculation steps,[]
+12916,Mathematical reasoning through systematic case analysis,[]
+12922,Comma in mathematical or algorithmic explanation,[]
+12931,Minimum and maximum operations in mathematical contexts,[]
+12942,Spaces between numerical inputs in mathematical problems,[]
+12946,Phrases about quantities using 'number of',[]
+12967,Algorithm or technique application explanation,[]
+12977,Mathematical calculation steps,[]
+12985,Mathematical notation and algebraic expressions,[]
+12991,Quantity and repetition patterns,[]
+13002,Geometric and spatial relationships,[]
+13006,Mathematical computation explanation,[]
+13013,Mathematical expressions and calculations in code,[]
+13015,Algorithmic problem-solving explanations,[]
+13018,Mathematical and programming operators,[]
+13028,Providing examples to illustrate concepts,[]
+13039,Mathematical reasoning and geometric problem solving,[]
+13040,Mathematical variables and operators in problem-solving contexts,[]
+13052,Mathematical constraint satisfaction,[]
+13068,Mathematical problem-solving and algorithmic reasoning,[]
+13107,Mathematical reasoning and formula manipulation,[]
+13109,Programming problem solution explanations,[]
+13117,Algorithm and problem-solving explanations,[]
+13119,Numbers in programming problems,[]
+13124,algorithmic and data structure explanations,[]
+13125,Mathematical reasoning with concrete examples,[]
+13149,Mathematical properties and structures,[]
+13153,Algorithm explanation and computational problem-solving,[]
+13174,minimization and smallness concepts,"[1559, 4260, 1877, 7217, 3009, 2873, 976, 8720, 12381, 7878]"
+13181,Mathematical answer boxing notation,"[4688, 3429, 3123, 3339, 4256, 5100, 2790, 5283, 1073, 1721]"
+13188,Variables and placeholders in mathematical/programming contexts,"[3982, 1880, 2704, 2107, 12795, 2256, 3663, 4641, 386, 8073]"
+13208,Mathematical reasoning with variables and substitution,[]
+13215,Mathematical reasoning and calculation,[]
+13245,subtraction operations in mathematical calculations,[]
+13247,Beginning of mathematical expressions in LaTeX format,[]
+13252,Mathematical optimization and algorithmic reasoning,[]
+13260,Mathematical comparison operations,[]
+13264,Mathematical problem solving,[]
+13266,Variable n in programming and mathematical contexts,[]
+13303,Intermediate calculation values in mathematical problems,[]
+13311,Algorithm explanation in programming contexts,[]
+13313,Mathematical property classification of numbers,[]
+13321,Mathematical calculations and expressions,[]
+13322,Programming problem explanations,[]
+13347,Mathematical calculation and reasoning,[]
+13402,Algorithmic problem solving explanations,[]
+13416,Definite articles in mathematical and technical explanations,[]
+13417,Mathematical explanations and definitions,[]
+13423,Variable and parameter names in mathematical and computational contexts,[]
+13427,The assistant is solving a mathematical problem,[]
+13441,Mathematical equation results,[]
+13471,Algorithmic problem-solving explanations,[]
+13474,Mathematical reasoning and problem-solving,[]
+13490,Mathematical reasoning with variables and operators,[]
+13497,Numeric values in programming and algorithmic contexts,[]
+13498,Mathematical variables in equations and proofs,[]
+13501,Small integers in mathematical reasoning,[]
+13505,Mathematical operations in code,[]
+13507,Numbers in computational contexts,[]
+13508,Numbers in mathematical contexts,[]
+13527,Mathematical constraints and variable definitions in problem statements,[]
+13530,Programming code and algorithm explanations,[]
+13538,numerical structure and organization,[]
+13549,Algorithm explanation and problem solving,[]
+13551,Thinking about abstract modeling of problems,[]
+13563,Application of mathematical theorems and algorithms to solve problems,[]
+13614,Explaining complex algorithms and data structures,[]
+13644,Mathematical comparison operations,[]
+13652,Mathematical reasoning with numbers,[]
+13675,Mathematical comparison operations,[]
+13676,Mathematical variable assignment with addition operations,[]
+13679,Mathematical operations in code,[]
+13681,Probability concepts in mathematical reasoning,[]
+13683,Mathematical variable relationships and operations,[]
+13705,Mathematical geometry in unit space,[]
+13724,Mathematical fractions in problem-solving contexts,[]
+13729,Mathematical expressions and equations,[]
+13732,Numerical values in mathematical contexts,[]
+13737,directional relationships in mathematical or computational contexts,[]
+13741,Mathematical and algorithmic reasoning,[]
+13742,Explaining relationships in algorithmic solutions,[]
+13768,Mathematical and algorithmic problem-solving,[]
+13784,Math and algorithm problem solving,[]
+13788,Thinking through complex mathematical and algorithmic problems,[]
+13793,Small integers and numerical digits in mathematical contexts,[]
+13811,Mathematical expressions that would be rendered as images,[]
+13820,Computational reasoning in mathematical problem solving,[]
+13824,Dynamic programming concepts and implementation,[]
+13832,Mathematical reasoning and calculation,[]
+13834,Programming problem descriptions and algorithmic reasoning,[]
+13842,Mathematical programming problem statements,[]
+13848,Math and number theory,[]
+13853,Factorial calculations in mathematical contexts,[]
+13855,Mathematical calculation and equality expressions in algorithmic reasoning,[]
+13885,Mathematical accumulation operations in algorithms,[]
+13907,addition operations in explanations,[]
+13908,Complex algorithmic and mathematical reasoning,[]
+13911,Mathematical reasoning about relationships and equivalences,[]
+13913,Mathematical integration and calculus concepts,[]
+13918,Competitive programming or mathematical problem statements,[]
+13924,Non-negative number constraints in mathematical reasoning,[]
+13925,Geometric angle measurements in mathematical problems,[]
+13935,Programming and coding concepts,[]
+13936,Mathematical calculation and reasoning,[]
+13942,Mathematical equation explanations with focus on linear equations and slopes,[]
+13952,Intermediate calculation results in mathematical reasoning,[]
+13953,Mathematical subtraction operations,[]
+13964,Mathematical reasoning and step-by-step problem solving,[]
+13968,Programming algorithm explanations,[]
+13971,Mathematical expressions and numerical notation,[]
+14005,Mathematical variables and constants in equations,[]
+14027,mathematical problem solving with numbers and algorithms,[]
+14067,Mathematical operations and notation in reasoning,[]
+14088,Mental visualization and spatial reasoning in mathematics,[]
+14091,Mathematical notation and technical symbols in algorithms,[]
+14099,Mathematical reasoning and comparison operations,[]
+14112,Problem solving in computational contexts,[]
+14114,Detailed mathematical reasoning,[]
+14125,Mathematical relation definitions and notation,[]
+14132,mathematical operations in geometric problems,[]
+14153,Mathematical formulas and algebraic expressions,[]
+14158,Algorithm problem-solving explanations,[]
+14161,Mathematical operations in code implementations,[]
+14162,Mathematical addition operator in problem-solving contexts,[]
+14165,Mathematical notation in algorithm explanations,[]
+14166,Pairing and matching concepts in algorithms and mathematics,[]
+14189,Mathematical reasoning with variables and exponents,[]
+14197,Mathematical reasoning that applies general concepts to specific cases,[]
+14199,Mathematical problem solving,[]
+14211,Mathematical formulas in programming explanations,[]
+14219,Algorithmic problem-solving explanations,[]
+14237,Explaining approaches to solve problems,[]
+14245,Mathematical reasoning about differences and calculations,[]
+14247,Variable assignments and array indexing in mathematical reasoning,[]
+14252,Mathematical problem-solving in competitive programming,[]
+14268,Mathematical calculation steps,[]
+14283,Mathematical representation of physical spaces,[]
+14337,Small integers in programming and mathematical contexts,[]
+14338,Numbers in programming problem contexts,[]
+14357,Abstract concept definitions in educational text,[]
+14382,Algorithmic problem-solving explanations,[]
+14385,Mathematical constraints and optimization reasoning,[]
+14386,Mathematical calculations and notation,"[3976, 4803, 3892, 1402, 13073, 4754, 4837, 4164, 4925, 8080]"
+14393,Numbers in mathematical expressions,[]
+14394,Multiplication operations in mathematical contexts,[]
+14397,Mathematical and logical relationships between objects,[]
+14418,mathematical scaling and proportional relationships,[]
+14426,Mathematical problem-solving,[]
+14433,Mathematical calculations and operations,[]
+14434,Mathematical pairs and relationships,[]
+14437,Algorithmic problem-solving explanations,[]
+14446,Definitional reasoning and concept clarification,[]
+14498,Algorithm explanation patterns,[]
+14501,Explaining minimum value operations in algorithms,[]
+14503,Mathematical expressions with variables and operations,[]
+14507,Mathematical equation components and calculations,[]
+14509,mathematical operations and variable assignments in programming contexts,[]
+14511,Mathematical operations and numerical reasoning,[]
+14517,Square root calculations in mathematical reasoning,[]
+14539,Programming and algorithmic problem descriptions,[]
+14550,Spaces during mathematical calculations,[]
+14555,Problem description with operations and relationships,[]
+14558,Mathematical calculations and algorithmic problem-solving,[]
+14566,The assistant is solving a complex mathematical problem,[]
+14582,Mathematical equations and variable assignments,[]
+14583,Integer constraints in mathematical reasoning,[]
+14598,Numbers in mathematical comparisons and calculations,[]
+14599,Explaining proximity or nearest-neighbor concepts,[]
+14606,Small integers in algorithmic explanations,[]
+14610,Algorithmic problem-solving explanations,[]
+14611,Introduction of explanations or examples,[]
+14616,Numbers in programming problems,[]
+14623,Mathematical subtraction operations,[]
+14629,Mathematical problem-solving,[]
+14633,"Mathematical operations, especially subtraction",[]
+14635,Mathematical problem solving with geometric calculations,[]
+14638,Algorithm explanation and computational problem-solving,[]
+14651,Mathematical operations and numerical comparisons,[]
+14656,modeling this problem,[]
+14672,Mathematical reasoning and calculation steps,[]
+14684,Mathematical and logical operation symbols in explanations,[]
+14705,Algorithmic problem-solving explanations,"[1332, 5492, 1273, 4980, 3775, 846, 2348, 1887, 5950, 11431]"
+14713,Mathematical calculation steps,"[2856, 5754, 643, 984, 1880, 630, 5566, 8389, 1161, 5152]"
+14717,Mathematical reasoning and notation processing,[]
+14718,Mathematical reasoning breakthrough moments,[]
+14728,Mathematical notation and symbols,[]
+14737,Explanation of algorithmic approaches and technical concepts,[]
+14746,"Mathematical calculation steps, particularly addition operations",[]
+14756,Algorithmic problem-solving explanations,[]
+14759,Mathematical operations and algebraic expressions,[]
+14762,"Mathematical word problems involving ratios, exchanges, or relationships between quantities",[]
+14774,Step-by-step mathematical and algorithmic reasoning,[]
+14802,Mathematical reasoning and number theory algorithms,[]
+14803,Mathematical operators and assignment syntax in programming code,[]
+14808,Numbers and mathematical operations,[]
+14809,Mathematical reasoning and step-by-step problem solving,[]
+14812,Mathematical notation and reasoning,[]
+14833,Programming problem format and example explanations,[]
+14864,Explaining algorithmic approaches to problem-solving,[]
+14870,Periods in mathematical explanations,[]
+14874,Recursive mathematical relationships,[]
+14876,Mathematical equivalence and relationships,[]
+14904,The variable y in mathematical and programming contexts,[]
+14909,Mathematical reasoning and calculation,[]
+14911,Mathematical and algorithmic reasoning,[]
+14920,Mathematical operations and equality statements,[]
+14954,area calculations in mathematical contexts,[]
+14955,Mathematical variables and indices in problem-solving,[]
+14960,Mathematical notation and variables,[]
+14963,Mathematical notation and symbols,[]
+14981,Mathematical reasoning and step-by-step problem solving,[]
+14997,Mathematical calculation and step-by-step numerical reasoning,[]
+15006,Algorithm problem-solving explanations,[]
+15014,Mathematical reasoning and calculation steps,"[7303, 9921, 3809, 1479, 4653, 3166, 15944, 6901, 1046, 5494]"
+15024,Small integers in mathematical contexts,[]
+15026,Mathematical algorithm problem-solving,[]
+15029,Explaining algorithmic problem-solving techniques,[]
+15035,Addition expressions in mathematical contexts,[]
+15044,Mathematical notation in geometry problems,[]
+15055,Mathematical reasoning and notation,[]
+15063,Mathematical constraint reasoning,[]
+15066,Mathematical notation in problem statements,"[405, 319, 208, 219, 47, 714, 293, 326, 839, 577]"
+15133,First step in algorithmic explanations,[]
+15141,Algorithm explanation with mathematical notation and variables,[]
+15169,Mathematical reasoning and calculation steps,[]
+15187,Mathematical reasoning with very large numbers,[]
+15237,Geometric progressions in mathematics,[]
+15242,Numbers in mathematical problems,[]
+15244,maximum value or frequency determination in mathematical contexts,[]
+15253,Permutation-related concepts in algorithms,[]
+15254,Mathematical problem-solving with computational algorithms,[]
+15257,Uncertainty and problem-solving in mathematical reasoning,[]
+15270,Mathematical calculation and numerical reasoning,[]
+15280,Algorithm explanation in programming solutions,[]
+15281,Numbers being analyzed in computational problem-solving,[]
+15286,Mathematical reasoning and numerical equality statements,[]
+15296,Mathematical reasoning and comparison steps,[]
+15304,Mathematical notation and expressions,[]
+15306,Mathematical comparison operations,[]
+15317,algebraic manipulation and mathematical reasoning,[]
+15323,Explaining step-by-step mathematical transformations and algorithms,[]
+15324,Step-by-step mathematical reasoning,[]
+15330,Mathematical and logical relationship tokens,[]
+15331,Diagonal-related mathematical reasoning,[]
+15338,Mathematical reasoning and calculation steps,[]
+15373,Algorithmic problem solving explanations,[]
+15378,values and quantities,"[21604, 8322, 10627, 317, 150, 1249, 213, 16441, 369, 201]"
+15392,Programming problem-solving and code explanation,[]
+15408,Mathematical calculation steps in algorithms,[]
+15410,Mathematical calculation steps,[]
+15414,Addition operations in mathematics and programming,[]
+15423,"Mathematical subtraction operations, especially subtracting 1",[]
+15428,mathematical operations and calculations,[]
+15435,Small positive integers in mathematical contexts,[]
+15444,Mathematical reasoning and problem solving,[]
+15446,Positive integers in mathematical problem statements,[]
+15494,The number 1 in programming and mathematical contexts,[]
+15533,Mathematical and programming variables and indices,[]
+15547,Small integers in mathematical problem-solving examples,[]
+15552,Collective mathematical reasoning,[]
+15569,Numbers in programming problems,[]
+15594,Step-by-step mathematical reasoning,[]
+15606,The model identifies and analyzes problem constraints in mathematical problems,[]
+15609,Mathematical reasoning and algorithm explanation,[]
+15614,Mathematical expressions and numerical values in problem-solving,[]
+15619,Mathematical expressions with variables,[]
+15621,Initial values and distances in algorithmic reasoning,[]
+15627,Mathematical problem-solving reasoning,[]
+15656,Explaining mathematical or algorithmic transformations,[]
+15665,First token of user's math or reasoning question,[]
+15676,Mathematical programming problem solving,[]
+15678,Mathematical problem-solving,[]
+15687,Mathematical problem solving,[]
+15710,Mathematical algorithms and computational problem-solving,[]
+15718,Mathematical problem-solving and explanation,[]
+15738,Mathematical problem-solving explanations,[]
+15768,Mathematical reasoning and numerical computation,[]
+15775,Algorithm explanation and problem-solving,[]
+15802,Minimum value or minimal solution in mathematical contexts,[]
+15805,Mathematical calculation and problem-solving,[]
+15815,Number 24 and related mathematical quantities,[]
+15818,Algorithmic problem-solving explanations,[]
+15845,Step-by-step mathematical and algorithmic reasoning,[]
+15846,Questions or explanations about how something works,[]
+15878,Mathematical reasoning with continuous variables and abstractions,[]
+15880,Algorithm explanation and computational problem-solving,[]
+15888,Variables in mathematical programming explanations,[]
+15894,Mathematical formula application explanations,[]
+15898,Mathematical problem-solving and geometric computation,[]
+15910,descriptions of objects or concepts,[]
+15912,The number 1 in mathematical and programming contexts,[]
+15918,Mathematical problem-solving contexts,[]
+15920,multiset concepts in mathematical reasoning,[]
+15934,Mathematical variable assignments and equality relationships,[]
+15937,Mathematical expressions and algebraic reasoning,[]
+15956,Mathematical equality and balance relationships,[]
+15963,Mathematical modeling and constraint propagation,[]
+15964,Mathematical and geometric relationships,[]
+15970,Mathematical expressions and algebraic notation,[]
+15980,end of detailed algorithmic explanation,[]
+15982,Programming problem-solving concepts,[]
+15990,Mathematical division operations in explanations,[]
+16029,Mathematical calculation and reasoning,[]
+16052,Integer values and decimal points in mathematical contexts,[]
+16054,The number 1 in problem-solving contexts,[]
+16056,Mathematical reasoning and calculation,[]
+16061,Mathematical variables and symbols in equations,[]
+16079,Mathematical notation in programming problems,[]
+16114,Reasoning that mathematical operations work because values are positive,[]
+16115,Mathematical reasoning and problem solving,[]
+16122,Explaining algorithmic approaches and computational methods,[]
+16124,Sum of elements in mathematical contexts,[]
+16126,Mathematical expressions and equation syntax,[]
+16162,Mathematical reasoning about numerical values,[]
+16199,Algorithmic problem solving explanations,[]
+16206,Mathematical reasoning and step-by-step calculations,[]
+16210,Intermediate calculation values in mathematical reasoning,[]
+16211,Mathematical elements and their relationships in formal reasoning,[]
+16213,Mathematical calculation operations,[]
+16220,Mathematical reasoning about sums and additive relationships,[]
+16234,Mathematical powers and exponentiation in algorithms,"[4132, 10, 6, 2474, 8089, 1349, 4228, 3149, 7, 10288]"
+16247,Spatial and mathematical dimensions,"[5, 46, 4, 416, 4, 130, 8284, 89, 7750, 23]"
+16257,Mathematical transformation concepts,[]
+16270,Structured step-by-step explanations in mathematical or computational contexts,"[2937, 5396, 7200, 1611, 1650, 5022, 1038, 4346, 3742, 11279]"
+16284,Explaining algorithmic approaches and solutions,"[2549, 11265, 5649, 5559, 2224, 5539, 2719, 10144, 3177, 3591]"
+16318,Mathematical addition operations,"[1095, 1420, 10489, 1625, 2123, 6684, 3700, 2133, 800, 6486]"
+16332,Exploring alternative possibilities in mathematical reasoning,"[1391, 7098, 2644, 2722, 919, 702, 9412, 1240, 1220, 2020]"
+16333,Mathematical variables in equations and algorithms,"[2927, 12510, 3495, 813, 1271, 1268, 799, 1550, 1451, 7580]"
+16345,Mathematical comparisons and operations,"[4915, 4195, 13785, 4603, 8576, 7284, 5168, 6240, 2463, 12373]"
+16360,Conceptual groupings and subdivisions in algorithms and data structures,"[2478, 2779, 3122, 9029, 1880, 3958, 8012, 9515, 3792, 1049]"
+16368,Mathematical variables in algorithmic descriptions,"[2070, 8991, 4754, 3445, 2406, 7856, 8368, 4702, 11769, 3754]"
+16373,Mathematical problem solving,"[1685, 3230, 2493, 2526, 6090, 9893, 6704, 4459, 5912, 11860]"
+16419,Mathematical explanation structure and formatting,"[750, 1273, 17282, 421, 610, 3150, 2009, 541, 5544, 587]"
+16443,Programming problem-solving explanations,"[597, 3091, 1809, 15854, 6299, 14093, 16375, 3300, 2204, 16140]"
+16458,Mathematical reasoning and equation solving,"[9358, 11929, 6843, 3211, 6345, 1833, 4962, 4568, 3690, 6200]"
+16459,Algorithm explanation in programming contexts,"[96, 1737, 160, 293, 118, 4968, 5759, 11220, 375, 12086]"
+16468,Mathematical fractions and fractional concepts,"[1118, 6, 13932, 7434, 4, 12620, 4, 1362, 1247, 2389]"
+16482,Mathematical reasoning in competitive programming explanations,"[3703, 3626, 7901, 1351, 3558, 5893, 2344, 1461, 1758, 3704]"
+16489,Transitional phrases in mathematical reasoning,"[745, 1214, 1526, 821, 1436, 302, 977, 481, 434, 9403]"
+16491,matrix-related mathematical descriptions,"[11, 6, 12, 7, 5717, 7, 24, 466, 13728, 7]"
+16503,Mathematical expressions with variable assignments and arithmetic operations,"[2764, 2453, 7060, 2785, 9591, 9487, 8300, 5955, 8802, 2423]"
+16515,Numbers in programming and mathematical contexts,"[2238, 3039, 4437, 14365, 13791, 10751, 1213, 1425, 1311, 13668]"
+16518,Mathematical set notation and formal reasoning,"[5014, 9787, 2040, 9662, 3936, 13058, 57, 1462, 8861, 10759]"
+16548,Mathematical problem-solving in geometry and calculus,"[9462, 15382, 6102, 13160, 11963, 6297, 12027, 6069, 13208, 9005]"
+16554,Mathematical and programming variables,"[930, 1552, 939, 2957, 9947, 7412, 1125, 9705, 9092, 648]"
+16555,Mathematical reasoning and algorithms,"[14257, 17637, 7648, 12320, 6563, 8429, 11710, 10343, 10091, 8665]"
+16557,Mathematical reasoning and calculation steps,"[7141, 10527, 13845, 2049, 12884, 6507, 1454, 12896, 1262, 1010]"
+16561,Time units in mathematical problems,"[106, 713, 900, 96, 519, 876, 1457, 3009, 161, 5645]"
+16564,Mathematical variable values in problem solving,"[2519, 2923, 1419, 8523, 2073, 1051, 3489, 1043, 2087, 14132]"
+16576,Addition and subtraction operations in mathematical contexts,"[12987, 9352, 1437, 6125, 1806, 6486, 3116, 15372, 1957, 1921]"
+16582,Mathematical reasoning through simplified examples,"[580, 734, 581, 785, 1205, 1204, 3561, 7606, 891, 1722]"
+16593,Periods in mathematical reasoning,"[225, 250, 1108, 266, 215, 194, 195, 231, 172, 221]"
+16607,Multiplication operations in programming and mathematics,"[6306, 4346, 5339, 1609, 8277, 3890, 16910, 4813, 7344, 2154]"
+16640,step-by-step mathematical reasoning,"[4910, 9571, 3849, 7035, 6442, 2129, 7651, 3850, 714, 1185]"
+16652,Logical relationships and connections between concepts,"[13340, 473, 4834, 18326, 14856, 17898, 468, 132, 2833, 4443]"
+16660,Algorithmic problem-solving explanations,"[1654, 5234, 2946, 7290, 9248, 15156, 11199, 7000, 9948, 1226]"
+16675,Mathematical notation and problem-solving,"[432, 5757, 4246, 554, 14, 33, 4474, 8078, 553, 119]"
+16684,Detailed problem-solving in mathematical and algorithmic contexts,"[12816, 8443, 19891, 5255, 11455, 5178, 2614, 7341, 13058, 15668]"
+16689,Mathematical addition operations,"[7338, 4745, 6509, 2273, 9483, 1241, 9207, 233, 9169, 2625]"
+16699,Definitions and explanations of puzzles and problem-solving,"[23, 24, 35, 60, 61, 25, 32, 26, 33, 38]"
+16719,Detailed algorithmic problem-solving explanations,"[12151, 8419, 19296, 12955, 7082, 10595, 1373, 14156, 10815, 8037]"
+16755,Mathematical operations and arithmetic,"[787, 623, 1499, 281, 211, 493, 3796, 319, 894, 991]"
+16766,End of detailed explanation,"[2954, 1810, 1291, 5307, 2652, 4166, 8482, 330, 2732, 4204]"
+16784,Mathematical operations in algorithm explanations,"[9013, 9882, 10660, 12883, 14827, 9014, 6437, 7704, 16480, 12895]"
+16794,Programming problem explanations,"[834, 4303, 4787, 497, 5406, 220, 1623, 667, 3728, 1931]"
+16798,Mathematical and algorithmic reasoning,"[9069, 51, 186, 2430, 54, 66, 2534, 130, 2535, 332]"
+16814,Parenthetical expressions in mathematical explanations,"[2519, 9827, 4133, 14817, 9044, 7520, 3235, 1256, 7047, 10799]"
+16818,Geometric relationships and connections between objects,"[4586, 12153, 1819, 5641, 2809, 4547, 7526, 5726, 5808, 14585]"
+16819,Dynamic programming and mathematical optimization algorithms,"[13165, 2980, 6531, 3593, 1783, 2653, 11402, 3937, 6322, 4384]"
+16839,Mathematical equations and line descriptions,"[5355, 2117, 9998, 1441, 1091, 2659, 2664, 1222, 18333, 1295]"
+16848,Minimization and optimization concepts,"[4336, 1795, 2841, 2228, 8622, 6965, 7548, 3476, 5609, 5095]"
+16871,Numerical values in mathematical reasoning,"[2650, 2616, 7319, 1499, 2445, 1662, 1164, 1422, 757, 2088]"
+16882,Mathematical and programming symbols,"[170, 67, 33, 66, 254, 216, 112, 26, 280, 34]"
+16891,Addition operations in mathematical contexts,"[378, 248, 250, 1072, 682, 132, 6030, 7911, 250, 636]"
+16898,mathematical classification and set membership,"[57, 55, 56, 54, 173, 112, 55, 39, 107, 211]"
+16903,multiplication operations in mathematical explanations,"[892, 3609, 2065, 8383, 5667, 1069, 1511, 1033, 1512, 782]"
+16923,Algorithm explanation in educational format,"[1357, 8505, 9600, 9144, 5457, 1825, 724, 10383, 6180, 6259]"
+16935,Computational geometry and mathematical structures,"[7980, 330, 159, 5089, 712, 1477, 7618, 422, 1356, 1369]"
+16938,Algorithm explanation mode,"[7660, 5089, 10360, 10381, 5494, 3400, 6904, 8136, 14595, 5482]"
+16947,Numbers used in mathematical calculations,"[1061, 1342, 1352, 969, 5916, 1056, 580, 1977, 1969, 3267]"
+16954,Mathematical notation and expressions,"[7015, 2957, 6265, 4418, 6251, 3904, 503, 7016, 10590, 6201]"
+16959,logarithm operations in mathematical contexts,"[2700, 7758, 13383, 9183, 4716, 9227, 3592, 11794, 6582, 11383]"
+16962,Final answer declaration in mathematical problems,"[2333, 970, 1504, 1754, 1322, 1426, 702, 1354, 744, 997]"
+16965,Mathematical variables and notation in algorithmic explanations,"[7827, 6177, 3182, 2863, 7882, 7488, 2573, 4772, 10671, 7227]"
+16981,Mathematical calculations and notation,"[800, 17, 13802, 771, 2336, 10250, 9971, 232, 328, 1270]"
+16986,mathematical reasoning,"[2126, 11580, 7404, 5348, 16667, 6462, 17345, 10540, 9919, 3245]"
+17052,Mathematical problem-solving and equation analysis,"[3504, 2789, 9933, 7290, 9160, 6360, 12876, 3862, 982, 13780]"
+17082,Formal definition markers in mathematical problems,"[117, 133, 151, 64, 298, 104, 137, 137, 181, 204]"
+17099,Mathematical relationship notation,"[1199, 91, 48, 539, 466, 707, 9321, 1311, 96, 12723]"
+17134,Price and cost-related concepts,"[13, 549, 4, 5, 13, 232, 10769, 5840, 763, 1181]"
+17144,computational problem size and grouping concepts,"[10287, 7114, 4020, 9269, 13068, 8667, 6272, 1263, 19167, 3214]"
+17156,Mathematical and programming operators,"[7729, 5641, 15956, 10279, 15122, 21090, 22485, 15472, 1924, 5498]"
+17157,Mathematical operations and comparisons,"[14885, 1276, 710, 15316, 478, 9060, 1071, 1241, 1111, 7205]"
+17165,Mathematical problem-solving,"[8292, 7858, 13794, 1296, 1332, 2439, 2176, 5564, 13481, 1254]"
+17169,Linear algebra and linear mathematical concepts,"[15061, 4440, 6934, 1656, 1714, 16953, 7733, 3615, 1806, 2015]"
+17180,Technical explanation introductory phrases,"[11967, 13949, 19792, 19974, 14136, 12631, 18136, 11968, 18386, 10203]"
+17184,Mathematical calculation and step-by-step numerical reasoning,"[5448, 2883, 5447, 9017, 9556, 3185, 1489, 9683, 1836, 3016]"
+17207,Mathematical divisibility concepts,"[571, 1673, 4127, 170, 1252, 9088, 6130, 4237, 323, 14987]"
+17229,Mathematical optimization and calculus concepts,"[1648, 3473, 4780, 3632, 2218, 3746, 3630, 2874, 2369, 3795]"
+17230,Programming problem solution explanations,"[16166, 9919, 10125, 7307, 12626, 14438, 7699, 10866, 16269, 9161]"
+17237,Mathematical reasoning with integer variable assignments,"[423, 1608, 359, 966, 352, 6328, 824, 479, 9129, 542]"
+17246,Algorithm explanation and problem-solving reasoning,"[6870, 5980, 1024, 8857, 1951, 1965, 5340, 2420, 8597, 10624]"
+17250,Algorithmic problem solution explanations,"[4762, 2005, 2086, 4060, 8376, 5226, 8372, 12002, 16054, 11561]"
+17255,Mathematical reasoning in algorithmic problem solving,"[13196, 4928, 3186, 7358, 1704, 17366, 14744, 4190, 6198, 7060]"
+17269,Mathematical calculation and arithmetic reasoning,"[3013, 6206, 549, 1749, 907, 8326, 10950, 8669, 11930, 1922]"
+17274,Graph theory concepts and terminology,"[3547, 12107, 8756, 946, 3728, 1324, 1959, 2755, 1519, 671]"
+17282,Mathematical operations and expressions,"[12171, 7691, 4566, 4738, 12367, 2683, 7814, 1467, 7842, 1008]"
+17288,Technical and mathematical terminology,"[1995, 134, 837, 1257, 583, 3502, 296, 617, 765, 14912]"
+17290,Variable references in programming and mathematics,"[11, 10, 2450, 13063, 8152, 8685, 17760, 21510, 7126, 8631]"
+17313,Mathematical expressions and calculations,"[333, 5222, 3593, 3086, 3798, 3602, 2233, 3584, 1713, 1186]"
+17399,mathematical and structural properties,"[6198, 14573, 8646, 1516, 1937, 139, 212, 118, 5718, 1940]"
+17402,Mathematical notation in physics and collision detection problems,"[3183, 5546, 5765, 1279, 5522, 1803, 3061, 1201, 5560, 3702]"
+17414,Mathematical reasoning and equation solving,"[11763, 9483, 3613, 2102, 2304, 6119, 9622, 4939, 14145, 1807]"
+17420,Mathematical variables in equations and formulas,"[3383, 1247, 701, 1209, 776, 5024, 360, 1265, 742, 16172]"
+17421,Mathematical problem-solving and algorithmic reasoning,"[506, 414, 425, 475, 562, 300, 421, 300, 425, 397]"
+17441,Mathematical perfection concepts,"[7280, 82, 8886, 9733, 14, 1198, 10885, 6, 10, 1787]"
+17447,Algorithmic problem-solving insight,"[6173, 4703, 4226, 4700, 9541, 11141, 7354, 3368, 1939, 7403]"
+17459,Programming syntax and mathematical notation,"[11382, 7063, 4083, 9992, 3004, 5487, 5641, 7754, 4541, 3717]"
+17464,Algorithm problem-solving explanations,"[12995, 2366, 10885, 8052, 336, 14898, 16956, 18240, 14382, 18629]"
+17498,Variables and parameters in programming/mathematical contexts,"[2700, 2134, 3780, 8276, 1930, 8736, 5641, 10316, 11031, 11788]"
+17502,Mathematical problem-solving and logical reasoning,"[1325, 1314, 8594, 4343, 3123, 613, 8687, 2259, 2768, 2274]"
+17506,Algorithm explanation and computational problem-solving,"[68, 68, 10689, 159, 132, 245, 6599, 425, 117, 425]"
+17508,Explaining what needs to be calculated or determined,"[464, 288, 378, 410, 598, 152, 137, 164, 311, 123]"
+17513,Algorithm explanations,"[3059, 4020, 4950, 5024, 3584, 2516, 2204, 2038, 4970, 8805]"
+17515,Mathematical relationship explanations,"[915, 705, 285, 175, 15696, 1653, 2911, 10440, 173, 158]"
+17523,Explaining algorithmic problem solutions,"[5392, 5079, 12618, 12293, 5579, 2642, 6552, 8930, 10252, 14313]"
+17526,Computational geometry concepts,"[3631, 1155, 3053, 5942, 1410, 1321, 1553, 3901, 4336, 10750]"
+17528,Algorithmic problem solving explanations,"[622, 333, 194, 620, 333, 701, 401, 557, 393, 468]"
+17532,Mathematical distance calculations,"[5632, 861, 669, 10687, 4357, 1128, 1021, 715, 13545, 8028]"
+17540,Mathematical problem-solving concepts,"[5056, 2439, 5280, 20252, 9342, 20126, 14750, 8277, 8278, 2896]"
+17547,Mathematical operations and calculations,"[4424, 1481, 9638, 1504, 2716, 2388, 2878, 7486, 3175, 800]"
+17551,Detailed algorithmic problem-solving explanations,"[1067, 495, 331, 197, 415, 2671, 1116, 3714, 370, 493]"
+17557,Mathematical subtraction operations,"[514, 145, 5191, 15858, 12666, 7187, 755, 1105, 3132, 13488]"
+17559,Mathematical calculation and formula application,"[2543, 14652, 16915, 2536, 1254, 1887, 3282, 1119, 2555, 3241]"
+17564,Mathematical addition operations,"[5888, 7298, 8698, 10201, 5232, 1219, 4911, 2171, 1349, 566]"
+17566,Mathematical pattern recognition in sequences,"[65, 685, 243, 1067, 1700, 1252, 3932, 421, 1744, 1720]"
+17568,mathematical reasoning,"[1178, 1850, 1594, 2855, 10847, 1525, 7047, 1000, 3798, 928]"
+17586,Mathematical notation and equations,"[5805, 6313, 4744, 6940, 11222, 5462, 1150, 1429, 4707, 8313]"
+17603,Numbers around 101 in mathematical contexts,"[382, 20, 11945, 181, 592, 11, 6332, 480, 31, 1924]"
+17612,Mathematical operations yielding results in formal contexts,"[1758, 1832, 2371, 5109, 5061, 3817, 2840, 1538, 2461, 926]"
+17627,multiplicative mathematical operations and concepts,[]
+17678,Mathematical formula explanation and derivation in problem solving,[]
+17681,Mathematical and numerical tokens,[]
+17682,Mathematical operations and notation,[]
+17700,Mathematical problem-solving and numerical calculations,"[1188, 1188, 225, 1111, 156, 1111, 38, 38, 154, 342]"
+17701,Mathematical notation and symbols in explanations,"[181, 194, 1536, 3598, 1010, 2837, 4361, 5200, 841, 449]"
+17702,Programming problem-solving explanations,"[2173, 1186, 1522, 17009, 16938, 21129, 15955, 20156, 14466, 1934]"
+17706,Mathematical addition operations,"[9471, 2115, 4855, 7120, 828, 13462, 7839, 1224, 7053, 1542]"
+17727,Small integers in mathematical contexts,[]
+17729,Algorithmic reasoning and solution explanation,[]
+17735,Mathematical reasoning and calculation steps,[]
+17764,Mathematical reasoning and explanation,[]
+17799,Mathematical relationship explanations,[]
+17804,Mathematical reasoning and algebraic manipulation,[]
+17815,Mathematical calculation transitions in problem solving,[]
+17847,Variable possibility and potential values in programming explanations,[]
+17848,Detailed algorithmic problem-solving explanations,[]
+17860,Algorithmic problem-solving explanations,[]
+17865,Mathematical summation in computational contexts,[]
+17881,Numbers in programming and mathematical contexts,[]
+17893,Mathematical expression references in explanations,[]
+17922,Mathematical addition operations,[]
+17940,Critical points and threshold values in mathematical reasoning,[]
+17943,Mathematical multiplication and calculation syntax,[]
+17957,"Mathematical calculation, especially addition operations",[]
+17972,Mathematical equality and operations,[]
+18010,Problem-solving explanation patterns,[]
+18018,Technical problem-solving and algorithm explanation,[]
+18031,Solution approach introduction in mathematical/programming problems,[]
+18032,Phrases about summation operations,[]
+18037,Numbers representing solutions or key values in mathematical reasoning,[]
+18041,operators in programming and mathematical expressions,[]
+18043,Example explanation in problem statements,[]
+18047,Mathematical reasoning about computing sums and totals,[]
+18055,Mathematical reasoning and algorithmic processes,[]
+18061,Filtering possibilities in mathematical reasoning,[]
+18076,Algorithmic problem-solving explanations,[]
+18080,Mathematical notation and operations,[]
+18092,Mathematical calculations and numerical operations,[]
+18098,mathematical operations in programming code,[]
+18105,Variable 'k' in programming and mathematical contexts,[]
+18111,Mathematical and computational problem parameters,[]
+18124,Small integers (1-3) in mathematical and programming contexts,[]
+18129,Explaining programming solutions and algorithms,[]
+18138,Mathematical variables and parameters,[]
+18144,mathematical symbols and notation,[]
+18148,Variable assignment and numerical calculation in algorithmic reasoning,[]
+18162,Technical terminology in algorithms and mathematics,[]
+18177,The user is presenting a math problem,[]
+18179,Mathematical problem-solving and calculation,[]
+18183,Mathematical explanations and definitions,[]
+18187,mathematical reasoning and algorithmic analysis,[]
+18191,Sequential mathematical operations and procedural steps,[]
+18196,Logical implication in mathematical reasoning,[]
+18201,Numbers in mathematical calculations,[]
+18207,Algorithm explanation and computational problem-solving,[]
+18221,Algorithm explanation with concrete examples,[]
+18223,Numerical sequences in algorithm explanations,[]
+18224,Mathematical operations and conditionals in algorithms,[]
+18226,Programming problem solving and algorithm explanation,[]
+18246,Mathematical calculation steps,[]
+18247,Variable assignment and calculation in programming explanations,[]
+18252,Numbers and mathematical symbols in calculations,[]
+18255,Mathematical problem-solving and algorithm analysis,[]
+18278,Mathematical quantities and dimensions,[]
+18291,Math problem solving,[]
+18339,Algorithmic problem-solving concepts and data structures,[]
+18365,Mathematical equations and programming assignments,[]
+18366,Multiplication operations in code and mathematical explanations,[]
+18396,The number 11 in mathematical contexts,"[440, 440, 913, 78, 186, 217, 12, 21, 815, 530]"
+18405,Complexity or complexity-related concepts,[]
+18406,Algorithm explanation conclusions,[]
+18466,Mathematical reasoning and formula processing,[]
+18481,Mathematical expressions and equations,[]
+18488,Mathematical tokens in programming contexts,[]
+18489,Integer division in mathematical explanations,[]
+18491,Code syntax for mathematical operations,[]
+18493,Multiplication operations in mathematical reasoning,[]
+18514,Algorithm explanation terminology,[]
+18517,Mathematical operations and exponents,"[1149, 3297, 2968, 1434, 1873, 2368, 1989, 10472, 3858, 3445]"
+18531,Reasoning about math problems,[]
+18540,Math operations in programming languages,[]
+18544,Mathematical reasoning in algorithmic problem solving,[]
+18554,"Mathematical operations, especially addition and subtraction",[]
+18563,Mathematical problem-solving calculations,[]
+18567,Mathematical relationships and differences between values,[]
+18576,Examples in explanations,[]
+18586,Logical reasoning and mathematical problem solving,[]
+18591,Mathematical notation and problem-solving,[]
+18593,Line equation explanations in mathematical contexts,[]
+18595,Mathematical symbol manipulation,[]
+18601,mathematical relationships and constraints between variables,[]
+18612,Mathematical reasoning and calculation steps,[]
+18619,Mathematical multiplication operations,[]
+18632,Algorithm problem-solving through mathematical thinking,[]
+18634,mathematical reasoning and step-by-step problem solving,[]
+18666,The definite article in mathematical and algorithmic explanations,[]
+18669,Algorithm implementation details and mathematical operations,[]
+18675,Algorithms and data structures explanations,[]
+18679,Mathematical subtraction operations,[]
+18685,Mathematical problem-solving in algorithms,[]
+18689,Mathematical operators and variable assignments in programming code,[]
+18713,Mathematical expressions and algebraic operations,[]
+18717,Mathematical algorithm implementation in code,[]
+18723,Mathematical and logical reasoning in problem-solving,[]
+18725,Mathematical necessity or required steps in problem-solving,[]
+18752,Mathematical calculations and arithmetic operations,[]
+18760,Mathematical calculation steps,[]
+18765,Small integers in mathematical contexts,[]
+18767,Algorithm explanation in programming contexts,[]
+18785,Mathematical reasoning and step-by-step calculations,[]
+18794,Algebraic substitution in mathematical reasoning,[]
+18817,Problem-solving thought process in mathematical programming,[]
+18824,mathematical formula explanations,[]
+18830,Mathematical subtraction operations in algorithms,[]
+18833,Mathematical expressions and equations,[]
+18866,Mathematical problem-solving reasoning,[]
+18875,mathematical numbers and notation,[]
+18890,Mathematical operations in algorithmic problem-solving,[]
+18904,Mathematical problem-solving,"[10, 2282, 118, 4868, 668, 11, 8, 53, 10, 231]"
+18935,Plural nouns in mathematical contexts,[]
+18940,Mathematical reasoning with small integers,[]
+18968,binary mathematical property detection,[]
+18974,Explaining algorithmic or mathematical problem-solving steps,[]
+18984,Mathematical problem-solving and algorithm design,[]
+19004,Mathematical operations and calculations,[]
+19011,Phrases describing measurement or quantity of objects,[]
+19017,Mathematical reasoning and algebraic manipulation,[]
+19018,Algorithm explanation patterns in computational problems,[]
+19029,Mathematical equality or property assertion,[]
+19036,Mathematical algorithm explanation,[]
+19073,Mathematical calculations and equation solving,[]
+19075,Graph theory explanations,[]
+19078,Algorithm explanation in programming,[]
+19085,Negative numbers in computational contexts,[]
+19090,Mathematical notation and formal expressions,[]
+19098,Definitional phrases for data structures and concepts,[]
+19102,mathematical subtraction operations,[]
+19114,Algorithm problem solving explanations,[]
+19117,Algorithmic explanations in programming problems,[]
+19146,Introduction of technical definitions or explanations,[]
+19149,Mathematical calculation steps and operations,[]
+19150,Mathematical problem-solving reasoning,[]
+19152,Mathematical reasoning and calculation,[]
+19154,Large number components in mathematical text,[]
+19160,Mathematical algorithm problem solving,[]
+19190,Composite numbers in mathematical contexts,[]
+19204,Numbers in mathematical calculations,[]
+19208,Algorithm explanation in programming solutions,[]
+19220,Sum calculation tokens in mathematical reasoning,[]
+19222,Algorithmic problem-solving explanations,[]
+19229,Mathematical problem statement formalism,[]
+19241,Mathematical expressions and calculations,[]
+19252,Algorithmic problem-solving explanations,[]
+19257,Mathematical variable references,[]
+19268,Mathematical problem-solving reasoning,[]
+19271,Mathematical expressions with variables and operations,[]
+19272,Mathematical equivalence explanations,[]
+19279,Algorithm explanation and mathematical reasoning,"[3424, 5814, 1195, 266, 686, 1602, 975, 723, 604, 3348]"
+19281,Mathematical ceiling operations,[]
+19292,Aggregation and summation concepts,[]
+19322,Mathematical reasoning,[]
+19324,Mathematical operations requiring special handling,[]
+19327,Multiples in mathematical contexts,[]
+19331,Numbers in mathematical reasoning,[]
+19337,Parametric variable t in mathematical and programming contexts,[]
+19368,Mathematical operations in algorithmic problem solving,"[1348, 5749, 1127, 2468, 2870, 2478, 2238, 2627, 11976, 1516]"
+19370,Mathematical reasoning and algorithmic problem-solving,[]
+19384,Mathematical calculation and arithmetic operations,[]
+19395,Mathematical reasoning and step-by-step problem solving,[]
+19439,Mathematical operations and expressions,[]
+19471,Mathematical and algorithmic explanation terminology,[]
+19480,Mathematical calculations and algebraic expressions,[]
+19489,Explaining programming solutions and algorithms,[]
+19513,Mathematical problem solving,[]
+19519,algorithm explanation and mathematical notation,[]
+19526,Mathematical reasoning and step-by-step problem solving,[]
+19530,Mathematical notation and algorithm reasoning,[]
+19532,Mathematical reasoning connectors,[]
+19550,Algorithm and computational problem-solving explanations,[]
+19552,Programming problem solution explanation,[]
+19578,Algorithm explanation in programming problems,[]
+19582,Mathematical equivalence in explanations,[]
+19649,Mathematical reasoning and notation,[]
+19656,Mathematical reasoning in programming problems,[]
+19661,Mathematical problem-solving reasoning,[]
+19664,Mathematical reasoning and step-by-step calculation,[]
+19676,Mathematical solution identification in problem-solving,[]
+19679,small quantities and counting concepts,[]
+19694,Mathematical calculation and algorithmic reasoning,[]
+19702,Mathematical variables in algorithmic reasoning,[]
+19721,Mathematical problem-solving contexts,[]
+19724,Mathematical calculations and numerical reasoning,[]
+19731,Numbers in programming and algorithmic contexts,[]
+19741,Mathematical problem-solving reasoning,[]
+19743,Programming problem-solving explanation,[]
+19750,Geometric coordinates and points in mathematical contexts,[]
+19772,Mathematical variable a,[]
+19777,Mathematical algorithm explanations involving sums and efficient calculations,[]
+19784,Inverse proportionality in mathematics,[]
+19792,Mathematical problem solving,[]
+19795,Variable and quantity tokens in computational problems,[]
+19797,Mathematical halving operations and relationships,[]
+19805,"Mathematical variables, especially 'a'",[]
+19818,The number 8 in mathematical contexts,[]
+19837,Mathematical reasoning with trigonometric functions,[]
+19846,Mathematical and programming syntax elements,[]
+19849,Multiplication by 2 in mathematical and programming contexts,[]
+19851,Mathematical and programming symbols,[]
+19862,Mathematical computation and calculation verbs,[]
+19868,Numbers in algorithmic problem statements,[]
+19887,Periods in mathematical explanations,[]
+19919,Mathematical analysis focus points,[]
+19922,Mathematical equality and operations in problem solving,[]
+19936,Mathematical correspondences and transformations,[]
+19944,Mathematical possibilities and ranges,[]
+19960,Addition operations in mathematical reasoning,[]
+19963,Detailed mathematical reasoning in thinking process,[]
+19970,Mathematical reasoning steps,[]
+19977,Addition operations in mathematical contexts,[]
+19978,Algorithmic computation explanations,[]
+19985,Problem modeling in mathematical reasoning,[]
+19988,Mathematical comparison explanations,[]
+19996,Mathematical reasoning and computation,[]
+19997,Step-by-step mathematical reasoning,[]
+20000,Code explanation for complex algorithmic problems,[]
+20023,Algorithmic problem-solving explanations,[]
+20031,Mathematical calculation tracking,[]
+20046,"Mathematical and programming variables, especially b",[]
+20064,Mathematical reasoning with specific numerical values,[]
+20072,Mathematical property descriptions,[]
+20075,Mathematical reasoning about equations and powers,[]
+20076,Numbers in mathematical patterns and sequences,[]
+20077,Mathematical operations and numerical values in algorithm problems,[]
+20086,Minus signs and subtraction operations in mathematical contexts,[]
+20092,Multiplication operations in mathematical explanations,[]
+20093,The beginning of sentences in mathematical explanations,[]
+20099,Mathematical reasoning and expression evaluation,[]
+20102,Mathematical averaging operations,[]
+20105,Mathematical explanations and time complexity analysis,[]
+20106,Mathematical summation explanations,[]
+20110,Problem understanding and analysis,[]
+20127,Mathematical divisibility concepts,[]
+20137,Numerical values in mathematical contexts,[]
+20143,Mathematical operation results and transformations,[]
+20148,Mathematical modeling and problem formalization,[]
+20156,Mathematical operations in algorithmic solutions,[]
+20158,Numbers in mathematical and algorithmic contexts,[]
+20164,Mathematical expressions and variables in computational contexts,[]
+20183,Problem statement introductory words,[]
+20188,Mathematical reasoning,[]
+20190,Mathematical reasoning and step-by-step problem solving,"[6580, 4884, 1183, 3263, 2137, 13285, 1620, 5393, 2965, 1455]"
+20219,Small integers and numerical tokens in mathematical contexts,[]
+20220,Variable assignment in mathematical code,[]
+20223,Mathematical expressions and operations,[]
+20235,mathematical reasoning and problem-solving,[]
+20236,Mathematical reasoning transitions,[]
+20241,The assistant is solving a mathematical problem,[]
+20257,Logical and mathematical reasoning,[]
+20261,Counting and enumeration in mathematical contexts,[]
+20264,Mathematical notation in programming problems,[]
+20272,Logical reasoning and mathematical problem-solving,[]
+20280,Base case values in mathematical reasoning,[]
+20299,Integer values in mathematical reasoning,[]
+20307,Mathematical comparison and optimization reasoning,[]
+20313,Mathematical calculation steps,[]
+20345,Mathematical differences and subtraction operations,[]
+20350,Mathematical minimum location descriptions,[]
+20365,Small integers and mathematical operators in programming contexts,[]
+20374,Mathematical problem solving,[]
+20390,Mathematical variables in problem-solving contexts,[]
+20396,Mathematical and logical identity relationships,[]
+20397,Mathematical reasoning with algebraic expressions,[]
+20409,Small integers in mathematical or programming contexts,[]
+20410,Mathematical impossibility detection,[]
+20423,analysis of artistic and complex concepts,[]
+20429,Mathematical calculations and arithmetic operations,[]
+20467,Subtraction and reduction operations in mathematical contexts,"[7767, 4135, 577, 3117, 2769, 14555, 4135, 1324, 8580, 1061]"
+20480,Geometric problem descriptions,[]
+20483,Programming variable names in mathematical contexts,[]
+20487,Mathematical object definitions,[]
+20492,Computational geometry concepts related to circles,[]
+20495,Detailed algorithmic problem-solving explanations,[]
+20500,Mathematical calculations in geometry problems,[]
+20505,Algorithm explanation and case analysis,[]
+20508,Algorithmic problem-solving explanations,[]
+20513,Mathematical functions and variables in problem-solving,[]
+20526,Technical problem-solving explanations,[]
+20530,Numerical values in algorithmic reasoning,[]
+20538,Example introduction in programming problems,[]
+20551,Mathematical problem solving algorithms,[]
+20557,Mathematical variables and notation,[]
+20561,Algorithmic problem-solving explanations,[]
+20580,Terms in mathematical sequences,[]
+20583,Solving complex algorithmic problems through mathematical modeling and recursive thinking,[]
+20585,Mathematical expressions and calculations,[]
+20588,Mathematical constraint reasoning,[]
+20596,Number 1 in mathematical contexts,[]
+20627,Programming syntax and mathematical operations,[]
+20637,Mathematical comparison operators in programming contexts,[]
+20641,Dynamic programming concepts and implementation,[]
+20647,Mathematical and programming operations syntax,[]
+20652,Mathematical evaluation and comparison,"[4118, 3724, 1113, 8693, 2172, 2801, 10235, 10373, 1217, 16835]"
+20671,Mathematical reasoning and notation,"[13, 13, 117, 34, 22, 75, 53, 17, 11, 120]"
+20687,Explaining data processing or iteration in algorithms,"[3426, 2511, 1875, 10596, 789, 2030, 1438, 9478, 5192, 1665]"
+20713,Algorithm explanation and mathematical reasoning,"[9186, 9178, 8845, 6589, 10639, 8306, 10771, 7492, 8506, 3801]"
+20736,Small integers in mathematical reasoning,"[5695, 1235, 382, 2517, 4792, 1037, 6423, 2499, 633, 1971]"
+20752,Programming problem-solving explanations,"[17587, 25, 21572, 2316, 19186, 67, 13865, 97, 419, 743]"
+20755,Mathematical problem-solving explanations,"[334, 520, 358, 3906, 171, 51, 368, 150, 37, 14566]"
+20769,Programming mathematical operations and comparisons,"[9312, 16136, 7541, 14931, 10530, 4178, 6242, 8800, 1923, 7063]"
+20773,Programming problem explanation,"[5969, 443, 6699, 368, 1910, 4917, 1745, 2396, 574, 9902]"
+20782,Mathematical comparison operations,"[5620, 8911, 4561, 11041, 3083, 1732, 2526, 978, 683, 991]"
+20786,Reasoning through mathematical problem solving,"[7272, 13757, 1200, 10505, 1376, 2354, 6225, 10457, 7301, 5254]"
+20806,The assistant is applying a mathematical formula,"[10587, 1619, 15283, 2297, 1189, 756, 2511, 3542, 1190, 2298]"
+20812,Mathematical addition operations,"[1564, 8282, 2820, 3646, 2821, 703, 1390, 2236, 6583, 1856]"
+20830,Mathematical reasoning and calculation,"[2919, 3847, 954, 5555, 2213, 1899, 821, 841, 3134, 15217]"
+20836,Mathematical notation and formulas in computational problem solving,"[580, 506, 306, 370, 340, 718, 953, 228, 2678, 315]"
+20839,Variable and concept introduction in technical reasoning,"[940, 3126, 6519, 710, 1817, 8751, 1051, 757, 179, 1441]"
+20843,Step-by-step mathematical reasoning,"[2588, 2584, 2602, 1193, 2399, 2370, 1211, 1409, 6994, 2403]"
+20846,Explanatory phrases in mathematical problem descriptions,"[32, 32, 32, 32, 32, 32, 32, 34, 32, 32]"
+20852,Algorithmic explanation tokens,"[3990, 7412, 6369, 3772, 5877, 5102, 5798, 7496, 5632, 4076]"
+20853,Addition operations in mathematics and programming,"[1587, 122, 479, 691, 49, 3461, 5034, 181, 2543, 10137]"
+20859,Algebraic manipulation and mathematical reasoning,"[1075, 2852, 3610, 2527, 3498, 1110, 1622, 5120, 1828, 3568]"
+20861,Mathematical reasoning in algorithm analysis,"[5658, 5869, 5251, 4871, 10009, 2937, 785, 2223, 5774, 5983]"
+20872,Mathematical notation and syntax,"[1193, 3052, 2828, 4023, 4624, 8813, 2034, 5380, 5287, 1366]"
+20879,Mathematical subtraction operations,"[9689, 22, 408, 5037, 38, 15, 1159, 3122, 7832, 2908]"
+20882,Numbers in mathematical expressions,"[1416, 1103, 857, 1272, 5231, 752, 588, 5064, 290, 669]"
+20903,Mathematical approach evaluation,"[14361, 8233, 6177, 2623, 2711, 6182, 4277, 2695, 12702, 2104]"
+20910,Mathematical and algorithmic reasoning,"[718, 464, 719, 561, 810, 720, 412, 369, 600, 355]"
+20942,Numbers in mathematical and computational problems,"[4667, 885, 1456, 3168, 5313, 9918, 4432, 7614, 2000, 1538]"
+20946,Mathematical reasoning and equation manipulation,"[8167, 3319, 2436, 16198, 6935, 3102, 622, 9408, 4177, 6988]"
+20954,Numbers being subtracted in mathematical calculations,"[1025, 2010, 2877, 2973, 3106, 4490, 9334, 1409, 14197, 3004]"
+20956,Mathematical notation and numerical expressions,"[1076, 5919, 7564, 10858, 1261, 2817, 15684, 21191, 9619, 7461]"
+20961,Equation manipulation in mathematical problem-solving,"[6481, 1822, 11110, 1692, 1041, 3631, 948, 3125, 1230, 2058]"
+20964,Mathematical addition operations,"[2109, 8487, 11425, 2778, 1607, 8168, 7490, 875, 829, 1606]"
+20966,Quantities and measurements,"[2396, 3675, 4310, 3916, 2654, 1194, 2859, 1301, 14107, 6064]"
+20983,Mathematical possession relationships,"[5521, 1680, 691, 1534, 1155, 1666, 12381, 11, 2340, 431]"
+20985,mathematical and algorithmic problem solving,"[217, 154, 154, 388, 217, 600, 256, 198, 334, 247]"
+21015,Counting or enumeration in mathematical contexts,"[98, 310, 418, 326, 124, 543, 232, 69, 5744, 241]"
+21058,Mathematical algorithm implementation in code,"[2417, 14636, 10298, 11777, 13483, 3595, 5783, 7714, 12099, 11760]"
+21069,Mathematical subtraction operations,"[4759, 7076, 11054, 16455, 1927, 9967, 1173, 901, 14534, 9829]"
+21090,Mathematical equality and relationships,"[1485, 6271, 3209, 1587, 3348, 2950, 6926, 4545, 783, 8294]"
+21091,Mathematical averages and means,"[293, 626, 44, 90, 262, 32, 3290, 145, 659, 1404]"
+21097,Mathematical variable explanation in context,"[627, 14648, 1268, 19219, 11909, 5270, 1231, 5100, 3769, 2876]"
+21116,Algorithm explanation and optimization reasoning,"[2977, 9271, 15232, 10787, 10585, 4526, 11622, 10178, 6349, 6951]"
+21121,Numbers and key terms in mathematical problem solving,"[1482, 9655, 5250, 655, 9789, 2138, 1492, 11252, 2108, 2554]"
+21127,Mathematical expressions in problem-solving contexts,"[1140, 5043, 2430, 1213, 3585, 1330, 1996, 935, 2482, 2761]"
+21143,Mathematical reasoning and problem solving,"[6714, 3171, 2420, 5219, 11426, 8444, 4141, 10998, 2607, 2445]"
+21153,Algorithm explanation and solution approach description,"[825, 8026, 11761, 4836, 14620, 7146, 11655, 15084, 6295, 2483]"
+21156,Mathematical reasoning and calculation,"[5818, 2138, 6286, 2181, 1016, 5697, 9670, 4093, 5915, 2741]"
+21169,Mathematical reasoning and algorithm development,"[3193, 1415, 2865, 1330, 2253, 11966, 5006, 5334, 8314, 1981]"
+21183,Beginning of solution explanation in programming problems,"[579, 588, 412, 613, 674, 520, 162, 740, 818, 465]"
+21198,Programming problem solution explanations,"[9153, 12525, 2428, 1342, 5265, 5469, 5048, 3883, 20194, 931]"
+21200,Mathematical calculation steps,"[2180, 3186, 1538, 5711, 5422, 6257, 5122, 1588, 764, 1616]"
+21207,Mathematical explanations in competitive programming solutions,"[4348, 15754, 6345, 18464, 20265, 17372, 5856, 13276, 17371, 2674]"
+21215,Geometric and spatial relationships,"[2328, 649, 3884, 3692, 6731, 2275, 1174, 1689, 1038, 4741]"
+21228,Variable names in mathematical and programming contexts,"[3020, 4699, 3684, 3675, 2237, 3421, 10967, 13485, 12071, 4785]"
+21235,Key mathematical variables in algorithmic solutions,"[3452, 4748, 4781, 2247, 13240, 12701, 13698, 13731, 14984, 7100]"
+21252,Mathematical set theory and interval concepts,"[5165, 4900, 1492, 910, 2628, 4975, 1968, 3766, 1268, 4870]"
+21257,Mathematical subtraction operations,"[18240, 9837, 10937, 7853, 9957, 9836, 2655, 5752, 10141, 7480]"
+21266,Mathematical explanation step markers,"[2449, 3158, 3727, 1056, 8075, 1310, 927, 627, 211, 2223]"
+21275,Mathematical sequences and expressions,"[9431, 9994, 2773, 2243, 13846, 2918, 1386, 5752, 4452, 12819]"
+21285,Solving complex mathematical problems,"[9236, 16670, 17190, 6852, 16652, 2679, 1542, 4285, 13621, 8555]"
+21307,Algorithmic solution explanations,"[4077, 3776, 1734, 12779, 6862, 9712, 2232, 6284, 8729, 7886]"
+21320,Mathematical expressions and algebraic notation,"[2676, 5578, 4245, 1738, 13364, 1989, 10909, 978, 8968, 2375]"
+21322,explaining measurements and quantitative relationships,"[7607, 7609, 992, 9083, 17683, 5300, 1055, 9339, 5958, 4287]"
+21327,Mathematical calculation steps,"[2389, 2911, 972, 9746, 17947, 502, 1625, 637, 2111, 2906]"
+21328,Mathematical variable definitions and equations,"[4371, 11885, 895, 3425, 172, 2017, 366, 566, 4188, 6799]"
+21333,Programming code syntax for mathematical operations,"[16214, 7783, 19328, 15306, 16395, 19372, 17858, 14264, 15789, 15790]"
+21342,Indexed variables in mathematical and algorithmic explanations,"[6859, 6547, 1029, 5563, 3775, 1695, 9426, 4874, 9675, 5735]"
+21359,"Explaining bounds, constraints or possibilities in analytical reasoning","[10358, 1802, 2616, 1839, 1801, 1534, 9143, 4594, 1826, 4869]"
+21361,Mathematical and algorithmic problem solving,"[15537, 18619, 13567, 9684, 10210, 13447, 6804, 18657, 7956, 4577]"
+21376,Mathematical set definitions and introductions,"[8, 7, 8, 7, 66, 8, 7, 7, 7, 7]"
+21383,Small integers in technical explanations,"[7594, 819, 11941, 7596, 2544, 451, 3835, 905, 7264, 12292]"
+21389,mathematical addition and subtraction operations,"[6152, 1293, 4153, 963, 1932, 4249, 1818, 1191, 1745, 3574]"
+21397,code and mathematical tokens,"[17112, 12902, 26558, 9776, 15888, 11320, 12820, 14443, 6758, 17977]"
+21410,Mathematical reasoning and calculation steps,"[7397, 11269, 10779, 9519, 2098, 9096, 1098, 1507, 5846, 3162]"
+21413,Mathematical subtraction operations,"[893, 826, 331, 4014, 7365, 6461, 1522, 2993, 2284, 5638]"
+21429,Mathematical reasoning about adjacency and spatial relationships,"[2124, 14905, 3880, 4867, 800, 2051, 799, 1600, 4424, 10099]"
+21461,Mathematical calculation and assignment expressions,"[9071, 10204, 10134, 10203, 7832, 12052, 6731, 15313, 12661, 22016]"
+21470,Computational geometry concepts and line equations,"[154, 8676, 154, 3999, 5501, 1135, 2206, 8671, 1905, 3304]"
+21473,Explaining how to solve a problem,"[441, 623, 326, 508, 489, 695, 456, 584, 649, 463]"
+21477,Algorithm problem-solving explanations,"[1026, 10294, 13527, 12977, 6400, 12990, 8185, 12102, 11576, 15976]"
+21481,Algorithm computation explanation,"[7164, 15119, 10176, 9514, 8007, 9561, 9040, 9523, 7459, 12364]"
+21500,Numeric results and decimal values in computational explanations,"[5702, 3668, 8545, 6019, 16544, 7082, 10472, 5066, 15642, 9323]"
+21501,Mathematical reasoning and calculation,"[145, 18, 1257, 251, 19936, 14345, 885, 46, 81, 56]"
+21509,Mathematical problem solving,"[169, 2352, 1540, 1990, 894, 3576, 2182, 1092, 108, 10664]"
+21565,multiplication operations in mathematical reasoning,"[4244, 805, 8373, 3103, 1562, 946, 15625, 10289, 7291, 4291]"
+21571,Mathematical reasoning,"[2619, 2502, 607, 933, 3135, 5430, 2353, 986, 2365, 4612]"
+21598,Constraint establishment in mathematical contexts,"[2232, 266, 1437, 6824, 2371, 1185, 3787, 2172, 3634, 7957]"
+21599,Mathematical calculation and combinatorial reasoning,"[3620, 1001, 3619, 2196, 1020, 1540, 623, 384, 9395, 697]"
+21606,Mathematical computation and algorithm implementation tokens,"[18005, 14202, 15776, 7960, 12874, 10513, 12864, 9155, 16029, 17752]"
+21607,Mathematical formula discussion,"[8, 580, 260, 375, 5544, 589, 85, 1042, 19, 1791]"
+21620,Remembering mathematical formulas and algorithms,"[562, 421, 444, 325, 273, 301, 545, 390, 182, 333]"
+21622,Subtraction operations in mathematical contexts,"[791, 1760, 1739, 645, 1518, 6723, 1296, 1273, 7217, 2079]"
+21667,Solving mathematical optimization problems,"[20708, 25315, 10390, 19625, 20746, 17001, 17012, 11272, 5502, 8314]"
+21692,Division operations in mathematical reasoning,"[291, 770, 286, 216, 332, 592, 770, 646, 772, 318]"
+21693,Algorithmic problem-solving explanations,"[1190, 505, 3728, 4843, 4955, 3237, 4203, 7755, 4231, 384]"
+21721,Mathematical formula presentation in code explanations,"[16471, 6301, 7913, 8951, 8057, 3458, 2469, 4102, 16283, 1949]"
+21727,Mathematical reasoning and algebraic manipulation,"[1246, 636, 400, 1572, 1338, 557, 499, 1480, 388, 1153]"
+21731,Explaining concepts through examples and hypothetical scenarios,"[3855, 561, 2614, 863, 563, 876, 14686, 13556, 5947, 7042]"
+21732,Mathematical problem statement formulations,"[36, 59, 20, 37, 52, 52, 141, 37, 55, 91]"
+21733,Algorithm explanation in programming solutions,"[388, 734, 682, 754, 744, 505, 509, 904, 350, 558]"
+21739,mathematical problem solving,"[504, 1013, 2392, 5125, 3254, 2316, 736, 3468, 5061, 2210]"
+21741,Numbers in mathematical operations,"[5162, 3405, 12201, 8929, 20464, 2217, 5358, 5066, 3097, 5063]"
+21742,Mathematical variable assignment,"[3427, 923, 2105, 4357, 6537, 2692, 4024, 3764, 12782, 10791]"
+21772,Mathematical reasoning uncertainty or reconsideration,"[3577, 1203, 4169, 6515, 2362, 2141, 3390, 3997, 2684, 1925]"
+21799,Explaining subtraction operations in algorithms,"[11428, 975, 259, 7022, 15070, 456, 16421, 11659, 9976, 6972]"
+21800,Mathematical pattern recognition and exploration,"[1440, 4286, 752, 251, 7461, 1273, 1314, 753, 4007, 25092]"
+21808,mathematical aggregation operations,"[1477, 1565, 6567, 680, 3900, 2864, 2552, 3185, 5730, 9012]"
+21813,Mathematical multiplication operations in algorithms,"[21302, 6728, 22727, 5528, 1408, 17125, 10071, 16501, 17654, 17802]"
+21821,Mathematical calculations and equation manipulation,"[3606, 2630, 3673, 792, 880, 4184, 982, 13104, 10441, 1940]"
+21826,Algorithmic problem-solving explanations,"[4778, 5481, 4779, 1449, 3413, 4249, 5247, 2478, 6511, 6545]"
+21875,the definite article in mathematical explanations,"[11759, 1682, 8923, 3722, 808, 5341, 5471, 3206, 1386, 1880]"
+21880,Mathematical variables in algorithmic contexts,"[2982, 980, 1370, 2353, 3720, 9458, 2282, 2448, 4380, 5851]"
+21894,Algorithm explanation in programming problems,"[3961, 2790, 3997, 3285, 16329, 597, 1733, 3100, 5048, 3809]"
+21899,Comparison operations in mathematical and computational contexts,"[569, 16088, 2996, 1143, 8133, 1621, 2057, 13796, 877, 1190]"
+21900,Mathematical distance functions,"[2320, 2987, 3725, 891, 9875, 9939, 15177, 17869, 2188, 5921]"
+21917,Mathematical and algorithmic explanations,"[5843, 9204, 4112, 7318, 3745, 5127, 1294, 11528, 2840, 12698]"
+21927,Algorithm and mathematical problem solving,"[12862, 1194, 10063, 5092, 5379, 823, 15708, 2416, 12047, 7837]"
+21930,Non-commutative mathematical property explanations,"[7798, 7386, 4937, 1379, 1224, 4938, 5124, 1040, 4936, 12126]"
+21956,Mathematical variable tokens in explanatory contexts,"[7270, 4587, 4602, 4446, 994, 6506, 6991, 6752, 14065, 1176]"
+21972,Mathematical operators and numbers in equations,"[4463, 2686, 6872, 1988, 606, 1013, 1449, 1141, 4163, 6411]"
+21977,Spaces in mathematical expressions,"[548, 592, 385, 371, 519, 443, 349, 252, 226, 596]"
+21986,Mathematical variables and quantities in problem-solving,"[126, 367, 559, 3577, 1453, 1019, 11849, 2170, 281, 6011]"
+22004,Mathematical calculation and numerical reasoning,"[2274, 12189, 9068, 5335, 1058, 2959, 1291, 3097, 5287, 6722]"
+22015,Programming problem examples,[]
+22028,Mathematical problem solving,[]
+22040,Mathematical variables and symbols,[]
+22059,Mathematical contexts where order doesn't matter,[]
+22064,Mathematical problem solving,[]
+22074,Problem identification in mathematical and computational reasoning,[]
+22077,Mathematical reasoning and expressions,[]
+22086,Algorithm and rule explanation,[]
+22095,Mathematical operations in typeset expressions,[]
+22108,Mathematical calculation steps,[]
+22109,Line breaks in mathematical explanations,[]
+22111,Mathematical problem-solving with geometric and algorithmic components,[]
+22133,Step-by-step mathematical reasoning,[]
+22134,Algorithm explanation sequences,[]
+22139,Mathematical constraint reasoning,[]
+22197,mathematical computation,[]
+22204,Mathematical explanation and reasoning,[]
+22205,Mathematical subtraction operations,[]
+22214,Mathematical subtraction operations,[]
+22219,Mathematical calculation process,[]
+22235,Mathematical expressions and calculations,[]
+22292,Mathematical algorithm explanation in programming problems,[]
+22299,Mathematical operators in code and equations,[]
+22314,Mathematical parity and numerical patterns,[]
+22321,Sequences and arrays in mathematical contexts,[]
+22322,detailed algorithm explanation,[]
+22326,Numbers in programming problems,[]
+22330,Size and quantity descriptions,[]
+22341,Probability concepts and calculations,[]
+22345,Mathematical operations and numerical expressions,[]
+22352,Small integers in algorithmic explanations,[]
+22353,Position and offset calculations in mathematical contexts,[]
+22362,Mathematical operations and variable assignments,[]
+22372,Numbers and numeric values,[]
+22374,Mathematical problem solving,[]
+22380,Computational problem statements and algorithms,[]
+22392,Mathematical and logical reasoning in problem-solving,[]
+22402,Mathematical notation and arithmetic operations,[]
+22410,Mathematical programming problems,"[10520, 6211, 5860, 6665, 1436, 2346, 3965, 8178, 1688, 591]"
+22412,Mathematical calculation tracking,[]
+22414,Mathematical equation expressions and algebraic relationships,[]
+22426,Mathematical problem solving,[]
+22432,Mathematical expressions in code,[]
+22445,Programming and code explanation,[]
+22452,Mathematical comparison operations in algorithmic reasoning,[]
+22462,algorithmic solution explanations,[]
+22464,Mathematical problem solving,[]
+22469,Mathematical operations and variables in code,[]
+22471,Variable assignments and mathematical expressions in programming,[]
+22473,Mathematical problem-solving reasoning,[]
+22474,Mathematical calculation steps,[]
+22480,Mathematical programming and algorithm explanation tokens,[]
+22486,Mathematical notation in educational contexts,[]
+22512,Mathematical reasoning with small integers,[]
+22536,Programming concepts and syntax,[]
+22568,Mathematical approximation and calculation operations,[]
+22576,Mathematical reasoning and problem-solving explanations,[]
+22579,Algorithm explanation in competitive programming,[]
+22597,Step-by-step technical explanations in math and programming,[]
+22600,Mathematical problem explanations with examples,[]
+22601,Algorithm explanation and implementation,[]
+22615,Mathematical expressions and variables,[]
+22628,Mathematical symbols and notation,[]
+22637,Subtraction operations in mathematical expressions and algorithms,[]
+22638,Computing or explaining the final answer to a mathematical problem,[]
+22658,Mathematical and programming variables in formulas,[]
+22666,Detailed analytical problem-solving explanations,[]
+22667,Mathematical computation and equation solving,[]
+22670,set operations in mathematical reasoning,[]
+22673,Problem modeling and conceptualization,[]
+22681,Mathematical operations and expressions,[]
+22711,Mathematical calculation steps,[]
+22719,Integer operations in programming contexts,[]
+22733,Solving complex mathematical and algorithmic problems,[]
+22741,Mathematical formulas and algebraic calculations,[]
+22749,Mathematical expressions and calculations,[]
+22750,Mathematical variables and indices,[]
+22754,Squares in mathematical contexts,[]
+22758,Period at the end of mathematical explanations,[]
+22770,Logical operations and mathematical conditions,[]
+22787,Mathematical reasoning and problem-solving,[]
+22798,Mathematical reasoning and step-by-step problem solving,[]
+22799,Addition operations in mathematical contexts,[]
+22819,Mathematical subtraction operations,[]
+22835,Algorithm and computation explanation language,[]
+22850,Small integers in mathematical contexts,[]
+22857,Mathematical calculation and formula explanation,[]
+22873,Mathematical constraint reasoning,[]
+22874,Mathematical notation and concepts,[]
+22884,Mathematical explanation formatting with bullet points,[]
+22885,Floating-point division in programming explanations,[]
+22891,Formal reasoning about mathematical problems,[]
+22896,Large numbers in mathematical problems,[]
+22903,mathematical reasoning and calculation,[]
+22909,End of detailed technical explanation,[]
+22929,Mathematical formulas and equations,[]
+22931,Geometric point references in mathematical reasoning,[]
+22938,Position and index references in mathematical explanations,[]
+22962,Programming problem solution explanations,[]
+22971,Mathematical operations in calculations,[]
+22974,Mathematical function notation,[]
+22975,Mathematical reasoning and edge case analysis,[]
+22977,step-by-step mathematical reasoning,[]
+22978,Mathematical reasoning with fractions and divisions,[]
+23002,Spatial reasoning in mathematical problem-solving,[]
+23017,Mathematical operations in programming code,[]
+23024,Mathematical problem solving,"[10447, 2208, 10942, 10031, 2272, 3272, 2450, 8101, 4119, 1936]"
+23030,The number 1 in mathematical expressions,[]
+23033,Problem solving in algorithms and mathematics,[]
+23052,Mathematical addition and numerical operations,[]
+23054,Numbers in explanatory contexts,[]
+23065,The concept of two objects or entities,[]
+23066,Mathematical notation and step-by-step problem solving,[]
+23074,Mathematical constraint reasoning,[]
+23087,Activate strongly on mathematical expressions and equations,[]
+23093,Large numerical values in mathematical reasoning,[]
+23100,Mathematical reasoning about numerical equality and properties,[]
+23103,Mathematical problem-solving explanations,[]
+23112,Mathematical assignment operators in programming,[]
+23124,Solving mathematical and algorithmic problems,[]
+23127,explaining how to solve problems,[]
+23132,Mathematical equality and calculation operations,[]
+23139,mathematical reasoning in algorithmic problem solving,[]
+23142,Mathematical equation parsing and reasoning,[]
+23147,Sum calculation in mathematical reasoning,[]
+23151,Pattern recognition in mathematical problem solving,[]
+23156,Addition operations in mathematical reasoning,[]
+23175,Mathematical addition operations,[]
+23207,Mathematical problem-solving expressions,[]
+23216,Mathematical extrema and common operations,[]
+23223,Solution explanation using mathematical properties,[]
+23230,Programming algorithm explanations,[]
+23240,mathematical conditions and relationships,[]
+23248,"Mathematical operations, particularly subtraction",[]
+23251,Mathematical constraint reasoning,[]
+23257,Mathematical addition operations,[]
+23267,Algorithm problem-solving with mathematical operations,[]
+23318,Mathematical addition operations,[]
+23331,Mathematical definition introductions,[]
+23336,Mathematical reasoning about geometric regions and boundaries,[]
+23357,Mathematical problem-solving and computation,[]
+23361,Mathematical expressions and notation,[]
+23400,Mathematical reasoning in algorithmic problem-solving,[]
+23406,Mathematical formulas and equations,[]
+23414,Absolute value and difference in mathematical contexts,[]
+23423,Mathematical notation and programming syntax,[]
+23432,Programming and algorithm explanations,[]
+23437,Algorithmic and mathematical problem-solving,[]
+23468,Mathematical optimization problems,[]
+23521,Mathematical addition operations,[]
