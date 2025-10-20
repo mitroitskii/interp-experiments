@@ -18,7 +18,7 @@ TT = TypeVar("TT")
 
 # %%
 # --- Constants ---
-BATCH_SIZE = 2
+BATCH_SIZE = 4
 
 GENERATION_SEED = 3
 INIT_SEED = 42
@@ -314,10 +314,15 @@ def compute_crosscoder_attribution(attribution_model: LanguageModel, reference_m
         crosscoder_latents = einops.rearrange(
             crosscoder_latents_flat, '(batch seq) d_crosscoder -> batch seq d_crosscoder', batch=batch_size, seq=seq_len)
 
-        # Operates on (batch, seq, d_model)
-        hidden_state_attr_grad[~attention_mask] = 0
-        # Operates on (batch, seq, d_crosscoder)
-        crosscoder_latents[~attention_mask] = 0
+        # Convert attention_mask to boolean and add feature dimension for broadcasting
+        # attention_mask shape: (batch, seq) -> (batch, seq, 1)
+        attention_mask_bool = attention_mask.bool().unsqueeze(-1)
+
+        # Apply masking by multiplying (this zeros out padded positions)
+        # Operates on (batch, seq, d_model) * (batch, seq, 1) -> (batch, seq, d_model)
+        hidden_state_attr_grad = hidden_state_attr_grad * attention_mask_bool
+        # Operates on (batch, seq, d_crosscoder) * (batch, seq, 1) -> (batch, seq, d_crosscoder)
+        crosscoder_latents = crosscoder_latents * attention_mask_bool
 
         # Use logits from the attribution_model
         output_logits = attribution_model.output.logits
