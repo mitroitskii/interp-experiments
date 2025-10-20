@@ -18,7 +18,7 @@ TT = TypeVar("TT")
 
 # %%
 # --- Constants ---
-BATCH_SIZE = 4
+BATCH_SIZE = 2
 
 GENERATION_SEED = 3
 INIT_SEED = 42
@@ -26,8 +26,7 @@ INIT_SEED = 42
 DATA_SOURCE = "outputs"
 # DATA_SOURCE = "data"
 
-DATA_PATH = "/disk/u/troitskiid/projects/interp-experiments/reasoning_circuits/outputs/wait_subsequences_from_outputs.json"
-# DATA_PATH = "/disk/u/troitskiid/projects/interp-experiments/reasoning_circuits/data/wait_subsequences_from_data.json"
+DATA_PATH = "/disk/u/troitskiid/projects/interp-experiments/reasoning_circuits/outputs/new_generated_outputs.json" # prompt + response containing the full response with closing </think> token
 SAVE_PATH = "/disk/u/troitskiid/projects/interp-experiments/reasoning_circuits/results"
 
 # --- Model Identifiers ---
@@ -56,10 +55,10 @@ else:
 # Model to load tokenizer from (usually compatible one, e.g., reasoning model's)
 TOKENIZER_MODEL_ID = REASONING_MODEL_ID
 
-# CROSSCODER_TYPE = "L1"
-CROSSCODER_TYPE = "BatchTopK"
-CROSSCODER_LAYER = 23
-CROSSCODER_DEVICE = "cuda:0"
+CROSSCODER_TYPE = "L1"
+# CROSSCODER_TYPE = "BatchTopK"
+CROSSCODER_LAYER = 15
+CROSSCODER_DEVICE = "cuda:7"
 CROSSCODER_PATH = f"/disk/u/troitskiid/data/checkpoints/{CROSSCODER_TYPE}-Crosscoder/L{CROSSCODER_LAYER}R/cc_weights.pt"
 
 BASELINE = 0
@@ -118,7 +117,7 @@ print("CROSSCODER loaded.")
 print(f"Loading data from {DATA_PATH}...")
 try:
     with open(DATA_PATH, "r") as file:
-        subsequence_data = json.load(file)
+        sequence_data = json.load(file)
 except FileNotFoundError:
     print(f"Error: Data file not found at {DATA_PATH}")
     exit()
@@ -126,14 +125,66 @@ except json.JSONDecodeError:
     print(f"Error: Could not decode JSON from {DATA_PATH}")
     exit()
 
-# Extract token ID sequences
-batch_of_token_ids = [item["subsequence_tokens"]
-                      for item in subsequence_data if "subsequence_tokens" in item]
+if not sequence_data:
+    raise ValueError(f"No data found in {DATA_PATH}")
+
+print(f"Loaded {len(sequence_data)} samples.")
+
+# %%
+# --- Process all samples ---
+batch_of_token_ids = []
+
+for idx, sample in enumerate(sequence_data):
+    sample_prompt = sample.get("prompt")
+    sample_generation = sample.get("response")
+    
+    if not sample_generation:
+        print(f"Warning: 'response' not found in sample {idx}, skipping.")
+        continue
+    if not sample_prompt:
+        print(f"Warning: 'prompt' not found in sample {idx}, skipping.")
+        continue
+    
+    # Format the prompt using chat template
+    message_prompt = [{"role": "user", "content": sample_prompt}]
+    formatted_prompt_tokens = tokenizer.apply_chat_template(
+        message_prompt, add_generation_prompt=True, tokenize=True)
+    generation_tokens = tokenizer.encode(sample_generation, add_special_tokens=False)
+    
+    # Combine the formatted prompt and generation tokens
+    formatted_tokens = formatted_prompt_tokens + generation_tokens
+    
+    batch_of_token_ids.append(formatted_tokens)
 
 if not batch_of_token_ids:
-    raise ValueError(f"No 'subsequence_tokens' found in {DATA_PATH}")
+    raise ValueError(f"No valid samples with 'prompt' and 'response' found in {DATA_PATH}")
 
-print(f"Loaded {len(batch_of_token_ids)} token sequences.")
+print(f"Processed {len(batch_of_token_ids)} valid token sequences.")
+
+
+# %%
+
+# 432 out of 495 sequences with target token are <= 5000 tokens long
+# see output_stats.py for calculations
+
+# Filter sequences to only include those with length <= 5000 tokens
+MAX_SEQUENCE_LENGTH = 5000
+filtered_batch_of_token_ids = []
+
+for idx, token_ids in enumerate(batch_of_token_ids):
+    if len(token_ids) <= MAX_SEQUENCE_LENGTH:
+        filtered_batch_of_token_ids.append(token_ids)
+    else:
+        print(f"Filtering out sequence {idx} with length {len(token_ids)} > {MAX_SEQUENCE_LENGTH}")
+
+batch_of_token_ids = filtered_batch_of_token_ids
+
+if not batch_of_token_ids:
+    raise ValueError(f"No sequences with length <= {MAX_SEQUENCE_LENGTH} tokens found.")
+
+print(f"After filtering: {len(batch_of_token_ids)} sequences with length <= {MAX_SEQUENCE_LENGTH} tokens.")
+
+
 
 # %%
 # --- Pad and batch token ID sequences ---
@@ -169,7 +220,7 @@ else:
 
 # %%
 # --- Define Target Tokens ---
-target_token_strs = ["wait", "Wait", " wait", " Wait"]
+target_token_strs = ["</think>"]
 target_token_ids = torch.tensor([tokenizer.encode(
     s, add_special_tokens=False)[0] for s in target_token_strs])
 print(
@@ -218,7 +269,7 @@ def compute_crosscoder_attribution(attribution_model: LanguageModel, reference_m
                       token position, shape (batch_size, seq_len, d_crosscoder).
     """
     print(
-        f"Starting nnsight trace for layer {crosscoder_layer_idx} on model {attribution_model.model_key} (reference: {reference_model.model_key})...")
+        f"Starting nnsight trace for layer {crosscoder_layer_idx})...")
     # Pass both tokens (as input_ids) and attention_mask to trace
     # nnsight passes these kwargs to the model's forward method
 
