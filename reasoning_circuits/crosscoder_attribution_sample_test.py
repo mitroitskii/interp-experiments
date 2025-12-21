@@ -23,15 +23,13 @@ SAMPLE_INDEX = 184  # Process a single sample
 GENERATION_SEED = 3
 INIT_SEED = 42
 
-# DATA_PATH = "/disk/u/troitskiid/projects/interp-experiments/reasoning_circuits/outputs/wait_subsequences_from_outputs.json"
-DATA_PATH = "/disk/u/troitskiid/projects/interp-experiments/reasoning_circuits/data/wait_subsequences_from_data.json"
-# SAVE_PATH = "/disk/u/troitskiid/projects/interp-experiments/reasoning_circuits/results" # No longer saving files this way
+DATA_PATH = "/disk/u/troitskiid/projects/interp-experiments/reasoning_circuits/outputs/new_generated_outputs.json" # prompt + response containing the full response with closing </think> token
 
 FT_MODEL_NAME = "deepseek-ai/DeepSeek-R1-Distill-Llama-8B"
 BASE_MODEL_NAME = "meta-llama/Meta-Llama-3.1-8B"
 
-# CROSSCODER_TYPE = "L1"
-CROSSCODER_TYPE = "BatchTopK"
+CROSSCODER_TYPE = "L1"
+# CROSSCODER_TYPE = "BatchTopK"
 CROSSCODER_LAYER = 7
 CROSSCODER_DEVICE = "cuda:0"
 CROSSCODER_PATH = f"/disk/u/troitskiid/data/checkpoints/{CROSSCODER_TYPE}-Crosscoder/L{CROSSCODER_LAYER}R/cc_weights.pt"
@@ -84,7 +82,7 @@ print("CROSSCODER loaded.")
 print(f"Loading data from {DATA_PATH}...")
 try:
     with open(DATA_PATH, "r") as file:
-        subsequence_data = json.load(file)
+        sequence_data = json.load(file)
 except FileNotFoundError:
     print(f"Error: Data file not found at {DATA_PATH}")
     exit()
@@ -92,31 +90,44 @@ except json.JSONDecodeError:
     print(f"Error: Could not decode JSON from {DATA_PATH}")
     exit()
 
-if not subsequence_data or len(subsequence_data) <= SAMPLE_INDEX:
+if not sequence_data or len(sequence_data) <= SAMPLE_INDEX:
     raise ValueError(
         f"Not enough data in {DATA_PATH} or sample index {SAMPLE_INDEX} is out of bounds."
     )
 
 # Extract token ID sequence for the specified sample
-sample_token_ids = subsequence_data[SAMPLE_INDEX].get("subsequence_tokens")
+sample_prompt = sequence_data[SAMPLE_INDEX].get("prompt")
+sample_generation = sequence_data[SAMPLE_INDEX].get("response")
 
-if not sample_token_ids:
+if not sample_generation:
     raise ValueError(
-        f"'subsequence_tokens' not found in sample {SAMPLE_INDEX} from {DATA_PATH}"
+        f"'response' not found in sample {SAMPLE_INDEX} from {DATA_PATH}"
+    )
+if not sample_prompt:
+    raise ValueError(
+        f"'prompt' not found in sample {SAMPLE_INDEX} from {DATA_PATH}"
     )
 
-print(f"Loaded token sequence for sample {SAMPLE_INDEX}.")
+print(f"Loaded prompt and generation for sample {SAMPLE_INDEX}.")
 
 # %%
-# --- Prepare Input Tensor ---
+message_prompt = [{"role": "user", "content": sample_prompt}]
+formatted_prompt_tokens = tokenizer.apply_chat_template(message_prompt, add_generation_prompt=True, tokenize=True)
+generation_tokens = tokenizer.encode(sample_generation, add_special_tokens=False)
+
+# Combine the formatted prompt and generation tokens
+formatted_tokens = formatted_prompt_tokens + generation_tokens
+
 # Convert to tensor and add batch dimension
-input_tokens = torch.tensor([sample_token_ids], dtype=torch.long)
+input_tokens = torch.tensor([formatted_tokens], dtype=torch.long)
 print(f"Input shape: {input_tokens.shape}")
 
+# Print the full sequence detokenized with special tokens intact for debugging
+print(f"Full sequence: {tokenizer.decode(formatted_tokens, skip_special_tokens=False)}")
 
 # %%
 # --- Define Target Tokens ---
-target_token_strs = ["wait", "Wait", " wait", " Wait"]
+target_token_strs = ["</think>"]
 target_token_ids = torch.tensor([tokenizer.encode(
     s, add_special_tokens=False)[0] for s in target_token_strs])
 print(
@@ -333,11 +344,89 @@ else:
 
 
 # Clean up
-del attribution, hs_grad, cc_latents, proj_grad
-del attribution_cpu, hs_grad_cpu, cc_latents_cpu, proj_grad_cpu
-if torch.cuda.is_available():
-    torch.cuda.empty_cache()
-gc.collect()
+# del attribution, hs_grad, cc_latents, proj_grad
+# del attribution_cpu, hs_grad_cpu, cc_latents_cpu, proj_grad_cpu
+# if torch.cuda.is_available():
+#     torch.cuda.empty_cache()
+# gc.collect()
 
 print("\nScript finished.")
+# %%
+# --- Results & Analysis ---
+# Use the last token attribution for analysis
+print(f"\n--- Results (Last Token Attributions) ---")
+
+# Analyze top attributing latents for the single sample
+if attribution_cpu.ndim == 3:  # batch, seq, d_crosscoder
+    analysis_tensor = attribution_cpu[0, -1, :]  # Last token of the single sample
+elif attribution_cpu.ndim == 2:  # seq, d_crosscoder (if batch was squeezed)
+    analysis_tensor = attribution_cpu[-1, :]
+else:
+    print(f"Unexpected attribution tensor shape: {attribution_cpu.shape}")
+    analysis_tensor = None
+
+if analysis_tensor is not None and analysis_tensor.numel() > 0:
+    k = 50  # Number of top/bottom latents to find
+    num_latents = analysis_tensor.shape[0]
+    num_to_show = min(k, num_latents)
+
+    if num_to_show > 0:
+        # --- Top K (Descending) ---
+        top_attr_values, top_attr_indices = torch.topk(
+            analysis_tensor, num_to_show, largest=True)
+
+        print(
+            f"\nTop {num_to_show} attribution latents (last token, descending):")
+        top_latents_data = []
+        for i in range(num_to_show):
+            idx = top_attr_indices[i].item()
+            val = top_attr_values[i].item()
+            print(f"  Latent {idx}: Attribution = {val:.4f}")
+            top_latents_data.append({"index": idx, "value": val})
+
+        # Print top indices in the requested format
+        top_indices_list = top_attr_indices.cpu().tolist()
+        print(
+            f"\nl{CROSSCODER_LAYER}_top_{num_to_show}_descending_indices = {top_indices_list}")
+
+        # --- Bottom K (Ascending) ---
+        bottom_attr_values, bottom_attr_indices = torch.topk(
+            analysis_tensor, num_to_show, largest=False)
+
+        print(
+            f"\nBottom {num_to_show} attribution latents (last token, ascending):")
+        bottom_latents_data = []
+        for i in range(num_to_show):
+            idx = bottom_attr_indices[i].item()
+            val = bottom_attr_values[i].item()
+            print(f"  Latent {idx}: Attribution = {val:.4f}")
+            bottom_latents_data.append({"index": idx, "value": val})
+
+        # Print bottom indices in the requested format
+        bottom_indices_list = bottom_attr_indices.cpu().tolist()
+        print(
+            f"\nl{CROSSCODER_LAYER}_bottom_{num_to_show}_ascending_indices = {bottom_indices_list}")
+
+        # --- Save to JSON ---
+        results_dir = f"results/{CROSSCODER_TYPE}-Crosscoder/L{CROSSCODER_LAYER}R/sample_{SAMPLE_INDEX}"
+        os.makedirs(results_dir, exist_ok=True)
+        json_save_path = f"{results_dir}/attributions_last_token.json"
+
+        data_to_save = {
+            "sample_index": SAMPLE_INDEX,
+            "layer": CROSSCODER_LAYER,
+            "crosscoder_type": CROSSCODER_TYPE,
+            "top": top_latents_data,
+            "bottom": bottom_latents_data
+        }
+
+        with open(json_save_path, "w") as f:
+            json.dump(data_to_save, f, indent=4)
+        print(f"\nSaved top/bottom latents with values to {json_save_path}")
+
+    else:
+        print("\nNot enough latents to show top/bottom k.")
+else:
+    print("\nSkipping attribution analysis as no valid data was found.")
+
 # %%
