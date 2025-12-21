@@ -143,3 +143,57 @@ else:
     print("No prompts found to process.")
 
 # %%
+
+# %%
+import json
+
+# Test chat template and <think> token presence
+print("=== Testing Chat Template and <think> Token ===")
+
+# Load 10 prompts from your data
+with open(PROMPTS_FILE_PATH, 'r') as f:
+    all_data = json.load(f)
+
+# Take first 10 prompts
+test_prompts = [item['original_message']['content'] for item in all_data[:10]]
+
+print(f"Testing with {len(test_prompts)} prompts from data\n")
+
+for i, prompt in enumerate(test_prompts, 1):
+    print(f"--- Prompt {i} ---")
+    print(f"Original: {prompt[:100]}{'...' if len(prompt) > 100 else ''}")
+    
+    # Format with chat template
+    message = [{"role": "user", "content": prompt}]
+    formatted = tokenizer.apply_chat_template(message, add_generation_prompt=True, tokenize=False)
+    
+    print(f"Chat Template Formatted: {formatted[:200]}{'...' if len(formatted) > 200 else ''}")
+    
+    # Check for <think> token in formatted prompt
+    has_think = '<think>' in formatted
+    print(f"Contains '<think>' token: {has_think}")
+    
+    # Run generation
+    sampling_params = SamplingParams(
+        seed=INIT_SEED,
+        temperature=0.6,
+        top_p=0.95,
+        max_tokens=500,  # Shorter for testing
+    )
+    
+    try:
+        outputs = model.generate(prompts=[formatted], sampling_params=sampling_params)
+        response = outputs[0].outputs[0].text
+        
+        print(f"Generated Response (first 200 chars): {response[:200]}{'...' if len(response) > 200 else ''}")
+        
+        # Check if response contains <think>
+        response_has_think = '<think>' in response
+        print(f"Response contains '<think>': {response_has_think}")
+        
+    except Exception as e:
+        print(f"Generation failed: {e}")
+    
+    print("-" * 50)
+    print()
+# %%
