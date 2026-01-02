@@ -4,8 +4,8 @@ import os
 import torch
 from pathlib import Path
 from typing import Dict, List, Any
-from sae_lens.analysis.neuronpedia_integration import get_neuronpedia_quick_list
-
+# from sae_lens.analysis.neuronpedia_integration import get_neuronpedia_quick_list
+from neuronpedia_utils import get_neuronpedia_quick_list_url
 from sae_loading import load_sae_from_path
 from sae_decomposition import decompose_difference_vectors_on_sae
 
@@ -81,12 +81,10 @@ for idx, category in VECTOR_CATEGORIES.items():
         
         top_indices = sae_result['top_features']['indices']
         top_similarities = sae_result['top_features']['similarities']
-        
-        # FIXME: get_neuronpedia_quick_list from sae_lens might expect an SAE object with specific metadata.
-        # If the dictionary_learning SAE lacks this, we might need to handle it.
+    
         try:
+            link = get_neuronpedia_quick_list_url(sae, top_indices, list_name=category)
             # link = get_neuronpedia_quick_list(sae, top_indices, name=category)
-            link = None
             results_links.append(f"{idx} ({category}):\n  Link: {link}\n  Top Indices: {top_indices}\n  Similarities: {[round(s, 4) for s in top_similarities]}\n")
         except Exception as e:
             print(f"Error generating Neuronpedia link for {category}: {e}")
