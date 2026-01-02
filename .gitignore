@@ -192,3 +192,6 @@ evaluations/
 *.pth.gz
 *.pt.bz2
 *.pth.bz2
+
+# TODO
+TODO.md
